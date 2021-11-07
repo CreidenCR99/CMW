@@ -1,53 +1,53 @@
 @keyframes loading {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes backgroundloading {
-    0% {
-      background-color: #000;
-    }
-    100% {
-      background-color: #191919;
-    }
-  }
-  
-  html {
-    animation: backgroundloading 2.5s;
-    background-color: #191919;
-  }
-  
-  body {
-    animation: loading 3.5s;
-  }
-  
-  h1,
-  h2 {
-    color: #e6e6e6;
-    font-family: verdana;
-  }
-  
-  ::selection {
-    color: #f7f7f7;
-    background: #7f7f7f;
-  }
-  
-  ::-moz-selection {
-    color: #f7f7f7;
-    background: #7f7f7f;
-  }
-  
-  a {
-    color: #7f7f7f;
-    text-decoration: underline #7f7f7f;
-  }
-  
-  a:hover {
-    color: #fff;
-    text-decoration: underline #000;
-    cursor: pointer;
-  }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes backgroundloading {
+	0% {
+		background-color: #000;
+	}
+	100% {
+		background-color: #191919;
+	}
+}
+
+html {
+	animation: backgroundloading 2.5s;
+	background-color: #191919;
+}
+
+body {
+	animation: loading 3.5s;
+}
+
+h1,
+h2 {
+	color: #e6e6e6;
+	font-family: verdana;
+}
+
+ ::selection {
+	color: #f7f7f7;
+	background: #7f7f7f;
+}
+
+ ::-moz-selection {
+	color: #f7f7f7;
+	background: #7f7f7f;
+}
+
+a {
+	color: #7f7f7f;
+	text-decoration: underline #7f7f7f;
+}
+
+a:hover {
+	color: #fff;
+	text-decoration: underline #000;
+	cursor: pointer;
+}
