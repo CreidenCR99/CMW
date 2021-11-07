@@ -30,6 +30,7 @@ var SylveonPrecioMultiplicador = 1;
 var LuvdiscPrecioMultiplicador = 1;
 
 var precioclick1 = 600;
+var precioclick2 = 1200;
 var click = 1;
 var precioinv1 = 1000;
 var invmejora = 1;
@@ -45,6 +46,23 @@ function click1() {
 		click = +2;
 		Diego -= precioclick1;
 		gastadototal += precioclick1;
+		document.getElementById("Mejora1").src = "img/CursorGold.png";
+        document.getElementById("Mejora1").property.onclick = "click2();"
+		document.getElementById("Mejora1").title = "Triplicador de clicks - 1200 Diegos";
+	} else {
+		console.log("No tienes diegos suficientes");
+	}
+}
+
+function click2() {
+
+	if (Diego >= precioclick2) {
+		click = +3;
+		Diego -= precioclick2;
+		gastadototal += precioclick2;
+		document.getElementById("Mejora1").src = "img/CursorDiamond.png";
+		document.getElementById("Mejora1").onclick = "";
+		document.getElementById("Mejora1").title = "¡Comprado!";
 	} else {
 		console.log("No tienes diegos suficientes");
 	}
@@ -57,24 +75,13 @@ function inv1() {
 		Diego -= precioinv1;
 		gastadototal += precioinv1;
 		DPS *= 2;
+		document.getElementById("Mejora2").src = "img/Superball.png";
+		document.getElementById("Mejora2").onclick = "";
+		document.getElementById("Mejora2").title = "¡Comprado!";
 	} else {
 		console.log("No tienes diegos suficientes");
 	}
 
-}
-
-function rendermejoras() {
-
-	if (click == 2) {
-		document.getElementById("Mejora1").src = "img/CursorGold.png";
-		document.getElementById("Mejora1").onclick = "";
-		document.getElementById("Mejora1").title = "¡Comprado!";
-	};
-	if (invmejora == 2) {
-		document.getElementById("Mejora2").src = "img/Superball.png";
-		document.getElementById("Mejora2").onclick = "";
-		document.getElementById("Mejora2").title = "¡Comprado!";
-	};
 }
 
 function ComprarTyranitar() {
@@ -316,6 +323,6 @@ setInterval(function() {
 setInterval(function() {
 	pokemon();
 	render();
-	rendermejoras();
+//	rendermejoras();
 	numbers();
 }, 1000 / 60);
