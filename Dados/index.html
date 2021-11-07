@@ -36,9 +36,17 @@
       var Resultado = Dado1 + Dado2;
       
       function CargaB() {
+        var Dado1 = Math.floor(Math.random() * (2)) + 1;
+        var Dado2 = Math.floor(Math.random() * (2)) + 1;
+        document.getElementById("Dado1").onclick = "TiradaB();"
         document.getElementById("Dado1").src = "img/CB/" + Dado1 + ".png";
-          document.getElementById("Dado2").src = "img/CB/" + Dado2 + ".png";
+        document.getElementById("Dado2").onclick = "TiradaB();"
+        document.getElementById("Dado2").src = "img/CB/" + Dado2 + ".png";
+        document.getElementById("Resultado").innerHTML = "<br>"
+        document.getElementById("Cuerpo").className = "B"
+        document.getElementById("Titulo").onclick = "CargaN();"
       };
+
       window.onload = CargaB;
       
       function TiradaB() {
@@ -60,25 +68,13 @@
       function CargaN() {
         var Dado1 = Math.floor(Math.random() * (2)) + 1;
         var Dado2 = Math.floor(Math.random() * (2)) + 1;
-        document.getElementById("Dado1").onclick = "TiradaN"
+        document.getElementById("Dado1").onclick = "TiradaN();"
         document.getElementById("Dado1").src = "img/CN/" + Dado1 + ".png";
-        document.getElementById("Dado2").onclick = "TiradaN"
+        document.getElementById("Dado2").onclick = "TiradaN();"
         document.getElementById("Dado2").src = "img/CN/" + Dado2 + ".png";
         document.getElementById("Resultado").innerHTML = "<br>"
         document.getElementById("Cuerpo").className = "N"
         document.getElementById("Titulo").onclick = "CargaB();"
-      }
-
-      function CargaB() {
-        var Dado1 = Math.floor(Math.random() * (2)) + 1;
-        var Dado2 = Math.floor(Math.random() * (2)) + 1;
-        document.getElementById("Dado1").onclick = "TiradaB"
-        document.getElementById("Dado1").src = "img/CB/" + Dado1 + ".png";
-        document.getElementById("Dado2").onclick = "TiradaB"
-        document.getElementById("Dado2").src = "img/CB/" + Dado2 + ".png";
-        document.getElementById("Resultado").innerHTML = "<br>"
-        document.getElementById("Cuerpo").className = "B"
-        document.getElementById("Titulo").onclick = "CargaN();"
       }
 
       function TiradaN() {
@@ -102,8 +98,8 @@
     <center>
       <h1 id="Titulo" onclick="CargaN();" class="Titulo">Dados 1-6</h1>
       <h2 class="Seleccion">
-        <img draggable="false" class="Puntero" onclick="TiradaB();" id="Dado1" src="">
-        <img draggable="false" class="Puntero" onclick="TiradaB();" id="Dado2" src="">
+        <img draggable="false" class="Puntero" onclick="TiradaB();" id="Dado1">
+        <img draggable="false" class="Puntero" onclick="TiradaB();" id="Dado2">
       </h2>
       <h2 class="Resultado" id="Resultado"><br></h2>
     </center>
