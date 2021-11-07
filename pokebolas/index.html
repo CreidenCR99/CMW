@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokebolas</title>
+    <style>
+      img {
+      width: 512px;
+      aspect-ratio: auto 512 / 512;
+      height: 512px;
+      }
+    </style>
+    <script>
+      var poke = Math.floor(Math.random() * (4) + 1)
+      function RandomPokeball() {
+          poke =+ Math.floor(Math.random() * (4) + 1)
+          document.getElementById("Poke").src = "img/poke" + poke + ".png"
+      }
+    </script>
+  </head>
+  <body>
+    <center>
+      <button onclick="RandomPokeball();">Generar Pokeball</button><br>
+      <img id="Poke" width="512" height="512">
+    </center>
+    <!-- <left>
+      <button onclick="VecImagenes()">Generar imagen</button>
+      </left>
+      <center>
+      <script language="javascript">
+      
+      function VecImagenes()
+      {
+      n=0;
+      this[n++]="img/poke.png";
+      this[n++]="img/poke1.png";
+      this[n++]="img/poke2.png";
+      this[n++]="img/poke3.png"
+      this.N=n;
+      }
+      var Imagenes=new VecImagenes();
+      src= Imagenes[ Math.floor(Math.random() * Imagenes.N) ] ;
+      document.write("<img src="+src+">");
+      
+      </script>
+      </center> -->
+  </body>
+</html>
