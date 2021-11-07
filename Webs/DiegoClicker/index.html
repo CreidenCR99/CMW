@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" onclick="clicktotal ++;">
+  <head>
+    <meta charset="UTF-8">
+    <title id="title">Diego Clicker - 0 Diegos</title>
+    <link rel="icon" type="image/png" sizes="1000x1000" href="img/icon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="rng.js"></script>
+    <script src="dgclkcd.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="description" content="Ese maravilloso juego de clickear un Diego salvaje">
+    <meta name="keywords" content="diego, clicker, diego clicker, juego de click, clic, cps, cps test, clickbait">
+  </head>
+  <body>
+    <a draggable="false" href="rsc/Patch Notes.html" target="_blank">
+      <img class="version" draggable="false" src="img/Patch Notes.png">
+    </a>
+    <h1 id="countdown" class="countdown">Loading... <br>Para la v-1.9 </h1>
+    <center>
+      <div>
+        <h1 class="title" id="win" title="Click para la lista de ayuda" onclick="titlealert(0)">Diego Clicker</h1>
+        <h1 class="default" id="numbers">Diegos: 0 | DPS: 0</h1>
+      </div>
+      <div class="container">
+        <div class="Diego">
+          <img id="DiegoI" class="grabbing" draggable="false" onclick="clic(0)" src="img/Diego.png">
+        </div>
+        <figure class="TyranitarGarchomp">
+          <img id="TyranitarS" class="items" draggable="false" title="Precio: 100 Diegos" onclick="ComprarTyranitar(0)" src="img/pkmns/Tyranitar.png">
+          <figurecaption>
+            <h1 class="default" id="TyranitarInv"></h1>
+          </figurecaption>
+          <img id="GarchompS" class="items" draggable="false" title="Precio: 200 Diegos" onclick="ComprarGarchomp(0)" src="img/pkmns/Garchomp.png">
+          <figurecaption>
+            <h1 class="default" id="GarchompInv"></h1>
+          </figurecaption>
+        </figure>
+        <figure class="SylveonLuvdisc">
+          <img id="SylveonS" class="items" draggable="false" title="Precio: 300 Diegos" onclick="ComprarSylveon(0)" src="img/pkmns/Sylveon.png">
+          <figurecaption>
+            <h1 class="default" id="SylveonInv"></h1>
+          </figurecaption>
+          <img id="LuvdiscS" class="items" draggable="false" title="Precio: 400 Diegos" onclick="ComprarLuvdisc(0)" src="img/pkmns/Luvdisc.png">
+          <figurecaption>
+            <h1 class="default" id="LuvdiscInv"></h1>
+          </figurecaption>
+        </figure>
+      </div>
+      <div>
+        <img id="Mejora1" draggable="false" class="upgrades" title="Duplicador de clicks - 600 Diegos" onclick="click1(0)" src="img/CursorDefault.png">
+        <img id="Mejora2" draggable="false" class="upgrades" title="Duplicador de producción - 1000 Diegos" onclick="inv1(0)" src="img/Pokeball.png">
+      </div>
+    </center>
+  </body>
+</html>

@@ -1,0 +1,177 @@
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rainbow19 {
+  0% {
+    color: #ffa500;
+    text-decoration: underline solid #7f5200;
+  }
+  10% {
+    color: #800080;
+    text-decoration: underline solid #0e477f;
+  }
+  20% {
+    color: #ff0000;
+    text-decoration: underline solid #7f0949;
+  }
+  30% {
+    color: #5f9ea0;
+    text-decoration: underline solid #007f7f;
+  }
+  40% {
+    color: #ffff00;
+    text-decoration: underline solid #003f00;
+  }
+  50% {
+    color: #ff7f50;
+    text-decoration: underline solid #7f3f27;
+  }
+  60% {
+    color: #008000;
+    text-decoration: underline solid #7f7f00;
+  }
+  70% {
+    color: #00ffff;
+    text-decoration: underline solid #2f4e4f;
+  }
+  80% {
+    color: #ff1493;
+    text-decoration: underline solid #7f0000;
+  }
+  90% {
+    color: #1e90ff;
+    text-decoration: underline solid #3f003f;
+  }
+  100% {
+    color: #ffa500;
+    text-decoration: underline solid #7f5200;
+  }
+}
+
+@keyframes backgroundloading19 {
+  0% {
+    background-color: #000;
+  }
+  100% {
+    background-color: #191919;
+  }
+}
+
+html {
+  animation: backgroundloading19 1.5s;
+  background-color: #191919;
+}
+
+body {
+  animation: loading 2.5s;
+}
+
+h1,
+h2,
+h3 {
+  color: #e6e6e6;
+  font-family: verdana;
+}
+
+a {
+  color: #7f7f7f;
+  text-decoration: underline #7f7f7f;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: underline #000;
+  cursor: pointer;
+}
+
+::selection {
+  color: #f7f7f7;
+  background: #7f7f7f;
+}
+
+::-moz-selection {
+  color: #f7f7f7;
+  background: #7f7f7f;
+}
+
+.default {
+  cursor: default;
+}
+
+.crosshair {
+  cursor: crosshair;
+}
+
+.return {
+  position: fixed;
+  user-select: none;
+}
+
+.Oldlinkcolor118 {
+  color: #0000ee;
+}
+
+.Oldlinkcolor218 {
+  color: #551a8b;
+}
+
+.Newlinkcolor18 {
+  color: #7f7f7f;
+}
+
+.Newbgcolor14 {
+  color: #191919;
+  background-color: #e6e6e6;
+}
+
+.Oldselectioncolor17 {
+  color: #fff;
+  background-color: #3390ff;
+}
+
+.Newselectioncolor17 {
+  color: #fff;
+  background-color: #000;
+}
+
+.rainbow19 {
+  cursor: default;
+  animation: rainbow19 20s infinite;
+}
+
+.Oldselectioncolor19 {
+  color: #fff;
+  background-color: #000;
+}
+
+.Newselectioncolor19 {
+  color: #f7f7f7;
+  background: #7f7f7f;
+}
+
+.Oldlinkstyle19 {
+  color: #7f7f7f;
+}
+
+.Newlinkstyle19 {
+  color: #7f7f7f;
+  text-decoration: underline #7f7f7f;
+}
+
+.Newlinkstyle19:hover {
+  color: #fff;
+  text-decoration: underline #000;
+  cursor: pointer;
+}
+
+.consolebutton {
+  cursor: crosshair;
+  user-select: none;
+}
