@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <title>Pato.</title>
+    <link rel="icon" type="image/png" sizes="1000x1000" href="img/icon.png">
+    <style>
+      html {
+      display: block;
+      }
+      head {
+      display: none;
+      }
+      meta {
+      display: none;
+      }
+      body {
+      display: block;
+      margin: 8px;
+      background-color: black;
+      }
+      body:-webkit-full-page-media {
+      background-color: rgb(0, 0, 0);
+      }
+      video:-webkit-full-page-media {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      max-height: 100%;
+      max-width: 100%;
+      margin: auto;
+      }
+      video {
+      object-fit: contain;
+      cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+      <center>
+      <video width="1150" controls="" autoplay="" name="media" loop="">
+        <source src="img/duck.mp4" type="video/mp4">
+      </center>
+      </video>
+  </body>
+</html>
