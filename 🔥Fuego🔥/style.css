@@ -1,0 +1,43 @@
+@keyframes loading {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes backgroundloading {
+    0% {
+      background-color: #000;
+    }
+    100% {
+      background-color: #191919;
+    }
+  }
+  
+  html {
+    animation: backgroundloading 1.5s;
+    background-color: #191919;
+    user-select: none;
+  }
+  
+  body {
+    animation: loading 2.5s;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    color: #e6e6e6;
+    font-family: verdana;
+  }
+  
+  ::selection {
+    color: #f7f7f7;
+    background: #7f7f7f;
+  }
+
+  .Pointer {
+    cursor: pointer;
+  }
