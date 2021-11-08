@@ -32,6 +32,17 @@
     color: #e6e6e6;
     font-family: verdana;
   }
+
+  .a {
+    color: #7f7f7f;
+    text-decoration: underline #7f7f7f;
+  }
+  
+  .a:hover {
+    color: #fff;
+    text-decoration: underline #000;
+    cursor: pointer;
+  }
   
   ::selection {
     color: #f7f7f7;
@@ -40,4 +51,9 @@
 
   .Pointer {
     cursor: pointer;
+  }
+
+  video {
+      border: 2px #f7f7f7 solid;
+      cursor: pointer;
   }

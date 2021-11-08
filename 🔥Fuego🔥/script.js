@@ -3,13 +3,19 @@ var now = new Date().getTime();
 
 setInterval(function() {
 now =+ new Date().getTime();
-document.getElementById("Titulo").innerHTML = "🔥Fuego🔥"
 }, 1000);
 
-var SaltoNombres = ["Víctor (...)"]
+var SaltoNombres = ["(...)"]
+
+function SaltoApodos() {
+    document.getElementById("SaltoApodos").innerHTML = "(Salto; Saltitos; Salsa; Chachi; ChuperChadich; Calcio Potasico,CaK; Shadiscoteca; Vector Squalo III; Ricostes_Maricortes; Ñadick; Shadick; Xavi; Chino2)"
+    document.getElementById("SaltoApodos").className = ""
+}
 
 function SaltoTodo() {
-    SaltoNombres = ["Victor (Salto; Saltitos; Salsa; Chachi; ChuperChadich; Calcio Potasico,CaK; Shadiscoteca; Vector Squalo III; Ricostes_Maricortes; Ñadick; Shadick; Xavi; Chino2)"]
+    SaltoNombres = ["(Salto; Saltitos; Salsa; Chachi; ChuperChadich; Calcio Potasico,CaK; Shadiscoteca; Vector Squalo III; Ricostes_Maricortes; Ñadick; Shadick; Xavi; Chino2)"]
+    document.getElementById("Salto(...)").title = ""
+    document.getElementById("Salto(...)").className = ""
     document.getElementById("Salto").title = ""
     document.getElementById("Salto").className = ""
 }
@@ -50,7 +56,7 @@ var Salto = setInterval(function() {
 	var Saltominutes = Math.floor((Saltodistance % (1000 * 60 * 60)) / (1000 * 60));
 	var Saltoseconds = Math.floor((Saltodistance % (1000 * 60)) / 1000);
 
-	document.getElementById("Salto").innerHTML = `${SaltoNombres}<br>${Saltodays}d ${Saltohours}h ${Saltominutes}m ${Saltoseconds}s`;
+	document.getElementById("Salto").innerHTML = `Víctor <a id="Salto(...)" class="a" title="Click para ver más" onclick="SaltoTodo();">${SaltoNombres}</a><br>${Saltodays}d ${Saltohours}h ${Saltominutes}m ${Saltoseconds}s`;
 
 	if (Saltodistance < 0) {
 		clearInterval(Salto);
@@ -60,7 +66,7 @@ var Salto = setInterval(function() {
 
 // ----- Cilindro ----- \\
 
-var CilindroCumple = new Date("Ago 12, 2022 00:00:00").getTime();
+var CilindroCumple = new Date("Aug 15, 2022 00:00:00").getTime();
 
 var Cilindro = setInterval(function() {
 
@@ -71,10 +77,73 @@ var Cilindro = setInterval(function() {
 	var Cilindrominutes = Math.floor((Cilindrodistance % (1000 * 60 * 60)) / (1000 * 60));
 	var Cilindroseconds = Math.floor((Cilindrodistance % (1000 * 60)) / 1000);
 
-	document.getElementById("Cilindro").innerHTML = `${Cilindrodays}d ${Cilindrohours}h ${Cilindrominutes}m ${Cilindroseconds}s`;
+	document.getElementById("Cilindro").innerHTML = `Sergio (Chikito Heladero Cilindro)<br>${Cilindrodays}d ${Cilindrohours}h ${Cilindrominutes}m ${Cilindroseconds}s`;
 
 	if (Cilindrodistance < 0) {
 		clearInterval(Cilindro);
 		document.getElementById("Cilindro").innerHTML = "¡Hoy!";
+	}
+}, 1000);
+
+// ----- Paula ----- \\
+
+var PaulaCumple = new Date("Nov 27, 2021 00:00:00").getTime();
+
+var Paula = setInterval(function() {
+
+	var Pauladistance = PaulaCumple - now;
+
+	var Pauladays = Math.floor(Pauladistance / (1000 * 60 * 60 * 24));
+	var Paulahours = Math.floor((Pauladistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var Paulaminutes = Math.floor((Pauladistance % (1000 * 60 * 60)) / (1000 * 60));
+	var Paulaseconds = Math.floor((Pauladistance % (1000 * 60)) / 1000);
+
+	document.getElementById("Paula").innerHTML = `Paula<br>${Pauladays}d ${Paulahours}h ${Paulaminutes}m ${Paulaseconds}s`;
+
+	if (Pauladistance < 0) {
+		clearInterval(Paula);
+		document.getElementById("Paula").innerHTML = "¡Hoy!";
+	}
+}, 1000);
+
+// ----- Valeria ----- \\
+
+var ValeriaCumple = new Date("Jul 14, 2022 00:00:00").getTime();
+
+var Valeria = setInterval(function() {
+
+	var Valeriadistance = ValeriaCumple - now;
+
+	var Valeriadays = Math.floor(Valeriadistance / (1000 * 60 * 60 * 24));
+	var Valeriahours = Math.floor((Valeriadistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var Valeriaminutes = Math.floor((Valeriadistance % (1000 * 60 * 60)) / (1000 * 60));
+	var Valeriaseconds = Math.floor((Valeriadistance % (1000 * 60)) / 1000);
+
+	document.getElementById("Valeria").innerHTML = `Valeria<br>${Valeriadays}d ${Valeriahours}h ${Valeriaminutes}m ${Valeriaseconds}s`;
+
+	if (Valeriadistance < 0) {
+		clearInterval(Valeria);
+		document.getElementById("Valeria").innerHTML = "¡Hoy!";
+	}
+}, 1000);
+
+// ----- Almudena ----- \\
+
+var AlmudenaCumple = new Date("Feb 12, 2022 00:00:00").getTime();
+
+var Almudena = setInterval(function() {
+
+	var Almudenadistance = AlmudenaCumple - now;
+
+	var Almudenadays = Math.floor(Almudenadistance / (1000 * 60 * 60 * 24));
+	var Almudenahours = Math.floor((Almudenadistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var Almudenaminutes = Math.floor((Almudenadistance % (1000 * 60 * 60)) / (1000 * 60));
+	var Almudenaseconds = Math.floor((Almudenadistance % (1000 * 60)) / 1000);
+
+	document.getElementById("Almudena").innerHTML = `Almudena<br>${Almudenadays}d ${Almudenahours}h ${Almudenaminutes}m ${Almudenaseconds}s`;
+
+	if (Almudenadistance < 0) {
+		clearInterval(Almudena);
+		document.getElementById("Almudena").innerHTML = "¡Hoy!";
 	}
 }, 1000);
