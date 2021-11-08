@@ -33,6 +33,7 @@ var precioclick1 = 600;
 var precioclick2 = 1200;
 var click = 1;
 var precioinv1 = 1000;
+var precioinv2 = 2000;
 var invmejora = 1;
 
 function clic() {
@@ -40,48 +41,56 @@ function clic() {
 	Total += click;
 }
 
-function click1() {
-
-	if (Diego >= precioclick1) {
-		click = +2;
-		Diego -= precioclick1;
-		gastadototal += precioclick1;
-		document.getElementById("Mejora1").src = "img/CursorGold.png";
-        document.getElementById("Mejora1").property.onclick = "click2();"
-		document.getElementById("Mejora1").title = "Triplicador de clicks - 1200 Diegos";
-	} else {
-		console.log("No tienes diegos suficientes");
+function clickUpgrade() {
+	if (click == 1) {
+		if (Diego >= precioclick1) {
+			click = +2;
+			Diego -= precioclick1;
+			gastadototal += precioclick1;
+			document.getElementById("Mejora1").src = "img/CursorGold.png";
+			document.getElementById("Mejora1").title = "Triplicador de clicks - 1200 Diegos";
+		} else {
+			console.log("No tienes diegos suficientes");
+		}
+	} else if (click == 2) {
+		if (Diego >= precioclick2) {
+			click = +3;
+			Diego -= precioclick2;
+			gastadototal += precioclick2;
+			document.getElementById("Mejora1").src = "img/CursorDiamond.png";
+			document.getElementById("Mejora1").title = "¡Comprado!";
+		} else {
+			console.log("No tienes diegos suficientes");
+		}
 	}
 }
 
-function click2() {
+function invUpgrade() {
 
-	if (Diego >= precioclick2) {
-		click = +3;
-		Diego -= precioclick2;
-		gastadototal += precioclick2;
-		document.getElementById("Mejora1").src = "img/CursorDiamond.png";
-		document.getElementById("Mejora1").onclick = "";
-		document.getElementById("Mejora1").title = "¡Comprado!";
-	} else {
-		console.log("No tienes diegos suficientes");
+	if (invmejora == 1) {
+		if (Diego >= precioinv1) {
+			invmejora = +2;
+			Diego -= precioinv1;
+			gastadototal += precioinv1;
+			DPS *= 2;
+			document.getElementById("Mejora2").src = "img/Superball.png";
+			document.getElementById("Mejora2").title = "Triplicador de producción - 2000 Diegos";
+		} else {
+			console.log("No tienes diegos suficientes");
+		}
+	} else if (invmejora == 2) {
+		if (Diego >= precioinv2) {
+			invmejora = +3;
+			Diego -= precioinv2;
+			gastadototal += precioinv2;
+			DPS /= 2;
+			DPS *= 3;
+			document.getElementById("Mejora2").src = "img/Ultraball.png";
+			document.getElementById("Mejora2").title = "¡Comprado!";
+		} else {
+			console.log("No tienes diegos suficientes");
+		}
 	}
-}
-
-function inv1() {
-
-	if (Diego >= precioinv1) {
-		invmejora = +2;
-		Diego -= precioinv1;
-		gastadototal += precioinv1;
-		DPS *= 2;
-		document.getElementById("Mejora2").src = "img/Superball.png";
-		document.getElementById("Mejora2").onclick = "";
-		document.getElementById("Mejora2").title = "¡Comprado!";
-	} else {
-		console.log("No tienes diegos suficientes");
-	}
-
 }
 
 function ComprarTyranitar() {
@@ -207,11 +216,9 @@ function title() {
 		`Diego Clicker - ${DiegoRedondeo} Diegos`;
 }
 
-function numbers() {
-
+function round() {
 	DiegoRedondeo = Math.round(Diego);
 	DPSRedondeo = Math.round(DPS);
-
 }
 
 function pokemon() {
@@ -255,9 +262,9 @@ function close() {
 function commands() {
 	var save = prompt(` ---- Diego Clicker (v-1.9) ---- \n\n Pagina 1: Estadísticas (Escribe 'P1') \n Pagina 2: Precios (Escribe 'P2') \n Pagina 3: Producción (Escribe 'P3') \n Pagina 4: Funciones (Escribe 'P4') \n Pagina 5: Shiny/Inverted (Escribe 'P5') \n\n ---- Diego Clicker (v-1.9) ---- `, ``);
 	if (save == "P1" || save == "p1" || save == "1")
-		alert(` ---- Pagina 1: Estadísticas ---- \n\n Diego = 0; \n DiegoRedondeo = Math.round(Diego); \n Total = 0; \n clicktotal = 0; \n gastadototal = 0; `);
+		alert(` ---- Pagina 1: Estadísticas ---- \n\n Diego = 0; \n DiegoRedondeo = Math.round(Diego); \n DPS = 0; \n DPSRedondeo = Math.round(DPS) \n Total = 0; \n clicktotal = 0; \n gastadototal = 0; `);
 	if (save == "P2" || save == "p2" || save == "2")
-		alert(` ---- Pagina 2: Precios ---- \n\n TyranitarPrecio = 100; \n GarchompPrecio = 200; \n SylveonPrecio = 300; \n LuvdiscPrecio = 400; \n precioclick1 = 600; \n precioinv1 = 1000; `);
+		alert(` ---- Pagina 2: Precios ---- \n\n TyranitarPrecio = 100; \n GarchompPrecio = 200; \n SylveonPrecio = 300; \n LuvdiscPrecio = 400; \n precioclick1 = 600; \n precioclick2 = 1200; \n precioinv1 = 1000; \n precioinv = 2000;`);
 	if (save == "P3" || save == "p3" || save == "3")
 		alert(` ---- Pagina 3: Producción ---- \n\n TyranitarProduce = 1; \n GarchompProduce = 2.25; \n SylveonProduce = 3.5; \n LuvdiscProduce = 4.75; \n invmejora = 1; \n click = 1; `);
 	if (save == "P4" || save == "p4" || save == "4")
@@ -269,7 +276,7 @@ function commands() {
 function stats() {
 	var save = prompt(` Tiempo: ${cd}d ${ch}h ${cm}m ${cs}s \n Clicks totales: ${clicktotal+1} \n Diegos totales: ${Total} \n Diegos gastados: ${gastadototal}  \n Diegos: ${Diego} \n Tyranitar: ${TyranitarInv} \n Garchomp: ${GarchompInv} \n Sylveon: ${SylveonInv} \n Luvdisc: ${LuvdiscInv} \n Escribe "Guardar" para obtener tu código de guardado`, ``);
 	if (save == "guardar" || save == "GUARDAR" || save == "Guardar" || save == "gUARDAR" || save == "1") {
-		prompt(`Para cargar tu partida pega este código en la consola [F12]:`, `clicktotal = ${clicktotal}; Total = ${Total}; gastadototal = ${gastadototal}; Diego = ${Diego}; TyranitarInv = ${TyranitarInv}; GarchompInv = ${GarchompInv}; SylveonInv = ${SylveonInv}; LuvdiscInv = ${LuvdiscInv}; TyranitarPrecio = ${TyranitarPrecio}; GarchompPrecio = ${GarchompPrecio}; SylveonPrecio = ${SylveonPrecio}; LuvdiscPrecio = ${LuvdiscPrecio}; click = ${click}; invmejora = ${invmejora}; DiegoInverted = ${DiegoInverted}; TyranitarShiny = ${TyranitarShiny}; GarchompShiny = ${GarchompShiny}; SylveonShiny = ${SylveonShiny}; LuvdiscShiny = ${LuvdiscShiny}; cs = ${cs}; cm = ${cm}; ch = ${ch}; cd = ${cd}; DPS = ${DPS}; onload(); title(); cronometro(); win(); pokemon(); render(); rendermejoras(); clear(); rngnumber();`);
+		prompt(`Para cargar tu partida pega este código en la consola [F12]:`, `clicktotal = ${clicktotal}; Total = ${Total}; gastadototal = ${gastadototal}; Diego = ${Diego}; TyranitarInv = ${TyranitarInv}; GarchompInv = ${GarchompInv}; SylveonInv = ${SylveonInv}; LuvdiscInv = ${LuvdiscInv}; TyranitarPrecio = ${TyranitarPrecio}; GarchompPrecio = ${GarchompPrecio}; SylveonPrecio = ${SylveonPrecio}; LuvdiscPrecio = ${LuvdiscPrecio}; click = ${click}; invmejora = ${invmejora}; DiegoInverted = ${DiegoInverted}; TyranitarShiny = ${TyranitarShiny}; GarchompShiny = ${GarchompShiny}; SylveonShiny = ${SylveonShiny}; LuvdiscShiny = ${LuvdiscShiny}; cs = ${cs}; cm = ${cm}; ch = ${ch}; cd = ${cd}; DPS = ${DPS}; onload(); title(); cronometro(); win(); pokemon(); render(); clear(); rngnumber();`);
 	}
 }
 
@@ -284,7 +291,7 @@ function titlealert() {
 }
 
 function win() {
-	if (Diego >= 2000 && TyranitarInv >= 5 && GarchompInv >= 5 && SylveonInv >= 5 && LuvdiscInv >= 5 && click >= 2 && invmejora >= 2) {
+	if (Diego >= 3500 && TyranitarInv >= 5 && GarchompInv >= 5 && SylveonInv >= 5 && LuvdiscInv >= 5 && click >= 3 && invmejora >= 3) {
 		document.getElementById("win").innerHTML =
 			`¡Diego Clicker!`;
 		document.getElementById("win").className =
@@ -323,6 +330,5 @@ setInterval(function() {
 setInterval(function() {
 	pokemon();
 	render();
-//	rendermejoras();
-	numbers();
+	round();
 }, 1000 / 60);
