@@ -2,24 +2,31 @@
   <head>
     <meta name="viewport" content="width=device-width">
     <title>Pato.</title>
-    <link rel="icon" type="image/png" sizes="1000x1000" href="img/icon.png">
+    <link rel="icon" type="image/png" sizes="1000x1000" href="icon.png">
     <style>
       html {
       display: block;
+      cursor: none;
+      animation: backgroundloading 2.5s;
+      background-color: #000;
       }
       head {
       display: none;
+      animation: loading 2.5s;
       }
       meta {
       display: none;
+      animation: loading 2.5s;
       }
       body {
       display: block;
       margin: 8px;
       background-color: black;
+      animation: loading 2.5s;
       }
       body:-webkit-full-page-media {
       background-color: rgb(0, 0, 0);
+      animation: loading 2.5s;
       }
       video:-webkit-full-page-media {
       position: absolute;
@@ -30,18 +37,38 @@
       max-height: 100%;
       max-width: 100%;
       margin: auto;
+      animation: loading 2.5s;
       }
       video {
       object-fit: contain;
-      cursor: pointer;
+      animation: loading 2.5s;
+      }
+      @keyframes loading {
+      0% {
+      opacity: 0;
+      }
+      100% {
+      opacity: 1;
+      }
+      }
+      @keyframes backgroundloading {
+      0% {
+      background-color: #191919;
+      }
+      50% {
+      background-color: #000;
+      }
+      100% {
+      background-color: #000;
+      }
       }
     </style>
   </head>
   <body>
-      <center>
+    <center>
       <video autoplay="" name="media" loop="">
-        <source src="img/duck.mp4" type="video/mp4">
-      </center>
-      </video>
+        <source src="duck.mp4" type="video/mp4">
+    </center>
+    </video>
   </body>
 </html>
