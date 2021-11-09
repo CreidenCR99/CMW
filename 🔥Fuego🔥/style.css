@@ -1,59 +1,71 @@
 @keyframes loading {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  0% {
+    opacity: 0;
   }
-  
-  @keyframes backgroundloading {
-    0% {
-      background-color: #000;
-    }
-    100% {
-      background-color: #191919;
-    }
+  100% {
+    opacity: 1;
   }
-  
-  html {
-    animation: backgroundloading 1.5s;
+}
+
+@keyframes backgroundloading {
+  0% {
+    background-color: #000;
+  }
+  100% {
     background-color: #191919;
-    user-select: none;
   }
-  
-  body {
-    animation: loading 2.5s;
-  }
-  
-  h1,
-  h2,
-  h3 {
-    color: #e6e6e6;
-    font-family: verdana;
-  }
+}
 
-  .a {
-    color: #7f7f7f;
-    text-decoration: underline #7f7f7f;
-  }
-  
-  .a:hover {
-    color: #fff;
-    text-decoration: underline #000;
-    cursor: pointer;
-  }
-  
-  ::selection {
-    color: #f7f7f7;
-    background: #7f7f7f;
-  }
+html {
+  animation: backgroundloading 1.5s;
+  background-color: #191919;
+  user-select: none;
+}
 
-  .Pointer {
-    cursor: pointer;
-  }
+body {
+  animation: loading 2.5s;
+}
 
-  video {
-      border: 2px #f7f7f7 solid;
-      cursor: pointer;
-  }
+h1,
+h2,
+h3 {
+  color: #e6e6e6;
+  font-family: verdana;
+}
+
+.a {
+  color: #7f7f7f;
+  text-decoration: underline #7f7f7f;
+}
+
+.a:hover {
+  color: #fff;
+  text-decoration: underline #000;
+  cursor: pointer;
+}
+
+.ab {
+  color: #7f7f7f;
+  text-decoration: underline #7f7f7f;
+}
+
+.ab:hover {
+  color: #fff;
+  text-decoration: underline #000;
+  cursor: pointer;
+}
+
+ ::selection {
+  color: #f7f7f7;
+  background: #7f7f7f;
+}
+
+.Pointer {
+  cursor: pointer;
+}
+
+video {
+  border: 2px #f7f7f7 solid;
+  cursor: pointer;
+  text-align: center;
+}
