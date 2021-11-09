@@ -68,4 +68,5 @@ video {
   border: 2px #f7f7f7 solid;
   cursor: pointer;
   text-align: center;
+  background-color: #000;
 }
