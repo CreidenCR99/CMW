@@ -173,3 +173,21 @@ var Almudena = setInterval(function () {
     document.getElementById("Almudena").innerHTML = "¡Hoy!";
   }
 }, 1000);
+
+// ----- Sergio ----- \\
+
+var SergioCumple = new Date("Feb 10, 2022 00:00:00").getTime();
+
+var Almudena = setInterval(function () {
+
+  var Sergiodistance = SergioCumple - now;
+
+  var Sergiodays = Math.floor(Sergiodistance / (1000 * 60 * 60 * 24));
+
+  document.getElementById("Sergio").innerHTML = `Sergio (Casquete; Papa)<br>${Sergiodays}d ${Hours}h ${Minutes}m ${Seconds}s`;
+
+  if (Sergiodistance < 0) {
+    clearInterval(Sergio);
+    document.getElementById("Sergio").innerHTML = "¡Hoy!";
+  }
+}, 1000);
