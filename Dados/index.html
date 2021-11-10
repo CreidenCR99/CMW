@@ -8,12 +8,12 @@
     <title>Dados</title>
     <style>
       .B {
-        background-color: white;
-        color: black;
+      background-color: white;
+      color: black;
       }
       .N {
-        background-color: black;
-        color: white;
+      background-color: black;
+      color: white;
       }
       .Seleccion {
       user-select: none;
@@ -34,27 +34,28 @@
       var Dado1 = Math.floor(Math.random() * (2)) + 1;
       var Dado2 = Math.floor(Math.random() * (2)) + 1;
       var Resultado = Dado1 + Dado2;
+      var nob = [""]
       
       function CargaB() {
+        nob = ["B"]
         var Dado1 = Math.floor(Math.random() * (2)) + 1;
         var Dado2 = Math.floor(Math.random() * (2)) + 1;
-        document.getElementById("Dado1").onclick = "TiradaB();"
         document.getElementById("Dado1").src = "img/CB/" + Dado1 + ".png";
-        document.getElementById("Dado2").onclick = "TiradaB();"
         document.getElementById("Dado2").src = "img/CB/" + Dado2 + ".png";
         document.getElementById("Resultado").innerHTML = "<br>"
         document.getElementById("Cuerpo").className = "B"
-        document.getElementById("Titulo").onclick = "CargaN();"
+        document.getElementById("Titulo").SetAttribute = ("onclick","function() {CargaN();}")
+        document.getElementById("Titulo").onclick = function() {CargaN();}
       };
-
+      
       window.onload = CargaB;
       
       function TiradaB() {
         Tirada += 1;
         Dado1 = Math.floor(Math.random() * (6) + 1);
-        document.getElementById("Dado1").src = "img/B/" + Dado1 + ".png";
+        document.getElementById("Dado1").src = "img/" + nob + "/" + Dado1 + ".png";
         Dado2 = Math.floor(Math.random() * (6) + 1);
-        document.getElementById("Dado2").src = "img/B/" + Dado2 + ".png";
+        document.getElementById("Dado2").src = "img/" + nob + "/" + Dado2 + ".png";
         Resultado = +Dado1 + Dado2;
         if (Dado1 == Dado2) {
           console.log(`Tirada:     ${Tirada}\nDado 1:     ${Dado1}\nDado 2:     ${Dado2}\nResultado:  ${Resultado}  Doble`);
@@ -66,37 +67,21 @@
       };
       
       function CargaN() {
+        nob = ["N"]
         var Dado1 = Math.floor(Math.random() * (2)) + 1;
         var Dado2 = Math.floor(Math.random() * (2)) + 1;
-        document.getElementById("Dado1").onclick = "TiradaN();"
         document.getElementById("Dado1").src = "img/CN/" + Dado1 + ".png";
-        document.getElementById("Dado2").onclick = "TiradaN();"
         document.getElementById("Dado2").src = "img/CN/" + Dado2 + ".png";
-        document.getElementById("Resultado").innerHTML = "<br>"
-        document.getElementById("Cuerpo").className = "N"
-        document.getElementById("Titulo").onclick = "CargaB();"
-      }
-
-      function TiradaN() {
-        Tirada += 1;
-        Dado1 = Math.floor(Math.random() * (6) + 1);
-        document.getElementById("Dado1").src = "img/N/" + Dado1 + ".png";
-        Dado2 = Math.floor(Math.random() * (6) + 1);
-        document.getElementById("Dado2").src = "img/N/" + Dado2 + ".png";
-        Resultado = +Dado1 + Dado2;
-        if (Dado1 == Dado2) {
-          console.log(`Tirada:     ${Tirada}\nDado 1:     ${Dado1}\nDado 2:     ${Dado2}\nResultado:  ${Resultado}  Doble`);
-          document.getElementById("Resultado").innerHTML = `${Dado1} + ${Dado2}<br>${Resultado}<br>Doble`;
-        } else {
-          console.log(`Tirada:     ${Tirada}\nDado 1:     ${Dado1}\nDado 2:     ${Dado2}\nResultado:  ${Resultado}`);
-          document.getElementById("Resultado").innerHTML = `${Dado1} + ${Dado2}<br>${Resultado}`;
-        };
+        document.getElementById("Resultado").innerHTML = "<br>";
+        document.getElementById("Cuerpo").className = "N";
+        document.getElementById("Titulo").SetAttribute = ("onclick","function() {CargaB();}");
+        document.getElementById("Titulo").onclick = function() {CargaB();};
       };
     </script>
   </head>
   <body id="Cuerpo" class="B">
     <center>
-      <h1 id="Titulo" onclick="CargaN();" class="Titulo">Dados 1-6</h1>
+      <h1 id="Titulo" onclick="CargaN" class="Titulo">Dados 1-6</h1>
       <h2 class="Seleccion">
         <img draggable="false" class="Puntero" onclick="TiradaB();" id="Dado1">
         <img draggable="false" class="Puntero" onclick="TiradaB();" id="Dado2">
