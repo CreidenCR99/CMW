@@ -3,13 +3,13 @@ var classa = ["a"]
 var clickmas = ["Click para ver más"]
 
 function SaltoApodos() {
-  document.getElementById("SaltoApodos").innerHTML = "(Salto; Saltitos; Salsa; Chachi; ChuperChadich; Calcio Potasico,CaK; Shadiscoteca; Vector Squalo III; Ricostes_Maricortes; Ñadick; Shadick; Xavi; Chino2)"
+  document.getElementById("SaltoApodos").innerHTML = "(Salto; Saltitos; Salsa; Chachi; ChuperChadich; Calcio Potasico,CaK; Shadiscoteca; Vector Squalo III; Ricostes_Maricortes; Ñadick; Shadick; Xavi; Chino2; ViceTHOR; Vitrocerámica)"
   document.getElementById("SaltoApodos").className = ""
   document.getElementById("SaltoApodos").title = ""
 }
 
 function SaltoTodo() {
-  SaltoNombres = ["(Salto; Saltitos; Salsa; Chachi; ChuperChadich; Calcio Potasico,CaK; Shadiscoteca; Vector Squalo III; Ricostes_Maricortes; Ñadick; Shadick; Xavi; Chino2)"]
+  SaltoNombres = ["(Salto; Saltitos; Salsa; Chachi; ChuperChadich; Calcio Potasico,CaK; Shadiscoteca; Vector Squalo III; Ricostes_Maricortes; Ñadick; Shadick; Xavi; Chino2; ViceTHOR; Vitrocerámica)"]
   classa = [""]
   clickmas = [""]
 }
