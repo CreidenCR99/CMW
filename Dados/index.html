@@ -7,6 +7,14 @@
     <link rel="icon" type="image/png" sizes="1000x1000" href="https://creidencr99.github.io/CMW/rsc/img/icon.png"/>
     <title>Dados</title>
     <style>
+      @keyframes img {
+      0% {
+      opacity: 0;
+      }
+      100% {
+      opacity: 1;
+      }
+      }
       .B {
       background-color: white;
       color: black;
@@ -28,27 +36,35 @@
       cursor: default;
       user-select: none;
       }
+      .Boton {
+      position: absolute;
+      }
+      img {
+        animation: img 1.5s linear;
+      }
     </style>
     <script>
       var Tirada = 0;
       var Dado1 = Math.floor(Math.random() * (2)) + 1;
       var Dado2 = Math.floor(Math.random() * (2)) + 1;
       var Resultado = Dado1 + Dado2;
-      var nob = [""]
+      var nob = [""];
       
       function CargaB() {
-        nob = ["B"]
+        nob = ["B"];
         var Dado1 = Math.floor(Math.random() * (2)) + 1;
         var Dado2 = Math.floor(Math.random() * (2)) + 1;
         document.getElementById("Dado1").src = "img/CB/" + Dado1 + ".png";
         document.getElementById("Dado2").src = "img/CB/" + Dado2 + ".png";
-        document.getElementById("Cuerpo").className = "B"
-        document.getElementById("Titulo").onclick = function() {CargaN();}
+        document.getElementById("Cuerpo").className = "B";
+        document.getElementById("Modo").onclick = function() {CargaN();};
+        document.getElementById("Modo").innerHTML = "Modo Oscuro"
+        document.getElementById("Resultado").innerHTML = "";
       };
       
       window.onload = CargaB;
       
-      function TiradaB() {
+      function Giro() {
         Tirada += 1;
         Dado1 = Math.floor(Math.random() * (6) + 1);
         document.getElementById("Dado1").src = "img/" + nob + "/" + Dado1 + ".png";
@@ -65,27 +81,31 @@
       };
       
       function CargaN() {
-        nob = ["N"]
+        nob = ["N"];
         var Dado1 = Math.floor(Math.random() * (2)) + 1;
         var Dado2 = Math.floor(Math.random() * (2)) + 1;
         document.getElementById("Dado1").src = "img/CN/" + Dado1 + ".png";
         document.getElementById("Dado2").src = "img/CN/" + Dado2 + ".png";
         document.getElementById("Cuerpo").className = "N";
-        document.getElementById("Titulo").onclick = function() {CargaB();};
+
+        document.getElementById("Modo").onclick = function() {CargaB();};
+        document.getElementById("Modo").innerHTML = "Modo Claro"
+        document.getElementById("Resultado").innerHTML = "";
       };
     </script>
   </head>
   <body id="Cuerpo" class="B">
+    <button class="Boton" id="Modo" onclick="CargaN();">Modo Oscuro</button>
     <center>
-      <h1 id="Titulo" onclick="CargaN();" class="Titulo">Dados 1-6</h1>
+      <h1 class="Titulo">Dados 1-6</h1>
       <h2 class="Seleccion">
-        <img draggable="false" class="Puntero" onclick="TiradaB();" id="Dado1">
-        <img draggable="false" class="Puntero" onclick="TiradaB();" id="Dado2">
+        <img draggable="false" class="Puntero" onclick="Giro();" id="Dado1">
+        <img draggable="false" class="Puntero" onclick="Giro();" id="Dado2">
       </h2>
       <h2 class="Resultado" id="Resultado"><br></h2>
     </center>
-    <canvas width="0" height="0" style="display: none;">
-    <img src="img/CB/1.png"><img src="img/CB/2.png"><img src="img/B/1.png"><img src="img/B/2.png"><img src="img/B/3.png"><img src="img/B/4.png"><img src="img/B/5.png"><img src="img/B/6.png"><img src="img/CN/1.png"><img src="img/CN/2.png"><img src="img/N/1.png"><img src="img/N/2.png"><img src="img/N/3.png"><img src="img/N/4.png"><img src="img/N/5.png"><img src="img/N/6.png">
+    <canvas width="0" height="0">
+      <img src="img/CB/1.png"><img src="img/CB/2.png"><img src="img/B/1.png"><img src="img/B/2.png"><img src="img/B/3.png"><img src="img/B/4.png"><img src="img/B/5.png"><img src="img/B/6.png"><img src="img/CN/1.png"><img src="img/CN/2.png"><img src="img/N/1.png"><img src="img/N/2.png"><img src="img/N/3.png"><img src="img/N/4.png"><img src="img/N/5.png"><img src="img/N/6.png">
     </canvas>
   </body>
 </html>
