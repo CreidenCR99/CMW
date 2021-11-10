@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="1000x1000" href="img/icon.png"/>
+    <link rel="icon" type="image/png" sizes="1000x1000" href="https://creidencr99.github.io/CMW/rsc/img/icon.png"/>
     <title>Dados</title>
     <style>
       .B {
@@ -42,9 +42,7 @@
         var Dado2 = Math.floor(Math.random() * (2)) + 1;
         document.getElementById("Dado1").src = "img/CB/" + Dado1 + ".png";
         document.getElementById("Dado2").src = "img/CB/" + Dado2 + ".png";
-        document.getElementById("Resultado").innerHTML = "<br>"
         document.getElementById("Cuerpo").className = "B"
-        document.getElementById("Titulo").SetAttribute = ("onclick","function() {CargaN();}")
         document.getElementById("Titulo").onclick = function() {CargaN();}
       };
       
@@ -72,21 +70,22 @@
         var Dado2 = Math.floor(Math.random() * (2)) + 1;
         document.getElementById("Dado1").src = "img/CN/" + Dado1 + ".png";
         document.getElementById("Dado2").src = "img/CN/" + Dado2 + ".png";
-        document.getElementById("Resultado").innerHTML = "<br>";
         document.getElementById("Cuerpo").className = "N";
-        document.getElementById("Titulo").SetAttribute = ("onclick","function() {CargaB();}");
         document.getElementById("Titulo").onclick = function() {CargaB();};
       };
     </script>
   </head>
   <body id="Cuerpo" class="B">
     <center>
-      <h1 id="Titulo" onclick="CargaN" class="Titulo">Dados 1-6</h1>
+      <h1 id="Titulo" onclick="CargaN();" class="Titulo">Dados 1-6</h1>
       <h2 class="Seleccion">
         <img draggable="false" class="Puntero" onclick="TiradaB();" id="Dado1">
         <img draggable="false" class="Puntero" onclick="TiradaB();" id="Dado2">
       </h2>
       <h2 class="Resultado" id="Resultado"><br></h2>
     </center>
+    <canvas width="0" height="0" style="display: none;">
+    <img src="img/CB/1.png"><img src="img/CB/2.png"><img src="img/B/1.png"><img src="img/B/2.png"><img src="img/B/3.png"><img src="img/B/4.png"><img src="img/B/5.png"><img src="img/B/6.png"><img src="img/CN/1.png"><img src="img/CN/2.png"><img src="img/N/1.png"><img src="img/N/2.png"><img src="img/N/3.png"><img src="img/N/4.png"><img src="img/N/5.png"><img src="img/N/6.png">
+    </canvas>
   </body>
 </html>
