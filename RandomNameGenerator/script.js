@@ -8,5 +8,6 @@ function generate() {
 	var Tercero = Math.floor(Math.random() * TerceroObligatorio.length);
 	var Cuarto = Math.floor(Math.random() * CuartoOpcional.length);
 	document.getElementById("Nombre").innerHTML = PrimeroOpcional[Primero] + SegundoObligatorio[Segundo] + TerceroObligatorio[Tercero] + CuartoOpcional[Cuarto];
+	console.log(PrimeroOpcional[Primero] + SegundoObligatorio[Segundo] + TerceroObligatorio[Tercero] + CuartoOpcional[Cuarto]);
 
 }
