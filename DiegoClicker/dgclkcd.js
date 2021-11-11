@@ -208,8 +208,22 @@ function producir() {
 
 function render() {
 	document.getElementById("numbers").innerHTML =
-		`Diegos: ${DiegoRedondeo} | DPS: ${DPS}`;
-}
+	  `Diegos: ${DiegoRedondeo} | DPS: ${DPS}`;
+	if (click == 2) {
+	  document.getElementById("Mejora1").src = "img/CursorGold.png";
+	  document.getElementById("Mejora1").title = "Triplicador de clicks - 1200 Diegos";
+	} else if (click == 3) {
+	  document.getElementById("Mejora1").src = "img/CursorDiamond.png";
+	  document.getElementById("Mejora1").title = "¡Comprado!";
+	}
+	if (invmejora == 2) {
+	  document.getElementById("Mejora2").src = "img/Superball.png";
+	  document.getElementById("Mejora2").title = "Triplicador de producción - 2000 Diegos";
+	} else if (invmejora == 3) {
+	  document.getElementById("Mejora2").src = "img/Ultraball.png";
+	  document.getElementById("Mejora2").title = "¡Comprado!";
+	}
+  }
 
 function title() {
 	document.getElementById("title").innerHTML =
@@ -325,7 +339,7 @@ setInterval(function() {
 	win();
 	producir();
 	title();
-}, 1000 / 1);
+}, 1000);
 
 setInterval(function() {
 	pokemon();
