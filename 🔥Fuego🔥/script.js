@@ -1,6 +1,12 @@
-var SaltoNombres = ["(...)"]
-var classa = ["a"]
-var clickmas = ["Click para ver más"]
+var SaltoNombresCumple = ["(...)"]
+var ClassSaltoCumple = ["a"]
+var ClickMasSaltoCumple = ["Click para ver más"]
+
+function SaltoTodo() {
+  SaltoNombresCumple = ["(Salto; Saltitos; Salsa; Chachi; ChuperChadich; Calcio Potasico,CaK; Shadiscoteca; Vector Squalo III; Ricostes_Maricortes; Ñadick; Shadick; Xavi; Chino2; ViceTHOR; Vitrocerámica)"]
+  ClassSaltoCumple = [""]
+  ClickMasSaltoCumple = [""]
+}
 
 function SaltoApodos() {
   document.getElementById("SaltoApodos").innerHTML = "(Salto; Saltitos; Salsa; Chachi; ChuperChadich; Calcio Potasico,CaK; Shadiscoteca; Vector Squalo III; Ricostes_Maricortes; Ñadick; Shadick; Xavi; Chino2; ViceTHOR; Vitrocerámica)"
@@ -8,10 +14,20 @@ function SaltoApodos() {
   document.getElementById("SaltoApodos").title = ""
 }
 
-function SaltoTodo() {
-  SaltoNombres = ["(Salto; Saltitos; Salsa; Chachi; ChuperChadich; Calcio Potasico,CaK; Shadiscoteca; Vector Squalo III; Ricostes_Maricortes; Ñadick; Shadick; Xavi; Chino2; ViceTHOR; Vitrocerámica)"]
-  classa = [""]
-  clickmas = [""]
+var CilindroNombresCumple = ["(...)"]
+var ClassCilindroCumple = ["ab"]
+var ClickMasCilindroCumple = ["Click para ver más"]
+
+function CilindroTodo() {
+  CilindroNombresCumple = ["(Chikito; Heladero; Cilindro; b·h; Psicologo de <del>poca</del> confianza)"]
+  ClassCilindroCumple = [""]
+  ClickMasCilindroCumple = [""]
+}
+
+function CilindroApodos() {
+  document.getElementById("CilindroApodos").innerHTML = "(Chikito; Heladero; Cilindro; b·h; Psicologo de <del>poca</del> confianza)"
+  document.getElementById("CilindroApodos").className = ""
+  document.getElementById("CilindroApodos").title = ""
 }
 
 function DiegoApodos() {
@@ -94,7 +110,7 @@ var Salto = setInterval(function () {
 
   var Saltodays = Math.floor(Saltodistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Salto").innerHTML = `Víctor <a id="SaltoNombres" class="${classa}" title="${clickmas}" onclick="SaltoTodo();">${SaltoNombres}</a><br>${Saltodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>11/12`;
+  document.getElementById("Salto").innerHTML = `Víctor <a id="SaltoNombres" class="${ClassSaltoCumple}" title="${ClickMasSaltoCumple}" onclick="SaltoTodo();">${SaltoNombresCumple}</a><br>${Saltodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>11/12`;
 
   if (Saltodistance < 0) {
     clearInterval(Salto);
@@ -112,7 +128,7 @@ var Cilindro = setInterval(function () {
 
   var Cilindrodays = Math.floor(Cilindrodistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Cilindro").innerHTML = `Sergio (Chikito; Heladero; Cilindro)<br>${Cilindrodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>12/8`;
+  document.getElementById("Cilindro").innerHTML = `Sergio <a id="CilindroNombres" class="${ClassCilindroCumple}" title="${ClickMasCilindroCumple}" onclick="CilindroTodo();">${CilindroNombresCumple}</a><br>${Cilindrodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>12/8`;
 
   if (Cilindrodistance < 0) {
     clearInterval(Cilindro);
