@@ -41,12 +41,12 @@ h2 {
 	background: #7f7f7f;
 }
 
-a {
+.a {
 	color: #7f7f7f;
 	text-decoration: underline #7f7f7f;
 }
 
-a:hover {
+.a:hover {
 	color: #fff;
 	text-decoration: underline #000;
 	cursor: pointer;
@@ -57,12 +57,50 @@ a:hover {
 	border: 2px solid #000000;
 	box-shadow: 4px 4px 25px 0px rgba(32, 32, 32, 1);
 	background-color: #f7f7f7;
+	height: 250px;
+	width: 238px;
 }
 
 .img {
-	display: block;
+	margin-right: 12px;
+	margin-left: 12px;
 	margin-top: 23px;
-	margin-left: 23px;
-	margin-bottom: 25px;
-	margin-right: 23px;
+	border: 2px #000 solid;
+	transition: transform 0.2s;
+	width: 208px;
+	height: 117px;
+	cursor: pointer;
+}
+
+.img:hover {
+    transform: scale(1.05);
+	width: 208px;
+	height: 117px;
+}
+
+.TituloBox {
+	text-align: left;
+	font-size: 25px;
+	margin-left: 25px;
+	cursor: default;
+}
+
+.TituloPequeñoBox {
+	text-align: left;
+	font-size: 20px;
+	margin-left: 25px;
+	cursor: default;
+}
+
+.TituloBoxA {
+	color: black;
+	text-decoration: none;
+}
+
+.DescripcionBox {
+	text-align: left;
+	color: black;
+	font-size: 10px;
+	margin-left: 27px;
+	cursor: default;
 }
