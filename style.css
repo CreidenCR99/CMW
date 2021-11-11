@@ -59,6 +59,7 @@ h2 {
 	background-color: #f7f7f7;
 	height: 250px;
 	width: 238px;
+	user-select: none;
 }
 
 .img {
