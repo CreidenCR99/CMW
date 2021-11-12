@@ -288,10 +288,14 @@ function commands() {
 }
 
 function stats() {
-	var save = prompt(` Tiempo: ${cd}d ${ch}h ${cm}m ${cs}s \n Clicks totales: ${clicktotal+1} \n Diegos totales: ${Total} \n Diegos gastados: ${gastadototal}  \n Diegos: ${Diego} \n Tyranitar: ${TyranitarInv} \n Garchomp: ${GarchompInv} \n Sylveon: ${SylveonInv} \n Luvdisc: ${LuvdiscInv} \n Escribe "Guardar" para obtener tu código de guardado`, ``);
-	if (save == "guardar" || save == "GUARDAR" || save == "Guardar" || save == "gUARDAR" || save == "1") {
-		prompt(`Para cargar tu partida pega este código en la consola [F12]:`, `clicktotal = ${clicktotal}; Total = ${Total}; gastadototal = ${gastadototal}; Diego = ${Diego}; TyranitarInv = ${TyranitarInv}; GarchompInv = ${GarchompInv}; SylveonInv = ${SylveonInv}; LuvdiscInv = ${LuvdiscInv}; TyranitarPrecio = ${TyranitarPrecio}; GarchompPrecio = ${GarchompPrecio}; SylveonPrecio = ${SylveonPrecio}; LuvdiscPrecio = ${LuvdiscPrecio}; click = ${click}; invmejora = ${invmejora}; DiegoInverted = ${DiegoInverted}; TyranitarShiny = ${TyranitarShiny}; GarchompShiny = ${GarchompShiny}; SylveonShiny = ${SylveonShiny}; LuvdiscShiny = ${LuvdiscShiny}; cs = ${cs}; cm = ${cm}; ch = ${ch}; cd = ${cd}; DPS = ${DPS}; onload(); title(); cronometro(); win(); pokemon(); render(); clear(); rngnumber();`);
+	var varstats = prompt(` Tiempo: ${cd}d ${ch}h ${cm}m ${cs}s \n Clicks totales: ${clicktotal+1} \n Diegos totales: ${Total} \n Diegos gastados: ${gastadototal}  \n Diegos: ${Diego} \n Tyranitar: ${TyranitarInv} \n Garchomp: ${GarchompInv} \n Sylveon: ${SylveonInv} \n Luvdisc: ${LuvdiscInv} \n Escribe "Guardar" para obtener tu código de guardado`, ``);
+	if (varstats == "guardar" || varstats == "GUARDAR" || varstats == "Guardar" || varstats == "gUARDAR" || varstats == "1") {
+		save();
 	}
+}
+
+function save() {
+	prompt(`Para cargar tu partida pega este código en la consola [F12]:`, `clicktotal = ${clicktotal}; Total = ${Total}; gastadototal = ${gastadototal}; Diego = ${Diego}; TyranitarInv = ${TyranitarInv}; GarchompInv = ${GarchompInv}; SylveonInv = ${SylveonInv}; LuvdiscInv = ${LuvdiscInv}; TyranitarPrecio = ${TyranitarPrecio}; GarchompPrecio = ${GarchompPrecio}; SylveonPrecio = ${SylveonPrecio}; LuvdiscPrecio = ${LuvdiscPrecio}; click = ${click}; invmejora = ${invmejora}; DiegoInverted = ${DiegoInverted}; TyranitarShiny = ${TyranitarShiny}; GarchompShiny = ${GarchompShiny}; SylveonShiny = ${SylveonShiny}; LuvdiscShiny = ${LuvdiscShiny}; cs = ${cs}; cm = ${cm}; ch = ${ch}; cd = ${cd}; DPS = ${DPS}; onload(); title(); cronometro(); win(); pokemon(); render(); clear(); rngnumber();`);
 }
 
 function titlealert() {
@@ -346,3 +350,7 @@ setInterval(function() {
 	render();
 	round();
 }, 1000 / 60);
+
+function instawin() {
+	Diego = 3500; DPS = 172.5;TyranitarInv = 5; GarchompInv = 5; SylveonInv = 5; LuvdiscInv = 5; click = 3; invmejora = 3;
+}

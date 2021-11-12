@@ -120,6 +120,7 @@ a {
   color: #7f7f7f;
   text-decoration: underline #7f7f7f;
   animation: loading 1.5s;
+  transition: 0.2s;
 }
 
 a:hover {
@@ -129,9 +130,11 @@ a:hover {
 }
 
 .title {
+  text-align: center;
   color: #e6e6e6;
   text-decoration: underline solid #7f7f7f;
   animation: loading 1.5s;
+  transition: 0.2s;
 }
 
 .title:hover {
@@ -143,6 +146,7 @@ a:hover {
 .rainbow {
   animation: rainbow 20s infinite;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 .container {
@@ -198,4 +202,10 @@ a:hover {
 .upgrades {
   cursor: crosshair;
   animation: loading 1.5s;
+}
+
+center {
+  width: max-content;
+  height: max-content;
+  text-align: center;
 }
