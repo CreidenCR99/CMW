@@ -83,6 +83,7 @@ a {
   color: #7f7f7f;
   text-decoration: underline #7f7f7f;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 a:hover {
