@@ -1,27 +1,9 @@
-var SaltoNombresCumple = ["(...)"]
-var ClassSaltoCumple = ["a"]
-var ClickMasSaltoCumple = ["Click para ver más"]
-
-function SaltoTodo() {
-  SaltoNombresCumple = ["(Salto; Saltitos; Salsa; Chachi; ChuperChadich; Calcio Potasico,CaK; Shadiscoteca; Vector Squalo III; Ricostes_Maricortes; Ñadick; Shadick; Xavi; Chino2; ViceTHOR; Vitrocerámica)"]
-  ClassSaltoCumple = [""]
-  ClickMasSaltoCumple = [""]
-}
+// ---------- Frases ---------- \\
 
 function SaltoApodos() {
   document.getElementById("SaltoApodos").innerHTML = "(Salto; Saltitos; Salsa; Chachi; ChuperChadich; Calcio Potasico,CaK; Shadiscoteca; Vector Squalo III; Ricostes_Maricortes; Ñadick; Shadick; Xavi; Chino2; ViceTHOR; Vitrocerámica)"
   document.getElementById("SaltoApodos").className = ""
   document.getElementById("SaltoApodos").title = ""
-}
-
-var CilindroNombresCumple = ["(...)"]
-var ClassCilindroCumple = ["ab"]
-var ClickMasCilindroCumple = ["Click para ver más"]
-
-function CilindroTodo() {
-  CilindroNombresCumple = ["(Chikito; Heladero; Cilindro; b·h; Psicologo de <del>poca</del> confianza)"]
-  ClassCilindroCumple = [""]
-  ClickMasCilindroCumple = [""]
 }
 
 function CilindroApodos() {
@@ -63,6 +45,28 @@ var HMSFunction = setInterval(function () {
   Seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 }, 1000);
+
+// ------- Apodos ------- \\
+
+var SaltoCumpleChangeApodos = ["(...)"]
+var SaltoCumpleClassChange = ["a"]
+var SaltoCumpleTitleChange = ["Click para ver más"]
+
+function SaltoCumpleApodos() {
+  SaltoCumpleChangeApodos = ["(Salto; Saltitos; Salsa; Chachi; ChuperChadich; Calcio Potasico,CaK; Shadiscoteca; Vector Squalo III; Ricostes_Maricortes; Ñadick; Shadick; Xavi; Chino2; ViceTHOR; Vitrocerámica)"]
+  SaltoCumpleClassChange = [""]
+  SaltoCumpleTitleChange = [""]
+}
+
+var CilindroCumpleChangeApodos = ["(...)"]
+var CilindroCumpleClassChange = ["a"]
+var CilindroCumpleTitleChange = ["Click para ver más"]
+
+function CilindroCumpleApodos() {
+  CilindroCumpleChangeApodos = ["(Chikito; Heladero; Cilindro; b·h; Psicologo de <del>poca</del> confianza)"]
+  CilindroCumpleClassChange = [""]
+  CilindroCumpleTitleChange = [""]
+}
 
 // ----- Grupo ----- \\
 
@@ -110,7 +114,7 @@ var Salto = setInterval(function () {
 
   var Saltodays = Math.floor(Saltodistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Salto").innerHTML = `Víctor <a id="SaltoNombres" class="${ClassSaltoCumple}" title="${ClickMasSaltoCumple}" onclick="SaltoTodo();">${SaltoNombresCumple}</a><br>${Saltodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>11/12`;
+  document.getElementById("Salto").innerHTML = `Víctor <a class="${SaltoCumpleClassChange}" title="${SaltoCumpleTitleChange}" onclick="SaltoCumpleApodos();">${SaltoCumpleChangeApodos}</a><br>${Saltodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>11/12`;
 
   if (Saltodistance < 0) {
     clearInterval(Salto);
@@ -128,7 +132,7 @@ var Cilindro = setInterval(function () {
 
   var Cilindrodays = Math.floor(Cilindrodistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Cilindro").innerHTML = `Sergio <a id="CilindroNombres" class="${ClassCilindroCumple}" title="${ClickMasCilindroCumple}" onclick="CilindroTodo();">${CilindroNombresCumple}</a><br>${Cilindrodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>12/8`;
+  document.getElementById("Cilindro").innerHTML = `Sergio <a class="${CilindroCumpleClassChange}" title="${CilindroCumpleTitleChange}" onclick="CilindroCumpleApodos();">${CilindroCumpleChangeApodos}</a><br>${Cilindrodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>12/8`;
 
   if (Cilindrodistance < 0) {
     clearInterval(Cilindro);
@@ -207,3 +211,4 @@ var Almudena = setInterval(function () {
     document.getElementById("Sergio").innerHTML = "¡Hoy!";
   }
 }, 1000);
+
