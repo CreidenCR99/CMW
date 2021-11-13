@@ -68,11 +68,15 @@ video {
 img {
   border: 2px #f7f7f7 solid;
   text-align: center;
-  background-color: #000;
+  background-color: #fff;
   zoom: 65%;
-  transition: transform 1s;
+  transition: 1s;
+  border-radius: 50%;
 }
 
 img:hover {
   transform: scale(1.1);
+  border-radius: 5%;
+  border: 2px #f7f7f7 solid;
+  background-color: #fff;
 }
