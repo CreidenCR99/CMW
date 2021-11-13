@@ -38,14 +38,15 @@ h3 {
 }
 
 .a {
-  color: #7f7f7f;
-  text-decoration: underline #7f7f7f;
+  color: #808080;
+  text-decoration: underline #404040;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 .a:hover {
-  color: #fff;
-  text-decoration: underline #000;
-  cursor: pointer;
+  color: #404040;
+  text-decoration: underline #808080;
 }
 
  ::selection {
@@ -62,4 +63,16 @@ video {
   cursor: pointer;
   text-align: center;
   background-color: #000;
+}
+
+img {
+  border: 2px #f7f7f7 solid;
+  text-align: center;
+  background-color: #000;
+  zoom: 65%;
+  transition: transform 1s;
+}
+
+img:hover {
+  transform: scale(1.1);
 }
