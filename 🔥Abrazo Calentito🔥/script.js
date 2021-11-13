@@ -212,3 +212,38 @@ var Almudena = setInterval(function () {
   }
 }, 1000);
 
+// ----- Nel ----- \\
+
+var NelCumple = new Date("Dec 18, 2021 00:00:00").getTime();
+
+var Nel = setInterval(function () {
+
+  var Neldistance = NelCumple - now;
+
+  var Neldays = Math.floor(Neldistance / (1000 * 60 * 60 * 24));
+
+  document.getElementById("Nel").innerHTML = `Nel (Nelini; Pranket; Nel Caprichoso)<br>${Neldays}d ${Hours}h ${Minutes}m ${Seconds}s<br>18/12`;
+
+  if (Neldistance < 0) {
+    clearInterval(Nel);
+    document.getElementById("Nel").innerHTML = "¡Hoy!";
+  }
+}, 1000);
+
+// ----- Xurde ----- \\
+
+var XurdeCumple = new Date("Nov 5, 2022 00:00:00").getTime();
+
+var Xurde = setInterval(function () {
+
+  var Xurdedistance = XurdeCumple - now;
+
+  var Xurdedays = Math.floor(Xurdedistance / (1000 * 60 * 60 * 24));
+
+  document.getElementById("Xurde").innerHTML = `Xurde (ElBisonte71)<br>${Xurdedays}d ${Hours}h ${Minutes}m ${Seconds}s<br>5/11`;
+
+  if (Xurdedistance < 0) {
+    clearInterval(Xurde);
+    document.getElementById("Xurde").innerHTML = "¡Hoy!";
+  }
+}, 1000);
