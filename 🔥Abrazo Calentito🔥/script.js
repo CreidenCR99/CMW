@@ -1,7 +1,7 @@
 // ---------- Frases ---------- \\
 
 function SaltoApodos() {
-  document.getElementById("SaltoApodos").innerHTML = "(Salto; Saltitos; Salsa; Chachi; ChuperChadich; Calcio Potasico,CaK; Shadiscoteca; Vector Squalo III; Ricostes_Maricortes; Ñadick; Shadick; Xavi; Chino2; ViceTHOR; Vitrocerámica)"
+  document.getElementById("SaltoApodos").innerHTML = "(Salto; Saltitos; SuperSalsa; Chachi; ChuperChadich; Calcio Potasico,CaK; Shadiscoteca; Vector Squalo III; Ricostes_Maricortes; Ñadik; Shadick; Xavi; Chino2; ViceTHOR; Vitrocerámica; Shadisco; SuperLopez; Viti; El pibe de los 100 subs)"
   document.getElementById("SaltoApodos").className = ""
   document.getElementById("SaltoApodos").title = ""
 }
@@ -53,7 +53,7 @@ var SaltoCumpleClassChange = ["a"]
 var SaltoCumpleTitleChange = ["Click para ver más"]
 
 function SaltoCumpleApodos() {
-  SaltoCumpleChangeApodos = ["(Salto; Saltitos; Salsa; Chachi; ChuperChadich; Calcio Potasico,CaK; Shadiscoteca; Vector Squalo III; Ricostes_Maricortes; Ñadick; Shadick; Xavi; Chino2; ViceTHOR; Vitrocerámica)"]
+  SaltoCumpleChangeApodos = ["(Salto; Saltitos; SuperSalsa; Chachi; ChuperChadich; Calcio Potasico,CaK; Shadiscoteca; Vector Squalo III; Ricostes_Maricortes; Ñadik; Shadick; Xavi; Chino2; ViceTHOR; Vitrocerámica; Shadisco; SuperLopez; Viti; El pibe de los 100 subs)"]
   SaltoCumpleClassChange = [""]
   SaltoCumpleTitleChange = [""]
 }
