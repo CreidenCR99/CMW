@@ -63,6 +63,14 @@ video {
   cursor: pointer;
   text-align: center;
   background-color: #000;
+  transition: 1s;
+  border-radius: 5%;
+}
+
+video:hover {
+  transform: scale(1.1);
+  border-radius: 0%;
+
 }
 
 img {
