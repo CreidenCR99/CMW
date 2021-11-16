@@ -2,6 +2,15 @@
   0% {
     opacity: 0;
   }
+  25% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.7;
+  }
   100% {
     opacity: 1;
   }
@@ -51,14 +60,9 @@ h2 {
   background: #7f7f7f;
 }
 
-.Pointer {
-  cursor: pointer;
-}
-
 video {
   border: 2px #800030 solid;
   cursor: pointer;
-  text-align: center;
   background-color: #000;
   transition: 1s;
   border-radius: 7.5%;
@@ -67,7 +71,6 @@ video {
 video:hover {
   transform: scale(1.1);
   border-radius: 0%;
-
 }
 
 img {
