@@ -7,17 +7,7 @@
   }
 }
 
-@keyframes backgroundloading {
-  0% {
-    background-color: #191919;
-  }
-  100% {
-    background-color: #000;
-  }
-}
-
 html {
-  animation: backgroundloading 0.5s;
   user-select: none;
 }
 
