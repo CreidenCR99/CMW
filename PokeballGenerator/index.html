@@ -4,24 +4,8 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" sizes="1000x1000" href="https://creidencr99.github.io/CMW/img/icon.png"/>
     <title>Pokeball Generator - CMW</title>
-    <style>
-      body {
-        background-color: #141414;
-      }
-      img {
-      width: 512px;
-      height: 512px;
-      background-color: #343434;
-      border: 1px solid #fff;
-      }
-    </style>
-    <script>
-      var poke = Math.floor(Math.random() * (4) + 1)
-      function RandomPokeball() {
-          poke =+ Math.floor(Math.random() * (4) + 1)
-          document.getElementById("Poke").src = "img/poke" + poke + ".png"
-      }
-    </script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <center>
@@ -30,24 +14,10 @@
     </center>
     <!-- <left>
       <button onclick="VecImagenes()">Generar imagen</button>
-      </left>
-      <center>
-      <script language="javascript">
-      
-      function VecImagenes()
-      {
-      n=0;
-      this[n++]="img/poke.png";
-      this[n++]="img/poke1.png";
-      this[n++]="img/poke2.png";
-      this[n++]="img/poke3.png"
-      this.N=n;
-      }
-      var Imagenes=new VecImagenes();
-      src= Imagenes[ Math.floor(Math.random() * Imagenes.N) ] ;
-      document.write("<img src="+src+">");
-      
-      </script>
-      </center> -->
+      </left> -->
+      <img class="load" src="img/poke1.png">
+      <img class="load" src="img/poke2.png">
+      <img class="load" src="img/poke3.png">
+      <img class="load" src="img/poke4.png">
   </body>
 </html>
