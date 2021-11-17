@@ -168,7 +168,7 @@ var Valeria = setInterval(function () {
 
   var Valeriadays = Math.floor(Valeriadistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Valeria").innerHTML = `Valeria (Brutal)<br>${Valeriadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>14/7`;
+  document.getElementById("Valeria").innerHTML = `Valeria<br>${Valeriadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>14/7`;
 
   if (Valeriadistance < 0) {
     clearInterval(Valeria);
