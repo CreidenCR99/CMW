@@ -1,3 +1,29 @@
+// ---------- Divs ---------- \\
+
+function Himno() {
+  document.getElementById("Himno").style= "display: block;"
+  document.getElementById("h2Himno").style = "cursor: default;"
+  document.getElementById("h2Himno").title = "Nuestro himno"
+}
+
+function Logo() {
+  document.getElementById("Logo").style= "display: block;"
+  document.getElementById("h2Logo").style = "cursor: default;"
+  document.getElementById("h2Logo").title = "Nuestra imagen del grupo"
+}
+
+function Frases() {
+  document.getElementById("Frases").style = "display: block;"
+  document.getElementById("h2Frases").style = "cursor: default;"
+  document.getElementById("h2Frases").title = "Frases random"
+}
+
+function Cumples() {
+  document.getElementById("Cumples").style = "display: block;"
+  document.getElementById("h2Cumples").style = "cursor: default;"
+  document.getElementById("h2Cumples").title = "Calendario de cumpleaños"
+}
+
 // ---------- Frases ---------- \\
 
 function SaltoApodos() {
