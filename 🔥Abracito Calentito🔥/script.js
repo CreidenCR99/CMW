@@ -16,7 +16,12 @@ function DiegoApodos() {
   document.getElementById("DiegoApodos").innerHTML = "(Amigo capullo de Adri; Mismógino, transfóbico, homófobo y racista)"
   document.getElementById("DiegoApodos").className = ""
   document.getElementById("DiegoApodos").title = ""
+}
 
+function IoApodos() {
+  document.getElementById("IoApodos").innerHTML = "(Pirómano; Suicida; Credenciales; Pato; Io)"
+  document.getElementById("IoApodos").className = ""
+  document.getElementById("IoApodos").title = ""
 }
 
 // ---------- Cumples ---------- \\
@@ -68,6 +73,16 @@ function CilindroCumpleApodos() {
   CilindroCumpleTitleChange = [""]
 }
 
+var IoCumpleChangeApodos = ["(...)"]
+var IoCumpleClassChange = ["a"]
+var IoCumpleTitleChange = ["Click para ver más"]
+
+function IoCumpleApodos() {
+  IoCumpleChangeApodos = ["(Pirómano; Suicida; Credenciales; Pato; Io)"]
+  IoCumpleClassChange = [""]
+  IoCumpleTitleChange = [""]
+}
+
 // ----- Grupo ----- \\
 
 var GrupoCumple = new Date("Oct 6, 2022 00:00:00").getTime();
@@ -96,7 +111,7 @@ var Io = setInterval(function () {
 
   var Iodays = Math.floor(Iodistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Io").innerHTML = `Adrián (Pirómano; Suicida; Credenciales; Pato)<br>${Iodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>26/9`;
+  document.getElementById("Io").innerHTML = `Adrián <a class="${IoCumpleClassChange}" title="${IoCumpleTitleChange}" onclick="IoCumpleApodos();">${IoCumpleChangeApodos}</a><br>${Iodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>26/9`;
 
   if (Iodistance < 0) {
     clearInterval(Io);
