@@ -150,7 +150,7 @@ var Paula = setInterval(function () {
 
   var Pauladays = Math.floor(Pauladistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Paula").innerHTML = `Paula<br>${Pauladays}d ${Hours}h ${Minutes}m ${Seconds}s<br>27/11`;
+  document.getElementById("Paula").innerHTML = `Paula (Capitana del ship)<br>${Pauladays}d ${Hours}h ${Minutes}m ${Seconds}s<br>27/11`;
 
   if (Pauladistance < 0) {
     clearInterval(Paula);
@@ -168,7 +168,7 @@ var Valeria = setInterval(function () {
 
   var Valeriadays = Math.floor(Valeriadistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Valeria").innerHTML = `Valeria<br>${Valeriadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>14/7`;
+  document.getElementById("Valeria").innerHTML = `Valeria (Brutal)<br>${Valeriadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>14/7`;
 
   if (Valeriadistance < 0) {
     clearInterval(Valeria);
