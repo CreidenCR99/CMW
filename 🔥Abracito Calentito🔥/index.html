@@ -18,24 +18,31 @@
   <center>
     <h1>🔥Abracito Calentito🔥</h1>
 
-    <h2 title="Nuestro himno">📝Himno:</h2>
+    <h2 id="h2Himno" style="cursor: pointer;" onclick="Himno();" title="Click para ver más">📝Himno:</h2>
+    <div style="display: none;" id="Himno">
       <h3>«Set Fire to the Rain» ~ Adele</h3>
       <video width="560" height="auto" controls>
         <source src="img/Himno.mp4" type="video/mp4">
         Tu dispositivo no soporta este archivo de vídeo.
       </video>
+      </div>
 
-    <h2 title="Nuestra imagen del grupo">📷Logo:</h2>
+    <h2 id="h2Logo" style="cursor: pointer;" onclick="Logo();" title="Click para ver más">📷Logo:</h2>
+    <div style="display: none;" id="Logo">
       <img draggable="false" src="img/icon2.png">
+      </div>
        
-    <h2 title="Frases random">🔤Frases:</h2>
+    <h2 id="h2Frases" style="cursor: pointer;" onclick="Frases();" title="Click para ver más">🔤Frases:</h2>
+    <div style="display: none;" id="Frases">
       <h3>"Si mueres, pierdes la vida." - Víctor <a class="a" id="SaltoApodos" title="Click para ver más" onclick="SaltoApodos();">(...)</a></h3>
       <h3>"Prendele fuego." - Adrián <a class="a" id="IoApodos" title="Click para ver más" onclick="IoApodos();">(...)</a></h3>
       <h3>"No quiero acabar morido... De momento." - Diego <a class="a" id="DiegoApodos" title="Click para ver más" onclick="DiegoApodos();">(...)</a></h3>
       <h3>"¿Eso por donde se mete?" - Sergio <a class="a" id="CilindroApodos" title="Click para ver más" onclick="CilindroApodos();">(...)</a></h3>
       <h3>"Que descanséis cuando os durmáis" - Paula (Capitana del ship)</h3>
+    </div>
 
-    <h2 title="Calendario de cumpleaños">🎂Cumpleaños:</h2>
+    <h2 id="h2Cumples" style="cursor: pointer;" onclick="Cumples();" title="Click para ver más">🎂Cumpleaños:</h2>
+    <div style="display: none;" id="Cumples">
       <h3 id="Grupo">Grupo (Japi Jalogüin)<br><br>6/10</h3>
       <h3 id="Io">Adrián <a class="a" title="Click para ver más" onclick="IoCumpleApodos();">(...)</a><br><br>26/9</h3>
       <h3 id="Salto">Víctor <a class="a" title="Click para ver más" onclick="SaltoCumpleApodos();">(...)</a><br><br>11/12</h3>
@@ -46,6 +53,7 @@
       <h3 id="Sergio">Sergio (Casquete; Papa)<br><br>10/2</h3>
       <h3 id="Nel">Nel (Nelini; Pranket; Nel Caprichoso)<br><br>18/12</h3>
       <h3 id="Xurde">Xurde (ElBisonte71)<br><br>5/11</h3>
+      </div>
           
   </center>
 </body>
