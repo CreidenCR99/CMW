@@ -96,7 +96,7 @@ var Io = setInterval(function () {
 
   var Iodays = Math.floor(Iodistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Io").innerHTML = `Adrián (Pirómano; Suicida)<br>${Iodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>26/9`;
+  document.getElementById("Io").innerHTML = `Adrián (Pirómano; Suicida; Credenciales; Pato)<br>${Iodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>26/9`;
 
   if (Iodistance < 0) {
     clearInterval(Io);
