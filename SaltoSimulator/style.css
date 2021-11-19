@@ -2,6 +2,10 @@ body {
     background-color: #e7e287;
 }
 
+center {
+    text-align: 50%;
+}
+
 h1,h2,h3 {
     color: #000;
 }

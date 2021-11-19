@@ -2,28 +2,15 @@ function rngnumber() {
 	console.log(` Diego:      ${DiegoInverted} \n Tyranitar:  ${TyranitarShiny} \n Garchomp:   ${GarchompShiny} \n Sylveon:    ${SylveonShiny} \n Luvdisc:    ${LuvdiscShiny}`)
 }
 
-var DiegoInverted = 0;
-var TyranitarShiny = 0;
-var GarchompShiny = 0;
-var SylveonShiny = 0;
-var LuvdiscShiny = 0;
-
-DiegoInverted = Math.random() * (0 + 100);
-DiegoInverted = Math.round(DiegoInverted);
-
-TyranitarShiny = Math.random() * (0 + 100);
-TyranitarShiny = Math.round(TyranitarShiny);
-
-GarchompShiny = Math.random() * (0 + 100);
-GarchompShiny = Math.round(GarchompShiny);
-
-SylveonShiny = Math.random() * (0 + 100);
-SylveonShiny = Math.round(SylveonShiny);
-
-LuvdiscShiny = Math.random() * (0 + 100);
-LuvdiscShiny = Math.round(LuvdiscShiny);
+var DiegoInverted = Math.floor(Math.random() * (100));
+var TyranitarShiny = Math.floor(Math.random() * (100));
+var GarchompShiny = Math.floor(Math.random() * (100));
+var SylveonShiny = Math.floor(Math.random() * (100));
+var LuvdiscShiny = Math.floor(Math.random() * (100));
 
 window.onload = function onload() {
+
+	// Diego
 
 	if (DiegoInverted >= 90) {
 		document.getElementById("DiegoI").src =
