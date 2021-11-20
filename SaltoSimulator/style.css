@@ -1,6 +1,7 @@
 body {
     background-color: #181d78;
     color: #e7e287;
+    user-select: none;
   }
   
   center {
