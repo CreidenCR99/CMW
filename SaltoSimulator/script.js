@@ -5,7 +5,7 @@ function ClickCabeza() {
 }
 
 function render60() {
-    document.getElementById("render").innerHTML = Saltos;
+    document.getElementById("render").innerHTML = `${Saltos} saltos`;
 }
 
 function render1() {

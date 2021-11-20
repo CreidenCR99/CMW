@@ -1,11 +1,62 @@
 body {
-    background-color: #e7e287;
-}
-
-center {
+    background-color: #181d78;
+    color: #e7e287;
+  }
+  
+  center {
     text-align: 50%;
-}
-
-h1,h2,h3 {
-    color: #000;
-}
+  }
+  
+  h1,
+  h2,
+  h3 {
+    color: #e7e287;
+    font-family: "Monaco", Monospace;
+  }
+  
+  .Cabeza {
+    width: 75%;
+    height: auto;
+  }
+  
+  .Separador {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    grid-template-rows: 100%;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "Izquierda Centro Derecha";
+  }
+  
+  .Izquierda {
+    grid-area: Izquierda;
+    border: #008b8b solid 2px;
+  }
+  
+  .Centro {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25% 75%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "Mejoras" "Tienda";
+    grid-area: Centro;
+    border: #008b8b solid 2px;
+  }
+  
+  .Mejoras {
+    grid-area: Mejoras;
+    border-bottom: #008b8b solid 2px;
+  }
+  
+  .Tienda {
+    grid-area: Tienda;
+    border-top: #008b8b solid 2px;
+  }
+  
+  .Derecha {
+    grid-area: Derecha;
+    border: #008b8b solid 2px;
+  }
