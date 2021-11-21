@@ -15,14 +15,53 @@
   <body>
     <div class="Separador">
       <div class="Izquierda">
-        <h1 id="render"></h1>
+        <h1 class="Saltos" id="Saltos">0 Saltos</h1>
+        <h3 class="SPS" id="SPS">0 por segundo</h3>
         <img draggable="false" class="Cabeza" onclick="ClickCabeza();" src="img/Cabeza.png">
       </div>
       <div class="Centro">
-        <div class="Mejoras">Mejoras</div>
-        <div class="Tienda">Tienda</div>
+        <div class="Mejoras">
+          <h1>Mejoras</h1>
+        </div>
+        <div class="Tienda">
+            <div onclick="ComprarTorchic();" class="Objetos">
+              <div class="Imagen">
+                <img class="ImagenObjetos" draggable="false" src="img/pkmn/Torchic.png">
+              </div>
+              <div class="Datos">
+                <h1 id="DatosTorchic" class="DatosObjetos">Torchic<br>15 saltos<br>1 SPS</h1>
+              </div>
+              <div class="Total">
+                <h1 class="TotalObjetos" id="TorchicTotal">0</h1>
+              </div>
+            </div>
+            <div onclick="ComprarCramorant();" class="Objetos">
+              <div class="Imagen">
+                <img class="ImagenObjetos" draggable="false" src="img/pkmn/Cramorant.png">
+              </div>
+              <div class="Datos">
+                <h1 id="DatosCramorant" class="DatosObjetos">Cramorant<br>100 saltos<br>3 SPS</h1>
+              </div>
+              <div class="Total">
+                <h1 class="TotalObjetos" id="CramorantTotal">0</h1>
+              </div>
+          </div>
+            <div onclick="ComprarKabutops();" class="Objetos">
+              <div class="Imagen">
+                <img class="ImagenObjetos" draggable="false" src="img/pkmn/Kabutops.png"> 
+              </div>
+              <div class="Datos">
+                <h1 id="DatosKabutops" class="DatosObjetos">Kabutops<br>1100 saltos<br>8 SPS</h1>
+              </div>
+              <div class="Total">
+                <h1 class="TotalObjetos" id="KabutopsTotal">0</h1>
+              </div>
+            </div>
+        </div>
       </div>
-      <div class="Derecha">Ajustes</div>
+      <div class="Derecha">
+        <h1>Ajustes</h1>
+      </div>
     </div>
     </div>
   </body>
