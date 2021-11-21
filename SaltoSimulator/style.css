@@ -1,63 +1,143 @@
+head {
+  display: none;
+}
+
 body {
-    background-color: #181d78;
-    color: #e7e287;
-    user-select: none;
-  }
-  
-  center {
-    text-align: 50%;
-  }
-  
-  h1,
-  h2,
-  h3 {
-    color: #e7e287;
-    font-family: "Monaco", Monospace;
-  }
-  
-  .Cabeza {
-    width: 75%;
-    height: auto;
-  }
-  
-  .Separador {
-    text-align: center;
-    display: grid;
-    grid-template-columns: 33% 34% 33%;
-    grid-template-rows: 100%;
-    grid-auto-columns: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas: "Izquierda Centro Derecha";
-  }
-  
-  .Izquierda {
-    grid-area: Izquierda;
-    border: #008b8b solid 2px;
-  }
-  
-  .Centro {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 25% 75%;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas: "Mejoras" "Tienda";
-    grid-area: Centro;
-    border: #008b8b solid 2px;
-  }
-  
-  .Mejoras {
-    grid-area: Mejoras;
-    border-bottom: #008b8b solid 2px;
-  }
-  
-  .Tienda {
-    grid-area: Tienda;
-    border-top: #008b8b solid 2px;
-  }
-  
-  .Derecha {
-    grid-area: Derecha;
-    border: #008b8b solid 2px;
-  }
+  background-color: #181d78;
+  user-select: none;
+}
+
+center {
+  text-align: 50%;
+}
+
+h1,
+h2,
+h3 {
+  color: #e7e287;
+  font-family: "Monaco", Monospace;
+  font-size: 250%;
+}
+
+.Separador {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 33% 34% 33%;
+  grid-template-rows: 100%;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Izquierda Centro Derecha";
+}
+
+.Izquierda {
+  height: 100%;
+  grid-area: Izquierda;
+  border: #008b8b solid 2px;
+}
+
+.Centro {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 25% 75%;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Mejoras" "Tienda";
+  grid-area: Centro;
+  border: #008b8b solid 2px;
+}
+
+.Mejoras {
+  grid-area: Mejoras;
+  border-bottom: #008b8b solid 2px;
+}
+
+.Tienda {
+  grid-area: Tienda;
+  border-top: #008b8b solid 2px;
+}
+
+.Derecha {
+  height: 100%;
+  grid-area: Derecha;
+  border: #008b8b solid 2px;
+}
+
+.Objetos {
+  cursor: pointer;
+  width: 75%;
+  background-color: #fff;
+  border: #000 solid 2px;
+  margin-left: 12.5%;
+  margin-top: 4%;
+  display: grid;
+  grid-template-columns: 30% 45% 25%;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Imagen Datos Total";
+}
+
+.Imagen {
+  grid-area: Imagen;
+  background-color: #fff;
+  border: #000 solid 2px;
+}
+
+.Datos {
+  grid-area: Datos;
+  background-color: #fff;
+  border: #000 solid 2px;
+  border-right: #fff;
+}
+
+.Total {
+  grid-area: Total;
+  border: #000 solid 2px;
+  border-left: #fff;
+}
+
+.DatosObjetos {
+  color: #000;
+  font-size: 130%;
+  font-weight: bolder;
+  text-align: left;
+  padding-left: 4.7%;
+}
+
+.ImagenObjetos {
+  width: 100%;
+  height: 100%;
+}
+
+.TotalObjetos {
+  text-align: center;
+  color: #000;
+  text-align: center;
+  font-family: "Monaco", Monospace;
+  font-size: 200%;
+}
+
+.Cabeza {
+  width: 75%;
+  height: auto;
+  height: auto;
+  cursor: pointer;
+  border-radius: 40% 50% 45% 50%;
+}
+
+.Saltos {
+  color: #e7e287;
+  font-family: "Monaco", Monospace;
+  font-size: 250%;
+}
+
+.SPS {
+  color: #e7e287;
+  font-family: "Monaco", Monospace;
+  font-size: 100%;
+}
