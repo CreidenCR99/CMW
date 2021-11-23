@@ -1,0 +1,20 @@
+head {
+  display: none;
+}
+
+body {
+  background-color: #181d78;
+  user-select: none;
+}
+
+center {
+  text-align: 50%;
+}
+
+h1,
+h2,
+h3 {
+  color: #e7e287;
+  font-family: "Monaco", Monospace;
+  font-size: 250%;
+}

@@ -1,0 +1,39 @@
+.DatosObjetos {
+    color: #e7e287;
+    font-size: 130%;
+    font-weight: bolder;
+    text-align: left;
+    padding-left: 4.7%;
+  }
+  
+  .ImagenObjetos {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .TotalObjetos {
+    padding: 10%;
+    color: #e7e287;
+    font-family: "Monaco", Monospace;
+    font-size: 200%;
+  }
+  
+  .Cabeza {
+    width: 75%;
+    height: auto;
+    height: auto;
+    cursor: pointer;
+    border-radius: 40% 50% 45% 50%;
+  }
+  
+  .Saltos {
+    color: #e7e287;
+    font-family: "Monaco", Monospace;
+    font-size: 250%;
+  }
+  
+  .SPS {
+    color: #e7e287;
+    font-family: "Monaco", Monospace;
+    font-size: 100%;
+  }
