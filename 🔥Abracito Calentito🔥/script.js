@@ -159,13 +159,13 @@ var Salto = setInterval(function () {
 
   if (Saltodistance < 0) {
     clearInterval(Salto);
-    document.getElementById("Salto").innerHTML = "¡Hoy!";
+    document.getElementById("SaltoFecha").innerHTML = "¡Hoy!";
   }
 }, 1000);
 
 // ----- Cilindro ----- \\
 
-var CilindroCumple = new Date("Aug 15, 2022 00:00:00").getTime();
+var CilindroCumple = new Date("Aug 12, 2022 00:00:00").getTime();
 
 var Cilindro = setInterval(function () {
 
@@ -173,11 +173,11 @@ var Cilindro = setInterval(function () {
 
   var Cilindrodays = Math.floor(Cilindrodistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Cilindro").innerHTML = `Sergio <a class="${CilindroCumpleClassChange}" title="${CilindroCumpleTitleChange}" onclick="CilindroCumpleApodos();">${CilindroCumpleChangeApodos}</a><br>${Cilindrodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>12/8`;
+  document.getElementById("Cilindro").innerHTML = `Sergio <a class="${CilindroCumpleClassChange}" title="${CilindroCumpleTitleChange}" onclick="CilindroCumpleApodos();">${CilindroCumpleChangeApodos}</a><br><b class="h3" id="CilindroFecha">${Cilindrodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>12/8</b>`;
 
   if (Cilindrodistance < 0) {
     clearInterval(Cilindro);
-    document.getElementById("Cilindro").innerHTML = "¡Hoy!";
+    document.getElementById("CilindroFecha").innerHTML = "¡Hoy!";
   }
 }, 1000);
 
@@ -191,7 +191,7 @@ var Paula = setInterval(function () {
 
   var Pauladays = Math.floor(Pauladistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Paula").innerHTML = `Paula (Capitana del ship)<br><a class="h3" id="PaulaFecha">${Pauladays}d ${Hours}h ${Minutes}m ${Seconds}s<br>27/11</h3>`;
+  document.getElementById("Paula").innerHTML = `Paula (Capitana del ship)<br><b class="h3" id="PaulaFecha">${Pauladays}d ${Hours}h ${Minutes}m ${Seconds}s<br>27/11</b></h3>`;
 
   if (Pauladistance < 0) {
     clearInterval(Paula);
@@ -268,23 +268,5 @@ var Nel = setInterval(function () {
   if (Neldistance < 0) {
     clearInterval(Nel);
     document.getElementById("Nel").innerHTML = "¡Hoy!";
-  }
-}, 1000);
-
-// ----- Xurde ----- \\
-
-var XurdeCumple = new Date("Nov 5, 2022 00:00:00").getTime();
-
-var Xurde = setInterval(function () {
-
-  var Xurdedistance = XurdeCumple - now;
-
-  var Xurdedays = Math.floor(Xurdedistance / (1000 * 60 * 60 * 24));
-
-  document.getElementById("Xurde").innerHTML = `Xurde (ElBisonte71)<br>${Xurdedays}d ${Hours}h ${Minutes}m ${Seconds}s<br>5/11`;
-
-  if (Xurdedistance < 0) {
-    clearInterval(Xurde);
-    document.getElementById("Xurde").innerHTML = "¡Hoy!";
   }
 }, 1000);
