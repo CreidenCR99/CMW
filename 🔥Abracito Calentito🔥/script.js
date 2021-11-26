@@ -191,11 +191,11 @@ var Paula = setInterval(function () {
 
   var Pauladays = Math.floor(Pauladistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Paula").innerHTML = `Paula (Capitana del ship)<br>${Pauladays}d ${Hours}h ${Minutes}m ${Seconds}s<br>27/11`;
+  document.getElementById("Paula").innerHTML = `Paula (Capitana del ship)<br><a class="h3" id="PaulaFecha">${Pauladays}d ${Hours}h ${Minutes}m ${Seconds}s<br>27/11</h3>`;
 
   if (Pauladistance < 0) {
     clearInterval(Paula);
-    document.getElementById("Paula").innerHTML = "¡Hoy!";
+    document.getElementById("PaulaFecha").innerHTML = "¡Hoy!";
   }
 }, 1000);
 

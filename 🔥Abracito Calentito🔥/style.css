@@ -43,6 +43,11 @@ h2 {
   text-decoration: underline #808080 solid;
 }
 
+.h3 {
+  color: #e6e6e6;
+  font-family: verdana;
+}
+
 .a {
   color: #808080;
   text-decoration: underline #404040;
