@@ -1,0 +1,84 @@
+@keyframes LoadingOpacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes LoadingBackground {
+  0% {
+    background-color: #000;
+  }
+  50% {
+    background-color: #000;
+  }
+  100% {
+    background-color: #181d78;
+  }
+}
+
+.Todo {
+  animation-name: LoadingOpacity;
+  animation-duration: 5s;
+  user-select: none;
+}
+
+body {
+  animation: LoadingBackground 5s;
+}
+
+/* @keyframes LoadFadeOut {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+  @keyframes LoadAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .Load {
+    animation: LoadFateOut 1s;
+    opacity: 0;
+  }
+
+  .PreLoader {
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 70px;
+    height: 70px;
+    border: 10px solid #eee;
+    border-top: 10px solid #666;
+    border-radius: 50%;
+    animation: LoadAnimation 1s infinite linear;
+  }
+
+  .LoadText {
+    margin-top: 120px;
+    margin-left: 47%;
+    opacity: none;
+    position: absolute;
+    color: #fff;
+    user-select: none;
+  } */

@@ -6,14 +6,14 @@ function ClickCabeza() {
 }
 
 function render60() {
-  Saltos += SPS
   document.getElementById("Saltos").innerHTML = `${Math.floor(Saltos)} Saltos`;
-  document.getElementById("SPS").innerHTML = `${SPS*30} por segundo`;
+  document.getElementById("SPS").innerHTML = `${SPS*10} por segundo`;
   TiendaDatos();
 };
 
-function render30() {
-  SPS =+ ((TorchicInv / 10) + (CramorantInv * CramorantSPS) + (KabutopsInv * KabutopsSPS)) / 30
+function render10() {
+  SPS =+ ((TorchicInv / 10) + (CramorantInv * CramorantSPS) + (KabutopsInv * KabutopsSPS)) / 10;
+  Saltos += SPS;
 }
 
 function render1() {
@@ -26,8 +26,8 @@ setInterval(function () {
 }, 1000);
 
 setInterval(function () {
-  render30();
-}, 1000 / 30);
+  render10();
+}, 1000 / 10);
 
 setInterval(function () {
   render60();

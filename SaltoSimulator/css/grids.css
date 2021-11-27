@@ -1,4 +1,5 @@
 .Separador {
+  background-color: #181d78;
   height: 100%;
   width: 100%;
   text-align: center;
@@ -12,6 +13,7 @@
 }
 
 .Izquierda {
+  background-color: #181d78;
   height: 100%;
   grid-area: Izquierda;
   border: #008b8b solid 2px;
@@ -21,6 +23,7 @@
 }
 
 .Centro {
+  background-color: #181d78;
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -45,6 +48,7 @@
 }
 
 .Derecha {
+  background-color: #181d78;
   height: 100%;
   grid-area: Derecha;
   border: #008b8b solid 2px;
