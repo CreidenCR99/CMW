@@ -24,6 +24,11 @@
     height: auto;
     cursor: pointer;
     border-radius: 40% 50% 45% 50%;
+    transition: transform 0.1s;
+  }
+
+  .Cabeza:hover {
+    transform: scale(1.1);
   }
   
   .Saltos {

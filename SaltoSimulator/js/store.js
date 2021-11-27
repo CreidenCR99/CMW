@@ -1,5 +1,5 @@
 var TorchicInv = 0;
-var TorchicSPS = TorchicInv / 10;
+var TorchicSPS = 0.1;
 var TorchicPrecio = 15;
 
 function ComprarTorchic() {
@@ -50,3 +50,15 @@ function TiendaDatos() {
 }
 
 var Click = 1;
+var ClickUpgradePrice = 1000;
+
+function clickUpgrade() {
+  if(Saltos >= ClickUpgradePrice) {
+    Saltos -= ClickUpgradePrice;
+    Click += 1;
+    ClickUpgradePrice += 1000;
+  }
+  else {
+    console.log("no")
+  }
+}
