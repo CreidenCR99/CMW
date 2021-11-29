@@ -24,6 +24,12 @@ function Cumples() {
   document.getElementById("h2Cumples").title = "Calendario de cumpleaños"
 }
 
+function Ships() {
+  document.getElementById("Ships").style = "display: block;"
+  document.getElementById("h2Ships").style = "cursor: default;"
+  document.getElementById("h2Ships").title = "Todos los ships del grupo"
+}
+
 // ---------- Frases ---------- \\
 
 function SaltoApodos() {
@@ -137,11 +143,11 @@ var Io = setInterval(function () {
 
   var Iodays = Math.floor(Iodistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Io").innerHTML = `Adrián <a class="${IoCumpleClassChange}" title="${IoCumpleTitleChange}" onclick="IoCumpleApodos();">${IoCumpleChangeApodos}</a><br>${Iodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>26/9`;
+  document.getElementById("Io").innerHTML = `Adrián <a class="${IoCumpleClassChange}" title="${IoCumpleTitleChange}" onclick="IoCumpleApodos();">${IoCumpleChangeApodos}</a><br><b class="h3" id="IoFecha">${Iodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>26/9</b>`;
 
   if (Iodistance < 0) {
     clearInterval(Io);
-    document.getElementById("Io").innerHTML = "¡Hoy!";
+    document.getElementById("IoFecha").innerHTML = "¡Hoy!";
   }
 }, 1000);
 
@@ -155,7 +161,7 @@ var Salto = setInterval(function () {
 
   var Saltodays = Math.floor(Saltodistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Salto").innerHTML = `Víctor <a class="${SaltoCumpleClassChange}" title="${SaltoCumpleTitleChange}" onclick="SaltoCumpleApodos();">${SaltoCumpleChangeApodos}</a><br>${Saltodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>11/12`;
+  document.getElementById("Salto").innerHTML = `Víctor <a class="${SaltoCumpleClassChange}" title="${SaltoCumpleTitleChange}" onclick="SaltoCumpleApodos();">${SaltoCumpleChangeApodos}</a><br><b class="h3" id="SaltoFecha">${Saltodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>11/12</b>`;
 
   if (Saltodistance < 0) {
     clearInterval(Salto);
@@ -209,7 +215,7 @@ var Valeria = setInterval(function () {
 
   var Valeriadays = Math.floor(Valeriadistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Valeria").innerHTML = `Valeria<br>${Valeriadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>14/7`;
+  document.getElementById("Valeria").innerHTML = `Valeria<br><b class="h3" id="ValeriaFecha">${Valeriadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>14/7</b>`;
 
   if (Valeriadistance < 0) {
     clearInterval(Valeria);
@@ -227,7 +233,7 @@ var Almudena = setInterval(function () {
 
   var Almudenadays = Math.floor(Almudenadistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Almudena").innerHTML = `Almudena<br>${Almudenadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>12/2`;
+  document.getElementById("Almudena").innerHTML = `Almudena<br><b class="h3" id="AlmudenaFecha">${Almudenadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>12/2</b>`;
 
   if (Almudenadistance < 0) {
     clearInterval(Almudena);
@@ -245,7 +251,7 @@ var Almudena = setInterval(function () {
 
   var Sergiodays = Math.floor(Sergiodistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Sergio").innerHTML = `Sergio (Casquete; Papa)<br>${Sergiodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>10/2`;
+  document.getElementById("Sergio").innerHTML = `Sergio (Casquete; Papa)<br><b class="h3" id="SergioFecha">${Sergiodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>10/2</b>`;
 
   if (Sergiodistance < 0) {
     clearInterval(Sergio);
@@ -263,7 +269,7 @@ var Nel = setInterval(function () {
 
   var Neldays = Math.floor(Neldistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Nel").innerHTML = `Nel (Nelini; Pranket; Nel Caprichoso)<br>${Neldays}d ${Hours}h ${Minutes}m ${Seconds}s<br>18/12`;
+  document.getElementById("Nel").innerHTML = `Nel (Nelini; Pranket; Nel Caprichoso)<br><b class="h3" id="NelFecha">${Neldays}d ${Hours}h ${Minutes}m ${Seconds}s<br>18/12</b>`;
 
   if (Neldistance < 0) {
     clearInterval(Nel);
