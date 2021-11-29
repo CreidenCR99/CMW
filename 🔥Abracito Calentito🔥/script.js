@@ -191,7 +191,7 @@ var Paula = setInterval(function () {
 
   var Pauladays = Math.floor(Pauladistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Paula").innerHTML = `Paula (Capitana del ship)<br><b class="h3" id="PaulaFecha">${Pauladays}d ${Hours}h ${Minutes}m ${Seconds}s<br>27/11</b></h3>`;
+  document.getElementById("Paula").innerHTML = `Paula (Capitana del ship)<br><b class="h3" id="PaulaFecha">${Pauladays}d ${Hours}h ${Minutes}m ${Seconds}s<br>27/11</b>`;
 
   if (Pauladistance < 0) {
     clearInterval(Paula);
@@ -213,7 +213,7 @@ var Valeria = setInterval(function () {
 
   if (Valeriadistance < 0) {
     clearInterval(Valeria);
-    document.getElementById("Valeria").innerHTML = "¡Hoy!";
+    document.getElementById("ValeriaFecha").innerHTML = "¡Hoy!";
   }
 }, 1000);
 
@@ -231,7 +231,7 @@ var Almudena = setInterval(function () {
 
   if (Almudenadistance < 0) {
     clearInterval(Almudena);
-    document.getElementById("Almudena").innerHTML = "¡Hoy!";
+    document.getElementById("AlmudenaFecha").innerHTML = "¡Hoy!";
   }
 }, 1000);
 
@@ -249,7 +249,7 @@ var Almudena = setInterval(function () {
 
   if (Sergiodistance < 0) {
     clearInterval(Sergio);
-    document.getElementById("Sergio").innerHTML = "¡Hoy!";
+    document.getElementById("SergioFecha").innerHTML = "¡Hoy!";
   }
 }, 1000);
 
@@ -267,7 +267,7 @@ var Nel = setInterval(function () {
 
   if (Neldistance < 0) {
     clearInterval(Nel);
-    document.getElementById("Nel").innerHTML = "¡Hoy!";
+    document.getElementById("NelFecha").innerHTML = "¡Hoy!";
   }
 }, 1000);
 
@@ -281,10 +281,10 @@ var Olaya = setInterval(function () {
 
   var Olayadays = Math.floor(Olayadistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Olaya").innerHTML = `Olaya (La de los audios; Oceano :333)<br>${Olayadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>6/9`;
+  document.getElementById("Olaya").innerHTML = `Olaya (La de los audios)<br><b class="h3" id="OlayaFecha">${Olayadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>6/9</b>`;
 
   if (Olayadistance < 0) {
     clearInterval(Olaya);
-    document.getElementById("Olaya").innerHTML = "¡Hoy!";
+    document.getElementById("OlayaFecha").innerHTML = "¡Hoy!";
   }
 }, 1000);
