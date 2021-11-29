@@ -183,7 +183,7 @@ var Cilindro = setInterval(function () {
 
 // ----- Paula ----- \\
 
-var PaulaCumple = new Date("Nov 27, 2021 00:00:00").getTime();
+var PaulaCumple = new Date("Nov 27, 2022 00:00:00").getTime();
 
 var Paula = setInterval(function () {
 
@@ -268,5 +268,23 @@ var Nel = setInterval(function () {
   if (Neldistance < 0) {
     clearInterval(Nel);
     document.getElementById("Nel").innerHTML = "¡Hoy!";
+  }
+}, 1000);
+
+// ----- Olaya ----- \\
+
+var OlayaCumple = new Date("Sep 6, 2022 00:00:00").getTime();
+
+var Olaya = setInterval(function () {
+
+  var Olayadistance = OlayaCumple - now;
+
+  var Olayadays = Math.floor(Olayadistance / (1000 * 60 * 60 * 24));
+
+  document.getElementById("Olaya").innerHTML = `Olaya (La de los audios; Oceano :333)<br>${Olayadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>6/9`;
+
+  if (Olayadistance < 0) {
+    clearInterval(Olaya);
+    document.getElementById("Olaya").innerHTML = "¡Hoy!";
   }
 }, 1000);

@@ -7,26 +7,31 @@
 }
 body{
     background-color: #191919;
-    filter: blur(5px);
 }
 img{
-    width: 1900px;
-    height: 2000px;
+    top: 50%;
+    left: 25%;
+    width: 979px;
+    height: 1040px;
     position: absolute;
     z-index: 1;
+    filter: blur(5px);
 }
-div{
-    width: 1900px;
-    height: 2000px;
+.div{
+    top: 50%;
+    left: 25%;
+    width: 979px;
+    height: 1040px;
     position: absolute;
     overflow: hidden;
     z-index: -1;
-    border: #191919 5px solid;
+    border: #191919 20px solid;
+    filter: blur(5px);
 }
-div:before{
+.div:before{
     content: "";
-    height: 150%;
     width: 150%;
+    height: 150%;
     position: absolute;
     background: conic-gradient(
         #fd004c,
