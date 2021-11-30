@@ -31,12 +31,7 @@ h2 {
 	font-family: verdana;
 }
 
- ::selection {
-	color: #f7f7f7;
-	background: #7f7f7f;
-}
-
- ::-moz-selection {
+::selection {
 	color: #f7f7f7;
 	background: #7f7f7f;
 }
