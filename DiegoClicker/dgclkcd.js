@@ -247,7 +247,7 @@ function pokemon() {
 
 }
 
-var countDownDate = new Date("Nov 29, 2021 21:30:00").getTime();
+var countDownDate = new Date("Dec 31, 2021 23:59:59").getTime();
 
 var x = setInterval(function() {
 
