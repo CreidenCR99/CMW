@@ -1,44 +1,44 @@
 .DatosObjetos {
-    color: #e7e287;
-    font-size: 130%;
-    font-weight: bolder;
-    text-align: left;
-    padding-left: 4.7%;
-  }
-  
-  .ImagenObjetos {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .TotalObjetos {
-    padding: 10%;
-    color: #e7e287;
-    font-family: "Monaco", Monospace;
-    font-size: 200%;
-  }
-  
-  .Cabeza {
-    width: 75%;
-    height: auto;
-    height: auto;
-    cursor: pointer;
-    border-radius: 40% 50% 45% 50%;
-    transition: transform 0.1s;
-  }
+  color: #e7e287;
+  font-size: 130%;
+  font-weight: bolder;
+  text-align: left;
+  padding-left: 4.7%;
+}
 
-  .Cabeza:hover {
-    transform: scale(1.1);
-  }
-  
-  .Saltos {
-    color: #e7e287;
-    font-family: "Monaco", Monospace;
-    font-size: 250%;
-  }
-  
-  .SPS {
-    color: #e7e287;
-    font-family: "Monaco", Monospace;
-    font-size: 100%;
-  }
+.ImagenObjetos {
+  width: 100%;
+  height: 100%;
+}
+
+.TotalObjetos {
+  padding-top: 12.5%;
+  color: #e7e287;
+  font-family: "Monaco", Monospace;
+  font-size: 200%;
+}
+
+.Cabeza {
+  padding-top: 7.5%;
+  width: 85%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 75% 90% 70% 80%;
+  transition: transform 0.2s;
+}
+
+.Cabeza:hover {
+  transform: scale(1.05);
+}
+
+.Saltos {
+  color: #e7e287;
+  font-family: "Monaco", Monospace;
+  font-size: 250%;
+}
+
+.SPS {
+  color: #e7e287;
+  font-family: "Monaco", Monospace;
+  font-size: 100%;
+}

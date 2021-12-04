@@ -48,6 +48,15 @@ function Achievement5() {
 var varAchievement6 = 0;
 
 function Achievement6() {
+  if(CrobatInv >= 1 && varAchievement6 == 0) {
+      TotalAchievements += 1;
+      varAchievement5 =+ 1;
+  }
+}
+
+var varAchievement7 = 0;
+
+function Achievement7() {
   if (Saltos >= 100 && varAchievement6 == 0) {
     TotalAchievements += 1;
     varAchievement6 =+ 1;
@@ -61,4 +70,5 @@ function Achievements() {
   Achievement4();
   Achievement5();
   Achievement6();
+  Achievement7();
 }
