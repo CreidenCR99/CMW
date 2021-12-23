@@ -88,3 +88,10 @@
   width: 36px;
   margin: -10px;
 }
+
+.Version {
+  margin: 0px;
+  font-size: medium;
+  display: block;
+  position: absolute;
+}

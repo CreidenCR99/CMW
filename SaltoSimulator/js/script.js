@@ -88,6 +88,10 @@ function Load() {
 	}, 2500);
 }
 
+document.oncontextmenu = function () {
+	return false
+}
+
 setInterval(function () {
 	render1();
 }, 1000);
