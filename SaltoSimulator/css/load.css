@@ -22,8 +22,10 @@
   }
 }
 
-.GameScreen {
-  animation: LoadingOpacity 3.5s;
+.Todo {
+  animation-name: LoadingOpacity;
+  animation-duration: 3.5s;
+  user-select: none;
 }
 
 body {

@@ -1,7 +1,5 @@
-.GameScreen {
-  padding: 0px;
-  margin: 0px;
-  height: 100vh;
+.Separador {
+  height: 650px;
   width: 100%;
   text-align: center;
   display: grid;
@@ -16,7 +14,7 @@
 .Izquierda {
   height: auto;
   grid-area: Izquierda;
-  border-right: #008b8b solid 2px;
+  border: #008b8b solid 2px;
   border-top: #008b8b solid 4px;
   border-bottom: #008b8b solid 4px;
   border-left: #008b8b solid 4px;
@@ -36,17 +34,16 @@
   border: #008b8b solid 2px;
   border-top: #008b8b solid 4px;
   border-bottom: #008b8b solid 4px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .Mejoras {
   grid-area: Mejoras;
   border-bottom: #008b8b solid 2px;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 .Tienda {
-  text-align: center;
   grid-area: Tienda;
   border-top: #008b8b solid 2px;
   display: grid;
@@ -56,8 +53,6 @@
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas: "Torchic" "Cramorant" "Kabutops" "Crobat";
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 .Torchic {
@@ -79,7 +74,7 @@
 .Objetos {
   cursor: pointer;
   width: 80%;
-  border: #008b8b solid 4px;
+  border: #008b8b solid 2px;
   margin-left: 10%;
   margin-top: 2%;
   display: grid;
@@ -89,30 +84,27 @@
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas: "Imagen Datos Total";
-  transition: transform 0.1s;
+  transition: transform 0.2s;
 }
 
 .Objetos:hover {
-  transform: scale(1.03);
-}
-
-.Objetos:active {
-  transform: scale(0.97);
+  transform: scale(1.1);
 }
 
 .Imagen {
   grid-area: Imagen;
-  border-right: #008b8b solid 2px;
+  border: #008b8b solid 2px;
 }
 
 .Datos {
   grid-area: Datos;
-  border-left: #008b8b solid 2px;
+  border: #008b8b solid 2px;
   border-right: currentColor;
 }
 
 .Total {
   grid-area: Total;
+  border: #008b8b solid 2px;
   border-left: currentColor;
 }
 
@@ -125,7 +117,7 @@
   border-right: #008b8b solid 4px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 49.9% 50.1%;
+  grid-template-rows: 50% 50%;
   grid-auto-columns: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
@@ -145,8 +137,6 @@
 
 .TituloEstadisticas {
   grid-area: TituloEstadisticas;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 .ContenidoEstadisticas {
@@ -154,7 +144,7 @@
   font-size: small;
   padding-left: 10%;
   text-align: left;
-  overflow-y: scroll;
+    overflow-y: scroll;
   overflow-x: hidden;
 }
 
@@ -170,8 +160,6 @@
 
 .TituloLogros {
   grid-area: TituloLogros;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 .ContenidoLogros {
