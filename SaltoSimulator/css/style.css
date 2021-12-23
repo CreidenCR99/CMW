@@ -4,6 +4,10 @@ head {
 
 body {
   background-color: #181d78;
+  user-select: none;
+  margin: 0px;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 center {
@@ -19,6 +23,11 @@ h3 {
 
 h1 {
   font-size: 250%;
+}
+
+::selection {
+  background-color: #e7e287;
+  color: #181d78;
 }
 
 ::-webkit-scrollbar {
