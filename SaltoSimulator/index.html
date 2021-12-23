@@ -15,13 +15,13 @@
 		<script src="js/achievements.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" type="text/css" href="css/grids.css"/>
-		<link rel="stylesheet" type="text/css" href="css/load.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animations.css"/>
 		<link rel="stylesheet" type="text/css" href="css/class.css"/>
 	</head>
-	<body onload="Load();">
-		<div class="GameScreen">
+	<body onload="Load();" id="body" style="opacity: 0; background-color: #000;">
+		<div class="GameScreen" id="GameScreen" style="display: none;">
 			<div class="Izquierda">
-				<button style="display: block; position: absolute;" onclick="TorchicInv=10;CramorantInv=10;KabutopsInv=10;CrobatInv=10;Saltos=25000;">Botón</button>
+				<button style="display: block; position: absolute; opacity: 0;" onclick="TorchicInv=10;CramorantInv=10;KabutopsInv=10;CrobatInv=10;Saltos=25000;">Win</button>
 				<h1>Salto Simulator</h1>
 				<h2 class="Saltos" id="Saltos">0 Saltos</h2>
 				<h3 class="SPS" id="SPS">0 SPS</h3>

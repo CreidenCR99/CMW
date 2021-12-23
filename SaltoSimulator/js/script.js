@@ -13,12 +13,12 @@ var ClickAchievementsUpgrade = 0;
 
 function Clicks() {
 	if (ClickPercentajePokemonsBuy == 1) {
-		ClickPokemonsUpgrade =+ (TorchicInv + CramorantInv + KabutopsInv + CrobatInv) / 20
+		ClickPokemonsUpgrade = +(TorchicInv + CramorantInv + KabutopsInv + CrobatInv) / 20
 	};
 	if (ClickPercentajeAchievementsBuy == 1) {
-		ClickAchievementsUpgrade =+ (EarnedAchievements/5)
+		ClickAchievementsUpgrade = +(EarnedAchievements / 5)
 	};
-	Click =+ 1 + (ClickPokemonsUpgrade + ClickAchievementsUpgrade)
+	Click = +1 + (ClickPokemonsUpgrade + ClickAchievementsUpgrade)
 };
 
 function render60() {
@@ -49,7 +49,7 @@ function render30() {
 };
 
 function render1() {
-	
+
 	if (Math.floor(Saltos) == 0) {
 		document.getElementById("title").innerHTML = `Salto Simulator - 0 Saltos`;
 	} else if (Math.floor(Saltos) == 1) {
@@ -61,10 +61,10 @@ function render1() {
 	} else if (Saltos >= 1000000) {
 		document.getElementById("title").innerHTML = `Salto Simulator - ${(Saltos / 1e6).toFixed(3) + "M"} Saltos`
 	};
-	
+
 	SaltosSiempre += SPS;
 	ProducidoTotal += SPS;
-	Click =+ Click.toFixed(2)
+	Click = +Click.toFixed(2)
 	Stats();
 	Achievements();
 };
@@ -80,6 +80,12 @@ function Load() {
 	document.getElementById("AchievementEmojiLeft").src = "img/Achievements.png"
 	document.getElementById("AchievementEmojiRight").src = "img/Achievements.png"
 	document.getElementById("PercentajeSales").src = "img/Upgrades/PercentajeSales.png"
+	setTimeout(() => {
+		document.getElementById("body").style = "animation: 2.5s ease 0s 1 normal forwards running Loading;"
+		setTimeout(() => {
+			document.getElementById("GameScreen").style = "display: grid;";
+		}, 250);
+	}, 2500);
 }
 
 setInterval(function () {

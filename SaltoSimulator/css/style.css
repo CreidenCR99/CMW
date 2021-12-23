@@ -3,7 +3,8 @@ head {
 }
 
 body {
-  background-color: #181d78;
+  background-color: #000;
+  opacity: 0;
   user-select: none;
   margin: 0px;
   overflow-y: hidden;
