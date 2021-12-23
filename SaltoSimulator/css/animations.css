@@ -1,0 +1,10 @@
+@keyframes Loading {
+  from {
+    opacity: 0;
+    background-color: #000;
+  }
+  to {
+    opacity: 1;
+    background-color: #181d78;
+  }
+}

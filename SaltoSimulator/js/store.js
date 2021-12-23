@@ -92,10 +92,10 @@ function PercentajeSaleUpgrade() {
 	if (Saltos >= PercentajeSalePrice && PercentajeSaleBuy == 0) {
 		Saltos -= PercentajeSalePrice;
 		PercentajeSaleBuy = +1;
-		TorchicPrecio /= 0.9;
-		CramorantPrecio /= 0.9;
-		KabutopsPrecio /= 0.9;
-		CrobatPrecio /= 0.9;
+		TorchicPrecio -= ((TorchicPrecio*10)/100).toFixed(0);
+		CramorantPrecio -= ((CramorantPrecio*10)/100).toFixed(0);
+		KabutopsPrecio -= ((KabutopsPrecio*10)/100).toFixed(0);
+		CrobatPrecio -= ((CrobatPrecio*10)/100).toFixed(0);
 	}
 }
 
