@@ -26,9 +26,8 @@
       .Seleccion {
       user-select: none;
       }
-      .Dado {
+      .Puntero {
       cursor: pointer;
-      border-radius: 20px;
       }
       .Resultado {
       user-select: contain;
@@ -49,7 +48,7 @@
       var Dado1 = Math.floor(Math.random() * (2)) + 1;
       var Dado2 = Math.floor(Math.random() * (2)) + 1;
       var Resultado = Dado1 + Dado2;
-      var nob = ["B"];
+      var nob = [""];
       
       function CargaB() {
         nob = ["B"];
@@ -100,8 +99,8 @@
     <center>
       <h1 class="Titulo">Dados 1-6</h1>
       <h2 class="Seleccion">
-        <img draggable="false" class="Dado" onclick="Giro();" id="Dado1">
-        <img draggable="false" class="Dado" onclick="Giro();" id="Dado2">
+        <img draggable="false" class="Puntero" onclick="Giro();" id="Dado1">
+        <img draggable="false" class="Puntero" onclick="Giro();" id="Dado2">
       </h2>
       <h2 class="Resultado" id="Resultado"><br></h2>
     </center>

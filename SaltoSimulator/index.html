@@ -1,115 +1,115 @@
 <!DOCTYPE html>
-<html lang="es">
-	<head>
-		<title id="title">Salto Simulator - 0 Saltos</title>
-		<link rel="icon" type="image/png" sizes="1000x1000" href="img/icon.png"/>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<meta name="description" content="Simulador de saltar como un profesional"/>
-		<meta name="image" content="img/icon.png"/>
-		<meta property="og:description" content="Simulador de saltar como un profesional"/>
-		<meta property="og:image" content="img/icon.png"/>
-		<script src="js/script.js"></script>
-		<script src="js/stats.js"></script>
-		<script src="js/store.js"></script>
-		<script src="js/achievements.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/style.css"/>
-		<link rel="stylesheet" type="text/css" href="css/grids.css"/>
-		<link rel="stylesheet" type="text/css" href="css/load.css"/>
-		<link rel="stylesheet" type="text/css" href="css/class.css"/>
-	</head>
-	<body onload="Load();">
-		<div class="GameScreen">
-			<div class="Izquierda">
-				<button style="display: block; position: absolute;" onclick="TorchicInv=10;CramorantInv=10;KabutopsInv=10;CrobatInv=10;Saltos=25000;">Botón</button>
-				<h1>Salto Simulator</h1>
-				<h2 class="Saltos" id="Saltos">0 Saltos</h2>
-				<h3 class="SPS" id="SPS">0 SPS</h3>
-				<img id="CabezaLoad" draggable="false" class="Cabeza" onclick="ClickCabeza();" src="img/texture.png" width="200px" height="250px"/>
-			</div>
-			<div class="Centro">
-				<div class="Mejoras">
-					<img draggable="false" style="display: none;" class="Upgrades" src="img/texture.png" id="PercentajeSales" onclick="PercentajeSaleUpgrade();" title="Precio: 500 saltos"/>
-					<img draggable="false" style="display: none;" class="Upgrades" src="img/texture.png" id="ClickAchievements" onclick="ClickPercentajeAchievements();" title="Precio: 750 saltos"/>
-					<img draggable="false" style="display: none;" class="Upgrades" src="img/texture.png" id="ClickPokemons" onclick="ClickPercentajePokemons();" title="Precio: 1000 saltos"/>
-					<img draggable="false" style="display: none;" class="Upgrades" src="img/texture.png" id="" onclick="" title="Precio: NaN saltos"/>
-					<img draggable="false" style="display: none;" class="Upgrades" src="img/texture.png" id="" onclick="" title="Precio: NaN saltos"/>
-				</div>
-				<div class="Tienda">
-					<div class="Torchic">
-						<div onclick="ComprarTorchic();" class="Objetos">
-							<div class="Imagen">
-								<img id="TorchicLoad" class="ImagenObjetos" draggable="false" src="img/texture.png"/>
-							</div>
-							<div class="Datos">
-								<h1 id="DatosTorchic" class="DatosObjetos">Torchic<br>15 saltos<br>1 SPS</h1>
-							</div>
-							<div class="Total">
-								<h1 class="TotalObjetos" id="TorchicTotal">0</h1>
-							</div>
-						</div>
-					</div>
-					<div class="Cramorant">
-						<div onclick="ComprarCramorant();" class="Objetos">
-							<div class="Imagen">
-								<img id="CramorantLoad" class="ImagenObjetos" draggable="false" src="img/texture.png"/>
-							</div>
-							<div class="Datos">
-								<h1 id="DatosCramorant" class="DatosObjetos">Cramorant<br>100 saltos<br>3 SPS</h1>
-							</div>
-							<div class="Total">
-								<h1 class="TotalObjetos" id="CramorantTotal">0</h1>
-							</div>
-						</div>
-					</div>
-					<div class="Kabutops">
-						<div onclick="ComprarKabutops();" class="Objetos">
-							<div class="Imagen">
-								<img id="KabutopsLoad" class="ImagenObjetos" draggable="false" src="img/texture.png"/> 
-							</div>
-							<div class="Datos">
-								<h1 id="DatosKabutops" class="DatosObjetos">Kabutops<br>1100 saltos<br>8 SPS</h1>
-							</div>
-							<div class="Total">
-								<h1 class="TotalObjetos" id="KabutopsTotal">0</h1>
-							</div>
-						</div>
-					</div>
-					<div class="Crobat">
-						<div onclick="ComprarCrobat();" class="Objetos">
-							<div class="Imagen">
-								<img id="CrobatLoad" class="ImagenObjetos" draggable="false" src="img/texture.png"/> 
-							</div>
-							<div class="Datos">
-								<h1 id="DatosCrobat" class="DatosObjetos">Crobat<br>12000 saltos<br>47 SPS</h1>
-							</div>
-							<div class="Total">
-								<h1 class="TotalObjetos" id="CrobatTotal">0</h1>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="Derecha">
-				<div class="Estadisticas">
-					<div class="TituloEstadisticas">
-						<h1 class="TitleEstadisticas">Estadisticas</h1>
-					</div>
-					<div class="ContenidoEstadisticas">
-						<h3 id="Stats"></h3>
-					</div>
-				</div>
-				<div class="Logros">
-					<div class="TituloLogros">
-						<h1 class="TitleLogros">
-							<img draggable="false" id="AchievementEmojiLeft" class="AchievementsEmoji" src="img/texture.png"> Logros <img draggable="false" id="AchievementEmojiRight" class="AchievementsEmoji" src="img/texture.png">
-						</h1>
-					</div>
-					<div class="ContenidoLogros">
-						<h2>Próximamente...</h2>
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
+<html onclick="ClickTotal++;">
+  <head>
+    <meta charset="UTF-8"/>
+    <title id="title">Salto Simulator - 0 Saltos</title>
+    <link rel="icon" type="image/png" sizes="1000x1000" href="img/icon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Simulador de saltar como un profesional"/>
+    <meta name="image" content="img/icon.png"/>
+    <meta property="og:description" content="Simulador de saltar como un profesional"/>
+    <meta property="og:image" content="img/icon.png"/>
+    <script src="js/script.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/achievements.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/grids.css"/>
+    <link rel="stylesheet" type="text/css" href="css/load.css"/>
+    <link rel="stylesheet" type="text/css" href="css/class.css"/>
+  </head>
+  <body>
+    <div class="Todo">
+      <div class="Separador">
+        <div class="Izquierda">
+          <h1 class="Saltos" id="Saltos">0 Saltos</h1>
+          <h3 class="SPS" id="SPS">0 por segundo</h3>
+          <img draggable="false" class="Cabeza" onclick="ClickCabeza();" src="img/Cabeza.png">
+        </div>
+        <div class="Centro">
+          <!-- <div class="Mejoras">
+            <img onclick="clickUpgrade();" src="img/Cabeza.png" width="384px" height="60px">
+            <br>
+            <img onclick="clickUpgrade();" src="img/Cabeza.png" width="384px" height="60px">
+            </div> -->
+          <div class="Tienda">
+            <div class="Torchic">
+              <div onclick="ComprarTorchic();" class="Objetos">
+                <div class="Imagen">
+                  <img class="ImagenObjetos" draggable="false" src="img/pkmn/Torchic.png">
+                </div>
+                <div class="Datos">
+                  <h1 id="DatosTorchic" class="DatosObjetos">Torchic<br>15 saltos<br>1 SPS</h1>
+                </div>
+                <div class="Total">
+                  <h1 class="TotalObjetos" id="TorchicTotal">0</h1>
+                </div>
+              </div>
+            </div>
+            <div class="Cramorant">
+              <div onclick="ComprarCramorant();" class="Objetos">
+                <div class="Imagen">
+                  <img class="ImagenObjetos" draggable="false" src="img/pkmn/Cramorant.png">
+                </div>
+                <div class="Datos">
+                  <h1 id="DatosCramorant" class="DatosObjetos">Cramorant<br>100 saltos<br>3 SPS</h1>
+                </div>
+                <div class="Total">
+                  <h1 class="TotalObjetos" id="CramorantTotal">0</h1>
+                </div>
+              </div>
+            </div>
+            <div class="Kabutops">
+              <div onclick="ComprarKabutops();" class="Objetos">
+                <div class="Imagen">
+                  <img class="ImagenObjetos" draggable="false" src="img/pkmn/Kabutops.png"> 
+                </div>
+                <div class="Datos">
+                  <h1 id="DatosKabutops" class="DatosObjetos">Kabutops<br>1100 saltos<br>8 SPS</h1>
+                </div>
+                <div class="Total">
+                  <h1 class="TotalObjetos" id="KabutopsTotal">0</h1>
+                </div>
+              </div>
+            </div>
+            <div class="Crobat">
+              <div onclick="ComprarCrobat();" class="Objetos">
+                <div class="Imagen">
+                  <img class="ImagenObjetos" draggable="false" src="img/pkmn/Crobat.png"> 
+                </div>
+                <div class="Datos">
+                  <h1 id="DatosCrobat" class="DatosObjetos">Crobat<br>12000 saltos<br>47 SPS</h1>
+                </div>
+                <div class="Total">
+                  <h1 class="TotalObjetos" id="CrobatTotal">0</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Derecha">
+          <div class="Estadisticas">
+            <div class="TituloEstadisticas">
+              <h1>Estadisticas</h1>
+            </div>
+            <div class="ContenidoEstadisticas">
+              <h3 id="StatsClickTotal"></h3>
+              <h3 id="StatsClickCabezaTotal"></h3>
+              <h3 id="StatsSaltos"></h3>
+              <h3 id="StatsSaltosSiempre"></h3>
+              <h3 id="StatsGastadoTotal"></h3>
+              <h3 id="StatsSPS"></h3>
+              <h3 id="StatsLogros"></h3>
+            </div>
+          </div>
+          <div class="Logros">
+            <div class="TituloLogros">
+              <h1>Logros</h1>
+            </div>
+            <div class="ContenidoLogros"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

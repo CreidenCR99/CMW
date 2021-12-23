@@ -1,151 +1,74 @@
-var EarnedAchievements = 0;
-var TotalAchievements = 16;
+var TotalAchievements = 0;
 
-// Click
+var varAchievement1 = 0;
 
-var ClickAchievement1 = 0;
-var ClickAchievement2 = 0;
-var ClickAchievement3 = 0;
-var ClickAchievement4 = 0;
-var ClickAchievement5 = 0;
-
-function ClickAchievements() {
-	if (Saltos >= 1) {
-		if (ClickAchievement1 == 0) {
-			EarnedAchievements += 1;
-			ClickAchievement1 = +1;
-		}
-	}
-
-	if (Saltos >= 100) {
-		if (ClickAchievement2 == 0) {
-			EarnedAchievements += 1;
-			ClickAchievement2 = +1;
-		}
-	}
-
-	if (Saltos >= 1000) {
-		if (ClickAchievement3 == 0) {
-			EarnedAchievements += 1;
-			ClickAchievement3 = +1;
-		}
-	}
-
-	if (Saltos >= 10000) {
-		if (ClickAchievement4 == 0) {
-			EarnedAchievements += 1;
-			ClickAchievement4 = +1;
-		}
-	}
-
-	if (Saltos >= 25000) {
-		if (ClickAchievement5 == 0) {
-			EarnedAchievements += 1;
-			ClickAchievement5 = +1;
-		}
-	}
+function Achievement1() {
+  if (Saltos >= 1 && varAchievement1 == 0) {
+    TotalAchievements += 1;
+    varAchievement1 =+ 1;
+  }
 }
 
-// Inventory
+var varAchievement2 = 0;
 
-var InventoryAchievement1 = 0;
-var InventoryAchievement2 = 0;
-var InventoryAchievement3 = 0;
-var InventoryAchievement4 = 0;
-var InventoryAchievement5 = 0;
-var InventoryAchievement6 = 0;
-var InventoryAchievement7 = 0;
-var InventoryAchievement8 = 0;
-
-function InventoryAchievements() {
-	if (TorchicInv >= 1) {
-		if (InventoryAchievement1 == 0) {
-			EarnedAchievements += 1;
-			InventoryAchievement1 = +1;
-		}
-	}
-
-	if (CramorantInv >= 1) {
-		if (InventoryAchievement2 == 0) {
-			EarnedAchievements += 1;
-			InventoryAchievement2 = +1;
-		}
-	}
-
-	if (KabutopsInv >= 1) {
-		if (InventoryAchievement3 == 0) {
-			EarnedAchievements += 1;
-			InventoryAchievement3 = +1;
-		}
-	}
-
-	if (CrobatInv >= 1) {
-		if (InventoryAchievement4 == 0) {
-			EarnedAchievements += 1;
-			InventoryAchievement4 = +1;
-		}
-	}
-
-	if (TorchicInv >= 10) {
-		if (InventoryAchievement5 == 0) {
-			EarnedAchievements += 1;
-			InventoryAchievement5 = +1;
-		}
-	}
-
-	if (CramorantInv >= 10) {
-		if (InventoryAchievement6 == 0) {
-			EarnedAchievements += 1;
-			InventoryAchievement6 = +1;
-		}
-	}
-
-	if (KabutopsInv >= 10) {
-		if (InventoryAchievement7 == 0) {
-			EarnedAchievements += 1;
-			InventoryAchievement7 = +1;
-		}
-	}
-
-	if (CrobatInv >= 10) {
-		if (InventoryAchievement8 == 0) {
-			EarnedAchievements += 1;
-			InventoryAchievement8 = +1;
-		}
-	}
+function Achievement2() {
+  if (TorchicInv >= 1 && varAchievement2 == 0) {
+    TotalAchievements += 1;
+    varAchievement2 =+ 1;
+  }
 }
 
-// SPS
+var varAchievement3 = 0;
 
-var SPSAchievement1 = 0;
-var SPSAchievement2 = 0;
-var SPSAchievement3 = 0;
+function Achievement3() {
+  if (CramorantInv >= 1 && varAchievement3 == 0) {
+    TotalAchievements += 1;
+    varAchievement3 =+ 1;
+  }
+}
 
-function SPSAchievements() {
-	if (SPS >= 1) {
-		if (SPSAchievement1 == 0) {
-			EarnedAchievements += 1;
-			SPSAchievement1 = +1;
-		}
-	}
+var varAchievement4 = 0;
 
-	if (SPS >= 10) {
-		if (SPSAchievement2 == 0) {
-			EarnedAchievements += 1;
-			SPSAchievement2 = +1;
-		}
-	}
+function Achievement4() {
+  if (CramorantInv >= 1 && varAchievement4 == 0) {
+    TotalAchievements += 1;
+    varAchievement4 =+ 1;
+  }
+}
 
-	if (SPS >= 100) {
-		if (SPSAchievement3 == 0) {
-			EarnedAchievements += 1;
-			SPSAchievement3 = +1;
-		}
-	}
+var varAchievement5 = 0;
+
+function Achievement5() {
+  if(KabutopsInv >= 1 && varAchievement5 == 0) {
+      TotalAchievements += 1;
+      varAchievement5 =+ 1;
+  }
+}
+
+var varAchievement6 = 0;
+
+function Achievement6() {
+  if(CrobatInv >= 1 && varAchievement6 == 0) {
+      TotalAchievements += 1;
+      varAchievement5 =+ 1;
+  }
+}
+
+var varAchievement7 = 0;
+
+function Achievement7() {
+  if (Saltos >= 100 && varAchievement6 == 0) {
+    TotalAchievements += 1;
+    varAchievement6 =+ 1;
+  }
 }
 
 function Achievements() {
-	ClickAchievements();
-	InventoryAchievements();
-	SPSAchievements();
+  Achievement1();
+  Achievement2();
+  Achievement3();
+  Achievement4();
+  Achievement5();
+  Achievement6();
+  Achievement7();
 }
