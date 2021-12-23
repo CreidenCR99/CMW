@@ -85,7 +85,7 @@ function Load() {
 		setTimeout(() => {
 			document.getElementById("GameScreen").style = "display: grid;";
 		}, 250);
-	}, 2500);
+	}, 2500)
 }
 
 document.oncontextmenu = function () {
