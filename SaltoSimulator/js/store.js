@@ -69,7 +69,6 @@ function TiendaDatos() {
 	document.getElementById("DatosCrobat").innerHTML = `Crobat<br>${CrobatPrecio} saltos<br>${CrobatSPS} SPS`;
 }
 
-var Click = 1;
 var ClickUpgradePrice = 1000;
 
 function clickUpgrade() {
@@ -86,13 +85,12 @@ function clickUpgrade() {
 var PercentajeSalePrice = 500;
 var PercentajeSaleBuy = 0;
 var PercentajeSaleUnlock = 0;
-var Descuento = 1;
 
 function PercentajeSaleUpgrade() {
 	if (Saltos >= PercentajeSalePrice && PercentajeSaleBuy == 0) {
 		Saltos -= PercentajeSalePrice;
 		PercentajeSaleBuy = +1;
-	}
+	};
 	if (PercentajeSaleBuy == 1) {
 		TorchicPrecio -= ((TorchicPrecio*10)/100).toFixed(0);
 		CramorantPrecio -= ((CramorantPrecio*10)/100).toFixed(0);
@@ -109,7 +107,7 @@ function ClickPercentajeAchievements() {
 	if (Saltos >= ClickPercentajeAchievementsPrice && ClickPercentajeAchievementsBuy == 0) {
 		Saltos -= ClickPercentajeAchievementsPrice;
 		ClickPercentajeAchievementsBuy = +1;
-	}
+	};
 }
 
 var ClickPercentajePokemonsPrice = 1000;
@@ -120,7 +118,18 @@ function ClickPercentajePokemons() {
 	if (Saltos >= ClickPercentajePokemonsPrice && ClickPercentajePokemonsBuy == 0) {
 		Saltos -= ClickPercentajePokemonsPrice;
 		ClickPercentajePokemonsBuy = +1;
-	}
+	};
+}
+
+var ClickByFivePrice = 1250;
+var ClickByFiveBuy = 0;
+var ClickByFiveUnlock = 0;
+
+function ClickByFive() {
+	if (Saltos >= ClickByFivePrice && ClickByFiveBuy == 0) {
+		Saltos -= ClickByFivePrice;
+		ClickByFiveBuy = +1;
+	};
 }
 
 function UpgradesRender() {
@@ -193,16 +202,27 @@ function UpgradesRender() {
 	} else if (ClickPercentajePokemonsBuy == 1) {
 		document.getElementById("ClickPokemons").style = "display: none;";
 	};
+	// ClickByFive
+	if (Saltos >= 1099) {
+		ClickByFiveUnlock = +1;
+	};
+	if (ClickByFiveBuy == 0) {
+		if (Saltos == 1099 && Saltos <= 1100) {
+			document.getElementById("ClickByFive").style = "display: initial; filter: brightness(0.02); opacity: 0;";
+		} else if (Saltos >= 1101 && Saltos <= 1250) {
+			document.getElementById("ClickByFive").style = "display: initial; filter: brightness(0.02); opacity: 1;";
+		} else if (ClickByFiveUnlock == 1) {
+			if (Saltos >= 1250) {
+				document.getElementById("ClickByFive").style = "display: initial; filter: brightness(1); opacity: 1;";
+			} else if (Saltos <= 1099) {
+				document.getElementById("ClickByFive").style = "display: initial; filter: brightness(0.02); opacity: 1;";
+			};
+		} else if (ClickByFiveUnlock == 0) {
+			if (Saltos <= 1099) {
+				document.getElementById("ClickByFive").style = "display: none;";
+			};
+		};
+	} else if (ClickByFiveBuy == 1) {
+		document.getElementById("ClickByFive").style = "display: none;";
+	};
 };
-
-// Original
-//TorchicPrecio =+ Math.floor(TorchicPrecio + (TorchicPrecio / (41 / 6))).toFixed(0);
-
-//Usado
-//Math.floor(((15*(TorchicInv+(41/6)) / (41 / 6)))).toFixed(0);
-
-//Primera idea
-//TorchicPrecio =+ Math.floor((15 + (15 / (41 / 6))) * TorchicInv).toFixed(0);
-
-//Original
-//TorchicPrecio =+ Math.floor(TorchicPrecio + (TorchicPrecio / (41 / 6))).toFixed(0);

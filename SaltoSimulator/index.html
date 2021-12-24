@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<title id="title">Salto Simulator - 0 Saltos</title>
+		<title id="title">Salto Simulator - Loading...</title>
 		<link rel="icon" type="image/png" sizes="1000x1000" href="img/icon.png"/>
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -14,11 +14,15 @@
 		<script src="js/store.js"></script>
 		<script src="js/achievements.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/class.css"/>
 		<link rel="stylesheet" type="text/css" href="css/grids.css"/>
 		<link rel="stylesheet" type="text/css" href="css/animations.css"/>
-		<link rel="stylesheet" type="text/css" href="css/class.css"/>
 	</head>
-	<body onload="Load();" id="body" style="opacity: 0; background-color: #000;">
+	<body onload="Load();">
+		<div class="LoadScreen" id="LoadScreen">
+			<img draggable="false" class="LoadingIcon" id="LoadingIcon" src="img/icon.png"><br>
+			<h1 class="LoadedText" id="LoadedText">Salto Simulator<br>0/100 Loaded</h1>
+		</div>
 		<div class="GameScreen" id="GameScreen" style="display: none;">
 			<div class="Izquierda">
 				<h3 class="Version">v-1.0</h3>
@@ -32,7 +36,7 @@
 					<img draggable="false" style="display: none;" class="Upgrades" src="img/texture.png" id="PercentajeSales" onclick="PercentajeSaleUpgrade();" title="Precio: 500 saltos"/>
 					<img draggable="false" style="display: none;" class="Upgrades" src="img/texture.png" id="ClickAchievements" onclick="ClickPercentajeAchievements();" title="Precio: 750 saltos"/>
 					<img draggable="false" style="display: none;" class="Upgrades" src="img/texture.png" id="ClickPokemons" onclick="ClickPercentajePokemons();" title="Precio: 1000 saltos"/>
-					<img draggable="false" style="display: none;" class="Upgrades" src="img/texture.png" id="" onclick="" title="Precio: NaN saltos"/>
+					<img draggable="false" style="display: none;" class="Upgrades" src="img/texture.png" id="ClickByFive" onclick="ClickByFive();" title="Precio: 1250 saltos"/>
 					<img draggable="false" style="display: none;" class="Upgrades" src="img/texture.png" id="" onclick="" title="Precio: NaN saltos"/>
 				</div>
 				<div class="Tienda">
