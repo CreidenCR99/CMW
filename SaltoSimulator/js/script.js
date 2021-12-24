@@ -29,10 +29,10 @@ function Clicks() {
 var Loading = 0;
 
 async function Load() {
-	let Loaded = 0;
+	let Loaded = 1;
 	function LoadingText() {
-		Loaded += 10;
-		document.getElementById("LoadedText").innerHTML = `Salto Simulator<br>${Loaded}/100 Loaded`
+		Loaded += 1;
+		document.getElementById("LoadedText").innerHTML = `Salto Simulator<br>${Loaded}/12 Loaded`
 	}
 	await sleep(50);
 	document.getElementById("CabezaLoad").src = "img/Cabeza.png";
@@ -63,6 +63,9 @@ async function Load() {
 	LoadingText();
 	await sleep(100);
 	document.getElementById("PercentajeSales").src = "img/Upgrades/PercentajeSales.png";
+	LoadingText();
+	await sleep(100);
+	document.getElementById("ClickByFive").src = "img/Upgrades/ByFive.png";
 	await sleep(250);
 	LoadingText();
 	await sleep(400);
