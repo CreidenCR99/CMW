@@ -74,6 +74,12 @@ h2 {
 	height: 117px;
 }
 
+.img:active {
+    transform: scale(0.95);
+	width: 208px;
+	height: 117px;
+}
+
 .TituloBox {
 	text-align: left;
 	font-size: 25px;
