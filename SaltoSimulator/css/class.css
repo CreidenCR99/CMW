@@ -90,8 +90,35 @@
 }
 
 .Version {
+  position: absolute;
+  padding: 0px;
   margin: 0px;
   font-size: medium;
-  display: block;
+}
+
+.LoadScreen {
+  cursor: none;
   position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  background-color: #000;
+  opacity: 1;
+}
+
+.LoadedText {
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  margin-top: 50vh;
+  margin-left: 70vh;
+}
+
+.LoadingIcon {
+  width: 256px;
+  height: 256px;
+  position: absolute;
+  margin-top: 12.5vh;
+  margin-left: 75vh;
+  animation: 1000ms linear 100ms infinite IconRotate;
 }
