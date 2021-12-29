@@ -1,6 +1,7 @@
 var TorchicInv = 0;
 var TorchicSPS = 0.1;
 var TorchicPrecio = 15;
+var TorchicPrecioDisplay = 15;
 
 function ComprarTorchic() {
 	if (Saltos >= TorchicPrecio) {
@@ -16,6 +17,7 @@ function ComprarTorchic() {
 var CramorantInv = 0;
 var CramorantSPS = 1;
 var CramorantPrecio = 100;
+var CramorantPrecioDisplay = 100;
 
 function ComprarCramorant() {
 	if (Saltos >= CramorantPrecio) {
@@ -31,6 +33,7 @@ function ComprarCramorant() {
 var KabutopsInv = 0;
 var KabutopsSPS = 8;
 var KabutopsPrecio = 1100;
+var KabutopsPrecioDisplay = 1100;
 
 function ComprarKabutops() {
 	if (Saltos >= KabutopsPrecio) {
@@ -46,6 +49,7 @@ function ComprarKabutops() {
 var CrobatInv = 0;
 var CrobatSPS = 47;
 var CrobatPrecio = 12000;
+var CrobatPrecioDisplay = 12000;
 
 function ComprarCrobat() {
 	if (Saltos >= CrobatPrecio) {
@@ -58,16 +62,61 @@ function ComprarCrobat() {
 	};
 };
 
+function TorchicDisplay() {
+	if (TorchicPrecio <= 999) {
+		TorchicPrecioDisplay = +TorchicPrecio
+	} else if (TorchicPrecio >= 1000 && TorchicPrecio <= 999999) {
+		TorchicPrecioDisplay = +(TorchicPrecio / 1e3).toFixed(2) + "K";
+	} else if (TorchicPrecio >= 1000000) {
+		TorchicPrecioDisplay = +(TorchicPrecio / 1e6).toFixed(3) + "M";
+	};
+};
+
+function CramorantDisplay() {
+	if (CramorantPrecio <= 999) {
+		CramorantPrecioDisplay = +CramorantPrecio
+	} else if (CramorantPrecio >= 1000 && CramorantPrecio <= 999999) {
+		CramorantPrecioDisplay = +(CramorantPrecio / 1e3).toFixed(2) + "K";
+	} else if (CramorantPrecio >= 1000000) {
+		CramorantPrecioDisplay = +(CramorantPrecio / 1e6).toFixed(3) + "M";
+	};
+};
+
+function KabutopsDisplay() {
+	if (KabutopsPrecio <= 999) {
+		KabutopsPrecioDisplay = +KabutopsPrecio
+	} else if (KabutopsPrecio >= 1000 && KabutopsPrecio <= 999999) {
+		KabutopsPrecioDisplay = +(KabutopsPrecio / 1e3).toFixed(2) + "K";
+	} else if (KabutopsPrecio >= 1000000) {
+		KabutopsPrecioDisplay = +(KabutopsPrecio / 1e6).toFixed(3) + "M";
+	};
+};
+
+function CrobatDisplay() {
+	if (CrobatPrecio <= 999) {
+		CrobatPrecioDisplay = +CrobatPrecio
+	} else if (CrobatPrecio >= 1000 && CrobatPrecio <= 999999) {
+		CrobatPrecioDisplay = +(CrobatPrecio / 1e3).toFixed(2) + "K";
+	} else if (CrobatPrecio >= 1000000) {
+		CrobatPrecioDisplay = +(CrobatPrecio / 1e6).toFixed(3) + "M";
+	};
+};
+
+
 function TiendaDatos() {
 	document.getElementById("TorchicTotal").innerHTML = TorchicInv;
-	document.getElementById("DatosTorchic").innerHTML = `Torchic<br>${TorchicPrecio} saltos<br>${TorchicSPS} SPS`;
+	document.getElementById("DatosTorchic").innerHTML = `Torchic<br>${TorchicPrecioDisplay} saltos<br>${TorchicSPS} SPS`;
+	TorchicDisplay();
 	document.getElementById("CramorantTotal").innerHTML = CramorantInv;
-	document.getElementById("DatosCramorant").innerHTML = `Cramorant<br>${CramorantPrecio} saltos<br>${CramorantSPS} SPS`;
+	document.getElementById("DatosCramorant").innerHTML = `Cramorant<br>${CramorantPrecioDisplay} saltos<br>${CramorantSPS} SPS`;
+	CramorantDisplay();
 	document.getElementById("KabutopsTotal").innerHTML = KabutopsInv;
-	document.getElementById("DatosKabutops").innerHTML = `Kabutops<br>${KabutopsPrecio} saltos<br>${KabutopsSPS} SPS`;
+	document.getElementById("DatosKabutops").innerHTML = `Kabutops<br>${KabutopsPrecioDisplay} saltos<br>${KabutopsSPS} SPS`;
+	KabutopsDisplay();
 	document.getElementById("CrobatTotal").innerHTML = CrobatInv;
-	document.getElementById("DatosCrobat").innerHTML = `Crobat<br>${CrobatPrecio} saltos<br>${CrobatSPS} SPS`;
-}
+	document.getElementById("DatosCrobat").innerHTML = `Crobat<br>${CrobatPrecioDisplay} saltos<br>${CrobatSPS} SPS`;
+	CrobatDisplay();
+};
 
 var ClickUpgradePrice = 1000;
 
@@ -226,3 +275,5 @@ function UpgradesRender() {
 		document.getElementById("ClickByFive").style = "display: none;";
 	};
 };
+
+Loaded += 1;

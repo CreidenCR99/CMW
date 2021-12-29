@@ -149,3 +149,5 @@ function Achievements() {
 	InventoryAchievements();
 	SPSAchievements();
 }
+
+Loaded += 1;

@@ -37,7 +37,7 @@
 }
 
 .Saltos {
-  margin-block-start: -20px;
+  margin-block-start: 20px;
   color: #e7e287;
   font-family: "Monaco", Monospace;
   font-size: 2em;
@@ -50,12 +50,45 @@
   font-size: 1.5em;
 }
 
+.TitleEstadisticas,
+.TitleLogros,
+.TitleOpciones  {
+  color: #e7e287;
+  text-decoration: underline #e7e287;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.TitleEstadisticas:hover,
+.TitleLogros:hover,
+.TitleOpciones:hover {
+  color: #797861;
+  text-decoration: underline #616167;
+}
+
+.TitleEstadisticas:active,
+.TitleLogros:active,
+.TitleOpciones:active {
+  color: #616167;
+  text-decoration: underline #303036;
+}
+
 .TitleEstadisticas {
   font-size: 225%;
 }
 
 .TitleLogros {
   font-size: 85%;
+}
+
+
+.TitleOpciones {
+  font-size: 250%;
+}
+
+.TitleSeleccion {
+  font-size: 300%;
+  margin-top: 20px;
 }
 
 .Upgrades {
@@ -92,7 +125,7 @@
 .Version {
   position: absolute;
   padding: 0px;
-  margin: 0px;
+  margin: 5px;
   font-size: medium;
 }
 
@@ -121,4 +154,23 @@
   margin-top: 12.5vh;
   margin-left: 75vh;
   animation: 1000ms linear 100ms infinite IconRotate;
+}
+
+.Seleccionh1 {
+  text-decoration: underline #e7e287;
+  color: #e7e287;
+  margin-top: 16.5%;
+  transition: 0.35s;
+}
+
+.Seleccionh1:hover {
+  transform: scale(1.1);
+  color: #797861;
+  text-decoration: underline #616167;
+}
+
+.Seleccionh1:active {
+  transform: scale(0.9);
+  color: #616167;
+  text-decoration: underline #303036;
 }
