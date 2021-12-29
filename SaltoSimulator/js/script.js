@@ -27,56 +27,63 @@ function Clicks() {
 };
 
 var Loading = 0;
+var Loaded = 0;
 
 async function Load() {
-	let Loaded = 1;
+	document.getElementById("LoadedText").innerHTML = `Salto Simulator<br>${Loaded}/17 Loaded`
+	let rng = (Math.floor(Math.random() * (100 - 50)) + 50);
 	function LoadingText() {
 		Loaded += 1;
-		document.getElementById("LoadedText").innerHTML = `Salto Simulator<br>${Loaded}/12 Loaded`
+		document.getElementById("LoadedText").innerHTML = `Salto Simulator<br>${Loaded}/17 Loaded`
 	}
-	await sleep(50);
+	await sleep(Math.floor(Math.random() * (500 - 250)) + 250);
 	document.getElementById("CabezaLoad").src = "img/Cabeza.png";
 	LoadingText();
-	await sleep(100);
+	await sleep(rng);
 	document.getElementById("TorchicLoad").src = "img/pkmns/Torchic.png";
 	LoadingText();
-	await sleep(100);
+	await sleep(rng);
 	document.getElementById("CramorantLoad").src = "img/pkmns/Cramorant.png";
 	LoadingText();
-	await sleep(100);
+	await sleep(rng);
 	document.getElementById("KabutopsLoad").src = "img/pkmns/Kabutops.png";
 	LoadingText();
-	await sleep(100);
+	await sleep(rng);
 	document.getElementById("CrobatLoad").src = "img/pkmns/Crobat.png";
 	LoadingText();
-	await sleep(100);
+	await sleep(rng);
 	document.getElementById("ClickAchievements").src = "img/Upgrades/ClickAchievement.png";
 	LoadingText();
-	await sleep(100);
+	await sleep(rng);
 	document.getElementById("ClickPokemons").src = "img/Upgrades/PokemonAchievement.png";
 	LoadingText();
-	await sleep(100);
+	await sleep(rng);
 	document.getElementById("AchievementEmojiLeft").src = "img/Achievements.png";
 	LoadingText();
-	await sleep(100);
+	await sleep(rng);
 	document.getElementById("AchievementEmojiRight").src = "img/Achievements.png";
 	LoadingText();
-	await sleep(100);
+	await sleep(Math.floor(Math.random() * (125 - 75)) + 75);
 	document.getElementById("PercentajeSales").src = "img/Upgrades/PercentajeSales.png";
 	LoadingText();
-	await sleep(100);
+	await sleep(Math.floor(Math.random() * (250 - 125)) + 125);
 	document.getElementById("ClickByFive").src = "img/Upgrades/ByFive.png";
-	await sleep(250);
+	await sleep(Math.floor(Math.random() * (500 - 250)) + 250);
 	LoadingText();
 	await sleep(400);
-	document.getElementById("LoadedText").style = "display: none;"
-	document.getElementById("LoadingIcon").style = "display: none;"
-	await sleep(100);
-	document.getElementById("LoadScreen").style = "animation: 2500ms ease 0s 1 normal forwards running Loading;";
-	document.getElementById("GameScreen").style = "display: grid;";
-	await sleep(1500);
 	Loading = +1;
-	document.getElementById("LoadScreen").style = "display: none;";
+	if (Loading == 1) {
+		if (Loaded == 17) {
+			document.getElementById("LoadedText").style = "display: none;"
+			document.getElementById("LoadingIcon").style = "display: none;"
+			await sleep(100);
+			document.getElementById("LoadScreen").style = "animation: 2500ms ease 0s 1 normal forwards running Loading;";
+			document.getElementById("GameScreen").style = "display: grid;";
+			await sleep(1500);
+			document.getElementById("LoadScreen").style = "display: none;";
+			Loading = +1;
+		};
+	};
 };
 
 function sleep(ms) {
@@ -86,6 +93,33 @@ function sleep(ms) {
 document.oncontextmenu = function () {
 	return false;
 };
+
+function Derecha(Seleccion) {
+	if(Seleccion == 0) {
+		document.getElementById("DerechaSeleccion").style = "display: grid;"
+		document.getElementById("Opciones").style = "display: none;"
+		document.getElementById("Estadisticas").style = "display: none;"
+		document.getElementById("Logros").style = "display: none;"
+	}
+	else if (Seleccion == 1) {
+		document.getElementById("DerechaSeleccion").style = "display: none;"
+		document.getElementById("Opciones").style = "display: grid;"
+		document.getElementById("Estadisticas").style = "display: none;"
+		document.getElementById("Logros").style = "display: none;"
+	}
+	else if (Seleccion == 2) {
+		document.getElementById("DerechaSeleccion").style = "display: none;"
+		document.getElementById("Opciones").style = "display: none;"
+		document.getElementById("Estadisticas").style = "display: grid;"
+		document.getElementById("Logros").style = "display: none;"
+	}
+	else if (Seleccion == 3) {
+		document.getElementById("DerechaSeleccion").style = "display: none;"
+		document.getElementById("Opciones").style = "display: none;"
+		document.getElementById("Estadisticas").style = "display: none;"
+		document.getElementById("Logros").style = "display: grid;"
+	}
+}
 
 function render60() {
 	if (Math.floor(Saltos) == 0) {
@@ -115,9 +149,9 @@ function render30() {
 };
 
 function render1() {
-	if (Loading == 0) {
+	if (Loading == 0 || Loading == 1) {
 		document.getElementById("title").innerHTML = `Salto Simulator - Loading...`
-	} else if (Loading == 1) {
+	} else if (Loading == 2) {
 		if (Math.floor(Saltos) == 0) {
 			document.getElementById("title").innerHTML = `Salto Simulator - 0 Saltos`;
 		} else if (Math.floor(Saltos) == 1) {
@@ -130,7 +164,6 @@ function render1() {
 			document.getElementById("title").innerHTML = `Salto Simulator - ${(Saltos / 1e6).toFixed(3) + "M"} Saltos`;
 		};
 	};
-
 	SaltosSiempre += SPS;
 	ProducidoTotal += SPS;
 	Click = +Click.toFixed(2)
@@ -149,3 +182,5 @@ setInterval(function () {
 setInterval(function () {
 	render60();
 }, 1000 / 60);
+
+Loaded += 1;

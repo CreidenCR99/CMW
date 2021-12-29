@@ -10,6 +10,7 @@
 		<meta property="og:description" content="Simulador de saltar como un profesional"/>
 		<meta property="og:image" content="img/icon.png"/>
 		<script src="js/script.js"></script>
+		<script src="js/sounds.js"></script>
 		<script src="js/stats.js"></script>
 		<script src="js/store.js"></script>
 		<script src="js/achievements.js"></script>
@@ -18,20 +19,20 @@
 		<link rel="stylesheet" type="text/css" href="css/grids.css"/>
 		<link rel="stylesheet" type="text/css" href="css/animations.css"/>
 	</head>
-	<body onload="Load();">
+	<body onload="Load(); Loaded += 1;">
+		<h3 class="Version">v-1.0</h3>
 		<div class="LoadScreen" id="LoadScreen">
 			<img draggable="false" class="LoadingIcon" id="LoadingIcon" src="img/icon.png"><br>
-			<h1 class="LoadedText" id="LoadedText">Salto Simulator<br>0/12 Loaded</h1>
+			<h1 class="LoadedText" id="LoadedText">Salto Simulator<br>0/17 Loaded</h1>
 		</div>
 		<div class="GameScreen" id="GameScreen" style="display: none;">
 			<div class="Izquierda">
-				<h3 class="Version">v-1.0</h3>
-				<h1>Salto Simulator</h1>
 				<h2 class="Saltos" id="Saltos">0 Saltos</h2>
 				<h3 class="SPS" id="SPS">0 SPS</h3>
 				<img id="CabezaLoad" draggable="false" class="Cabeza" onclick="ClickCabeza();" src="img/texture.png" width="200px" height="250px"/>
 			</div>
 			<div class="Centro">
+				<button style="width: 1%; height: 1%; display: block; position: absolute; opacity: 0; cursor: none;" onclick="TorchicInv=10;CramorantInv=10;KabutopsInv=10;CrobatInv=10;Saltos=25000;"></button>
 				<div class="Mejoras">
 					<img draggable="false" style="display: none;" class="Upgrades" src="img/texture.png" id="PercentajeSales" onclick="PercentajeSaleUpgrade();" title="Precio: 500 saltos"/>
 					<img draggable="false" style="display: none;" class="Upgrades" src="img/texture.png" id="ClickAchievements" onclick="ClickPercentajeAchievements();" title="Precio: 750 saltos"/>
@@ -95,18 +96,40 @@
 				</div>
 			</div>
 			<div class="Derecha">
-				<button style="width: 1vh; height: 1vh; display: block; position: absolute; opacity: 0; cursor: none;" onclick="TorchicInv=10;CramorantInv=10;KabutopsInv=10;CrobatInv=10;Saltos=25000;"></button>
-				<div class="Estadisticas">
+				<div id="DerechaSeleccion" class="DerechaSeleccion">
+					<div class="TituloDerechaSeleccion">
+						<h1 class="TitleSeleccion">Salto Simulator</h1>
+					</div>
+				<div class="ContenidoDerechaSeleccion">
+					<div class="DerechaSeleccionOpciones">
+						<h1 onclick="Derecha(1);" class="Seleccionh1">Opciones</h1>
+					</div>
+					<div class="DerechaSeleccionEstadisticas">
+						<h1 onclick="Derecha(2);" class="Seleccionh1">Estadisticas</h1>
+					</div>
+					<div class="DerechaSeleccionLogros">
+						<h1 onclick="Derecha(3);" class="Seleccionh1">Logros</h1>
+					</div>
+				  </div>
+				</div>
+				<div id="Opciones" class="Opciones">
+					<div class="TituloOpciones">
+						<h1 onclick="Derecha(0);" class="TitleOpciones">Opciones</h1>
+					</div>
+					<div class="ContenidoOpciones">
+					</div>
+				</div>
+				<div id="Estadisticas" class="Estadisticas">
 					<div class="TituloEstadisticas">
-						<h1 class="TitleEstadisticas">Estadisticas</h1>
+						<h1 onclick="Derecha(0);" class="TitleEstadisticas">Estadisticas</h1>
 					</div>
 					<div class="ContenidoEstadisticas">
 						<h3 id="Stats"></h3>
 					</div>
 				</div>
-				<div class="Logros">
+				<div id="Logros" class="Logros">
 					<div class="TituloLogros">
-						<h1 class="TitleLogros">
+						<h1 onclick="Derecha(0);" class="TitleLogros">
 							<img draggable="false" id="AchievementEmojiLeft" class="AchievementsEmoji" src="img/texture.png"> Logros <img draggable="false" id="AchievementEmojiRight" class="AchievementsEmoji" src="img/texture.png">
 						</h1>
 					</div>
