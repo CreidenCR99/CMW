@@ -153,7 +153,7 @@ var Io = setInterval(function () {
 
 // ----- Salto ----- \\
 
-var SaltoCumple = new Date("Dec 12, 2021 00:00:00").getTime();
+var SaltoCumple = new Date("Dec 12, 2022 00:00:00").getTime();
 
 var Salto = setInterval(function () {
 
@@ -261,7 +261,7 @@ var Almudena = setInterval(function () {
 
 // ----- Nel ----- \\
 
-var NelCumple = new Date("Dec 18, 2021 00:00:00").getTime();
+var NelCumple = new Date("Dec 18, 2022 00:00:00").getTime();
 
 var Nel = setInterval(function () {
 
@@ -292,5 +292,23 @@ var Olaya = setInterval(function () {
   if (Olayadistance < 0) {
     clearInterval(Olaya);
     document.getElementById("OlayaFecha").innerHTML = "¡Hoy!";
+  }
+}, 1000);
+
+// ----- Olaya ----- \\
+
+var SofiaCumple = new Date("Aug 7, 2022 00:00:00").getTime();
+
+var Sofia = setInterval(function () {
+
+  var Sofiadistance = SofiaCumple - now;
+
+  var Sofiadays = Math.floor(Sofiadistance / (1000 * 60 * 60 * 24));
+
+  document.getElementById("Sofia").innerHTML = `Sofia<br><b class="h" id="SofiaFecha">${Sofiadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>7/8</b>`;
+
+  if (Olayadistance < 0) {
+    clearInterval(Olaya);
+    document.getElementById("SofiaFecha").innerHTML = "¡Hoy!";
   }
 }, 1000);
