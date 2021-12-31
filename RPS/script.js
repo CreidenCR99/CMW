@@ -3,87 +3,143 @@
 var SelectionP1 = 0;
 var SelectionP2 = 0;
 var Winner = SelectionP1 + SelectionP2;
+var WinP1 = 0;
+var WinP2 = 0;
 
-var SelectP1 = 0;
-var SelectP2 = 0;
+var SelectedP1 = 0;
+var SelectedP2 = 0;
 
-var Rock = 100;
-var Paper = 10;
-var Scissors = 1;
+const Rock = 100;
+const Paper = 10;
+const Scissors = 1;
+const None = 0;
 
 // SelectionP1
 
-function SelectRockP1() {
-    SelectionP1 = Rock;
-    document.getElementById("SelectionP1").src = "img/Rock.png";
-    SelectP1 = 1;
-}
-
-function SelectPaperP1() {
-    SelectionP1 = Paper;
-    document.getElementById("SelectionP1").src = "img/Paper.png";
-    SelectP1 = 1;
-}
-
-function SelectScissorsP1() {
-    SelectionP1 = Scissors;
-    document.getElementById("SelectionP1").src = "img/Scissors.png";
-    SelectP1 = 1;
-}
+function SelectP1(Select) {
+	if (SelectedP1 == 0) {
+		if (Select == Rock) {
+			SelectionP1 = Rock;
+            document.getElementById("SelectRockP1").style.cursor = "not-allowed";
+            document.getElementById("SelectPaperP1").style.cursor = "not-allowed";
+            document.getElementById("SelectScissorsP1").style.cursor = "not-allowed";
+			SelectedP1 = 1;
+		} else if (Select == Paper) {
+			SelectionP1 = Paper;
+            document.getElementById("SelectRockP1").style.cursor = "not-allowed";
+            document.getElementById("SelectPaperP1").style.cursor = "not-allowed";
+            document.getElementById("SelectScissorsP1").style.cursor = "not-allowed";
+			SelectedP1 = 1;
+		} else if (Select == Scissors) {
+			SelectionP1 = Scissors;
+            document.getElementById("SelectRockP1").style.cursor = "not-allowed";
+            document.getElementById("SelectPaperP1").style.cursor = "not-allowed";
+            document.getElementById("SelectScissorsP1").style.cursor = "not-allowed";
+			SelectedP1 = 1;
+		};
+	};
+};
 
 // SelectionP2
 
-function SelectRockP2() {
-    SelectionP2 = Rock;
-    document.getElementById("SelectionP2").src = "img/Rock.png";
-    SelectP2 = 1;
-}
-
-function SelectPaperP2() {
-    SelectionP2 = Paper;
-    document.getElementById("SelectionP2").src = "img/Paper.png";
-    SelectP2 = 1;
-}
-
-function SelectScissorsP2() {
-    SelectionP2 = Scissors;
-    document.getElementById("SelectionP2").src = "img/Scissors.png";
-    SelectP2 = 1;
-}
+function SelectP2(Select) {
+	if (SelectedP2 == 0) {
+		if (Select == Rock) {
+			SelectionP2 = Rock;
+            document.getElementById("SelectRockP2").style.cursor = "not-allowed";
+            document.getElementById("SelectPaperP2").style.cursor = "not-allowed";
+            document.getElementById("SelectScissorsP2").style.cursor = "not-allowed";
+			SelectedP2 = 1;
+		} else if (Select == Paper) {
+			SelectionP2 = Paper;
+            document.getElementById("SelectRockP2").style.cursor = "not-allowed";
+            document.getElementById("SelectPaperP2").style.cursor = "not-allowed";
+            document.getElementById("SelectScissorsP2").style.cursor = "not-allowed";
+			SelectedP2 = 1;
+		} else if (Select == Scissors) {
+			SelectionP2 = Scissors;
+            document.getElementById("SelectRockP2").style.cursor = "not-allowed";
+            document.getElementById("SelectPaperP2").style.cursor = "not-allowed";
+            document.getElementById("SelectScissorsP2").style.cursor = "not-allowed";
+			SelectedP2 = 1;
+		};
+	};
+};
 
 function win() {
-    if(Winner == 200) {
-        document.getElementById("Winner").scr = "img/Circle.png"
-    }
-    else if(Winner == 20) {
-        document.getElementById("Winner").scr = "img/Circle.png"
-    }
-    else if(Winner == 2) {
-        document.getElementById("Winner").scr = "img/Circle.png"
-    }
-    else if(Winner == 110) {
-        document.getElementById("Winner").src = "img/Paper.png"
-    }
-    else if(Winner == 101) {
-        document.getElementById("Winner").src = "img/Rock.png"
-    }
-    else if(Winner == 11) {
-        document.getElementById("Winner").src = "img/Scissors.png"
-    }
-}
+    Winner = SelectionP1 + SelectionP2;
+	document.getElementById("Subtitle").innerHTML = `P1: ${WinP1} | P2: ${WinP2}`;
+	if (Winner == (Rock + Rock) || Winner == (Paper + Paper) || Winner == (Scissors + Scissors)) {
+		document.getElementById("Winner").src = "img/Circle.png";
+	} else if (Winner == (Rock + Paper)) {
+		document.getElementById("Winner").src = "img/Paper.png";
+		if (SelectionP1 == Rock) {
+			document.getElementById("SelectionP1").src = "img/Rock.png";
+			document.getElementById("SelectionP2").src = "img/Paper.png";
+			WinP1 ++;
+			SelectionP1 = None;
+			SelectionP2 = None;
+		} else if (SelectionP2 == Rock) {
+			document.getElementById("SelectionP1").src = "img/Paper.png";
+			document.getElementById("SelectionP2").src = "img/Rock.png";
+			WinP2 ++;
+			SelectionP1 = None;
+			SelectionP2 = None;
+		};
+	} else if (Winner == (Paper + Scissors)) {
+		document.getElementById("Winner").src = "img/Scissors.png";
+		if (SelectionP1 == Scissors) {
+			document.getElementById("SelectionP1").src = "img/Scissors.png";
+			document.getElementById("SelectionP2").src = "img/Paper.png";
+			WinP1 ++;
+			SelectionP1 = None;
+			SelectionP2 = None;
+		} else if (SelectionP2 == Scissors) {
+			document.getElementById("SelectionP1").src = "img/Paper.png";
+			document.getElementById("SelectionP2").src = "img/Scissors.png";
+			WinP2 ++;
+			SelectionP1 = None;
+			SelectionP2 = None;
+		};
+	} else if (Winner == (Scissors + Rock)) {
+		document.getElementById("Winner").src = "img/Rock.png";
+		if (SelectionP1 == Rock) {
+			document.getElementById("SelectionP1").src = "img/Rock.png";
+			document.getElementById("SelectionP2").src = "img/Scissors.png";
+			WinP1 ++;
+			SelectionP1 = None;
+			SelectionP2 = None;
+		} else if (SelectionP2 == Rock) {
+			document.getElementById("SelectionP1").src = "img/Scissors.png";
+			document.getElementById("SelectionP2").src = "img/Rock.png";
+			WinP2 ++;
+			SelectionP1 = None;
+			SelectionP2 = None;
+		};
+	};
+};
 
 function Reset() {
-    SelectP1 = 0;
-    SelectP2 = 0;
-    SelectionP1 = 0;
-    SelectionP2 = 0;
-    Winner = 0;
-    document.getElementById("Winner").src = "img/Circle.png"
-    document.getElementById("SelectionP1").src = "img/Circle.png"
-    document.getElementById("SelectionP2").src = "img/Circle.png"
+	Winner = 0;
+	document.getElementById("Winner").src = "img/Circle.png";
+    SelectedP1 = 0;
+	SelectionP1 = None;
+	document.getElementById("SelectionP1").src = "img/Circle.png";
+    document.getElementById("SelectRockP1").style.cursor = "pointer";
+    document.getElementById("SelectPaperP1").style.cursor = "pointer";
+    document.getElementById("SelectScissorsP1").style.cursor = "pointer";
+    SelectedP2 = 0;
+    SelectionP2 = None;
+	document.getElementById("SelectionP2").src = "img/Circle.png";
+    document.getElementById("SelectRockP2").style.cursor = "pointer";
+    document.getElementById("SelectPaperP2").style.cursor = "pointer";
+    document.getElementById("SelectScissorsP2").style.cursor = "pointer";
+};
+
+function sleep(ms) {
+	return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-setInterval(function() {
-    win();
-    Winner = SelectionP1 + SelectionP2;
-}, 1000);
+setInterval(function () {
+	win();
+}, 1000 / 30);
