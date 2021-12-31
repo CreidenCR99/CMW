@@ -86,3 +86,18 @@ img:hover {
   transform: scale(1.1);
   border-radius: 5%;
 }
+
+::-webkit-scrollbar {
+  width:12px;
+  height:3px;
+}
+::-webkit-scrollbar-track-piece {
+  background-color:#000;
+}
+::-webkit-scrollbar-thumb {
+  height:50px;
+  background-color: #616161;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aaaaaa;
+}
