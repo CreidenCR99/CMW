@@ -1,0 +1,44 @@
+html {
+	cursor: none;
+    background-color: #000;
+	animation: backgroundloading 2.5s;
+}
+
+body {
+	margin: 0px;
+	background-color: #000;
+	animation: loading 2.5s;
+}
+
+video {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+    width: 100%;
+	height: 100%;
+	margin: auto;
+	animation: loading 2.5s;
+}
+
+@keyframes loading {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes backgroundloading {
+	0% {
+		background-color: #191919;
+	}
+	50% {
+		background-color: #000;
+	}
+	100% {
+		background-color: #000;
+	}
+}
