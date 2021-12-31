@@ -11,17 +11,22 @@
   </head>
   <body>
     <center>
-      <div class="container">
-        <div class="RockPlayer1"><img onclick="SelectRockP1();" src="img/Rock.png"></div>
-        <div class="PaperPlayer1"><img onclick="SelectPaperP1();" src="img/Paper.png"></div>
-        <div class="ScissorsPlayer1"><img onclick="SelectScissorsP1();" src="img/Scissors.png"></div>
-        <div class="SelectionPlayer1"><img id="SelectionP1" src="img/Circle.png"></div>
-        <div class="SelectionPlayer2"><img id="SelectionP2" src="img/Circle.png"></div>
-        <div class="Winner"><img onclick="Reset();" id="Winner" src="img/Circle.png"></div>
-        <div class="RockPlayer2"><img onclick="SelectRockP2();" src="img/Rock.png"></div>
-        <div class="PaperPlayer2"><img onclick="SelectPaperP2();" src="img/Paper.png"></div>
-        <div class="ScissorsPlayer2"><img onclick="SelectScissorsP2();" src="img/Scissors.png"></div>
+    <h1 class="Title">Rock Paper Scissors</h1>
+    <h2 class="Subtitle" id="Subtitle">P1: 0 | P2: 0</h2>
+    <button onclick="Reset();">Reset</button>
+  </center>
+      <div>
+        <img draggable="false" id="SelectRockP1" style="cursor: pointer; transition: 0.5;" onclick="SelectP1(Rock);" src="img/Rock.png"/>
+        <img draggable="false" id="SelectionP1" src="img/Circle.png"/>
+        <img draggable="false" id="SelectRockP2" style="cursor: pointer; transition: 0.5;" onclick="SelectP2(Rock);" src="img/Rock.png"/>
+        <br>
+        <img draggable="false" id="SelectPaperP1" style="cursor: pointer; transition: 0.5;" onclick="SelectP1(Paper);" src="img/Paper.png"/>
+        <img draggable="false" style="cursor: pointer;" onclick="Reset();" id="Winner" src="img/Circle.png"/>
+        <img draggable="false" id="SelectPaperP2" style="cursor: pointer; transition: 0.5;" onclick="SelectP2(Paper);" src="img/Paper.png"/>
+        <br>
+        <img draggable="false" id="SelectScissorsP1" style="cursor: pointer; transition: 0.5;" onclick="SelectP1(Scissors);" src="img/Scissors.png"/>
+        <img draggable="false" id="SelectionP2" src="img/Circle.png"/>
+        <img draggable="false" id="SelectScissorsP2" style="cursor: pointer; transition: 0.5;" onclick="SelectP2(Scissors);" src="img/Scissors.png"/>
       </div>
-    </center>
   </body>
 </html>
