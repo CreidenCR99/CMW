@@ -287,7 +287,7 @@ var Olaya = setInterval(function () {
 
   var Olayadays = Math.floor(Olayadistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Olaya").innerHTML = `Olaya (La de los audios)<br><b class="h" id="OlayaFecha">${Olayadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>6/9</b>`;
+  document.getElementById("Olaya").innerHTML = `Olaya (La de los audios; Mamii :D)<br><b class="h" id="OlayaFecha">${Olayadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>6/9</b>`;
 
   if (Olayadistance < 0) {
     clearInterval(Olaya);
