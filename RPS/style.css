@@ -2,6 +2,7 @@ body {
 	color: #fff;
 	background-color: #000080;
 	margin: 0px;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 img {
@@ -16,4 +17,21 @@ div {
 	left: 34.5%;
 	right: 25%;
 	position: fixed;
+}
+
+button {
+	background-color: rgba(255, 255, 255, 0);
+	color: #fff;
+	border: 2px solid #fff;
+	font-weight: bold;
+	font-size: 16px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+  
+button:hover {
+	background-color: #00BFBF;
+	color: #fff;
+	border: 2px solid #0048FF;
+	box-shadow: 0px 0px 5px 1px #fff;
 }
