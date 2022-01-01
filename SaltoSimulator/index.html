@@ -20,7 +20,7 @@
 		<link rel="stylesheet" type="text/css" href="css/animations.css"/>
 	</head>
 	<body onload="Load(); Loaded += 1;">
-		<h3 class="Version">v-1.0</h3>
+		<h3 class="Version">open<br>alp-1.5</h3>
 		<div class="LoadScreen" id="LoadScreen">
 			<img draggable="false" class="LoadingIcon" id="LoadingIcon" src="img/icon.png"><br>
 			<h1 class="LoadedText" id="LoadedText">Salto Simulator<br>0/17 Loaded</h1>
@@ -29,22 +29,22 @@
 			<div class="Izquierda">
 				<h2 class="Saltos" id="Saltos">0 Saltos</h2>
 				<h3 class="SPS" id="SPS">0 SPS</h3>
-				<img id="CabezaLoad" draggable="false" class="Cabeza" onclick="ClickCabeza();" src="img/texture.png" width="200px" height="250px"/>
+				<img id="CabezaLoad" draggable="false" class="Cabeza" onclick="ClickCabeza();" src="img/Cabeza.png" width="200px" height="250px"/>
 			</div>
 			<div class="Centro">
 				<button style="width: 1%; height: 1%; display: block; position: absolute; opacity: 0; cursor: none;" onclick="TorchicInv=10;CramorantInv=10;KabutopsInv=10;CrobatInv=10;Saltos=25000;"></button>
 				<div class="Mejoras">
-					<img draggable="false" style="display: none;" class="Upgrades" src="img/texture.png" id="PercentajeSales" onclick="PercentajeSaleUpgrade();" title="Precio: 500 saltos"/>
-					<img draggable="false" style="display: none;" class="Upgrades" src="img/texture.png" id="ClickAchievements" onclick="ClickPercentajeAchievements();" title="Precio: 750 saltos"/>
-					<img draggable="false" style="display: none;" class="Upgrades" src="img/texture.png" id="ClickPokemons" onclick="ClickPercentajePokemons();" title="Precio: 1000 saltos"/>
-					<img draggable="false" style="display: none;" class="Upgrades" src="img/texture.png" id="ClickByFive" onclick="ClickByFive();" title="Precio: 1250 saltos"/>
+					<img draggable="false" style="display: none;" class="Upgrades" src="img/Upgrades/PercentajeSales.png" id="PercentajeSales" onclick="PercentajeSaleUpgrade();" title="Precio: 500 saltos"/>
+					<img draggable="false" style="display: none;" class="Upgrades" src="img/Upgrades/ClickAchievement.png" id="ClickAchievements" onclick="ClickPercentajeAchievements();" title="Precio: 750 saltos"/>
+					<img draggable="false" style="display: none;" class="Upgrades" src="img/Upgrades/PokemonAchievement.png" id="ClickPokemons" onclick="ClickPercentajePokemons();" title="Precio: 1000 saltos"/>
+					<img draggable="false" style="display: none;" class="Upgrades" src="img/Upgrades/ByFive.png" id="ClickByFive" onclick="ClickByFive();" title="Precio: 1250 saltos"/>
 					<img draggable="false" style="display: none;" class="Upgrades" src="img/texture.png" id="" onclick="" title="Precio: NaN saltos"/>
 				</div>
 				<div class="Tienda">
 					<div class="Torchic">
 						<div onclick="ComprarTorchic();" class="Objetos">
 							<div class="Imagen">
-								<img id="TorchicLoad" class="ImagenObjetos" draggable="false" src="img/texture.png"/>
+								<img id="TorchicLoad" class="ImagenObjetos" draggable="false" src="img/pkmns/Torchic.png"/>
 							</div>
 							<div class="Datos">
 								<h1 id="DatosTorchic" class="DatosObjetos">Torchic<br>15 saltos<br>1 SPS</h1>
@@ -57,7 +57,7 @@
 					<div class="Cramorant">
 						<div onclick="ComprarCramorant();" class="Objetos">
 							<div class="Imagen">
-								<img id="CramorantLoad" class="ImagenObjetos" draggable="false" src="img/texture.png"/>
+								<img id="CramorantLoad" class="ImagenObjetos" draggable="false" src="img/pkmns/Cramorant.png"/>
 							</div>
 							<div class="Datos">
 								<h1 id="DatosCramorant" class="DatosObjetos">Cramorant<br>100 saltos<br>3 SPS</h1>
@@ -70,7 +70,7 @@
 					<div class="Kabutops">
 						<div onclick="ComprarKabutops();" class="Objetos">
 							<div class="Imagen">
-								<img id="KabutopsLoad" class="ImagenObjetos" draggable="false" src="img/texture.png"/> 
+								<img id="KabutopsLoad" class="ImagenObjetos" draggable="false" src="img/pkmns/Kabutops.png"/> 
 							</div>
 							<div class="Datos">
 								<h1 id="DatosKabutops" class="DatosObjetos">Kabutops<br>1100 saltos<br>8 SPS</h1>
@@ -83,7 +83,7 @@
 					<div class="Crobat">
 						<div onclick="ComprarCrobat();" class="Objetos">
 							<div class="Imagen">
-								<img id="CrobatLoad" class="ImagenObjetos" draggable="false" src="img/texture.png"/> 
+								<img id="CrobatLoad" class="ImagenObjetos" draggable="false" src="img/pkmns/Crobat.png"/> 
 							</div>
 							<div class="Datos">
 								<h1 id="DatosCrobat" class="DatosObjetos">Crobat<br>12000 saltos<br>47 SPS</h1>
