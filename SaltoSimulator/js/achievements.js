@@ -14,6 +14,7 @@ function ClickAchievements() {
 		if (ClickAchievement1 == 0) {
 			EarnedAchievements += 1;
 			ClickAchievement1 = +1;
+			Sounds(1);
 		}
 	}
 
@@ -21,6 +22,7 @@ function ClickAchievements() {
 		if (ClickAchievement2 == 0) {
 			EarnedAchievements += 1;
 			ClickAchievement2 = +1;
+			Sounds(1);
 		}
 	}
 
@@ -28,6 +30,7 @@ function ClickAchievements() {
 		if (ClickAchievement3 == 0) {
 			EarnedAchievements += 1;
 			ClickAchievement3 = +1;
+			Sounds(1);
 		}
 	}
 
@@ -35,6 +38,7 @@ function ClickAchievements() {
 		if (ClickAchievement4 == 0) {
 			EarnedAchievements += 1;
 			ClickAchievement4 = +1;
+			Sounds(1);
 		}
 	}
 
@@ -42,6 +46,7 @@ function ClickAchievements() {
 		if (ClickAchievement5 == 0) {
 			EarnedAchievements += 1;
 			ClickAchievement5 = +1;
+			Sounds(1);
 		}
 	}
 }
@@ -62,6 +67,7 @@ function InventoryAchievements() {
 		if (InventoryAchievement1 == 0) {
 			EarnedAchievements += 1;
 			InventoryAchievement1 = +1;
+			Sounds(1);
 		}
 	}
 
@@ -69,6 +75,7 @@ function InventoryAchievements() {
 		if (InventoryAchievement2 == 0) {
 			EarnedAchievements += 1;
 			InventoryAchievement2 = +1;
+			Sounds(1);
 		}
 	}
 
@@ -76,6 +83,7 @@ function InventoryAchievements() {
 		if (InventoryAchievement3 == 0) {
 			EarnedAchievements += 1;
 			InventoryAchievement3 = +1;
+			Sounds(1);
 		}
 	}
 
@@ -83,6 +91,7 @@ function InventoryAchievements() {
 		if (InventoryAchievement4 == 0) {
 			EarnedAchievements += 1;
 			InventoryAchievement4 = +1;
+			Sounds(1);
 		}
 	}
 
@@ -90,6 +99,7 @@ function InventoryAchievements() {
 		if (InventoryAchievement5 == 0) {
 			EarnedAchievements += 1;
 			InventoryAchievement5 = +1;
+			Sounds(1);
 		}
 	}
 
@@ -97,6 +107,7 @@ function InventoryAchievements() {
 		if (InventoryAchievement6 == 0) {
 			EarnedAchievements += 1;
 			InventoryAchievement6 = +1;
+			Sounds(1);
 		}
 	}
 
@@ -104,6 +115,7 @@ function InventoryAchievements() {
 		if (InventoryAchievement7 == 0) {
 			EarnedAchievements += 1;
 			InventoryAchievement7 = +1;
+			Sounds(1);
 		}
 	}
 
@@ -111,6 +123,7 @@ function InventoryAchievements() {
 		if (InventoryAchievement8 == 0) {
 			EarnedAchievements += 1;
 			InventoryAchievement8 = +1;
+			Sounds(1);
 		}
 	}
 }
@@ -126,6 +139,7 @@ function SPSAchievements() {
 		if (SPSAchievement1 == 0) {
 			EarnedAchievements += 1;
 			SPSAchievement1 = +1;
+			Sounds(1);
 		}
 	}
 
@@ -133,6 +147,7 @@ function SPSAchievements() {
 		if (SPSAchievement2 == 0) {
 			EarnedAchievements += 1;
 			SPSAchievement2 = +1;
+			Sounds(1);
 		}
 	}
 
@@ -140,6 +155,7 @@ function SPSAchievements() {
 		if (SPSAchievement3 == 0) {
 			EarnedAchievements += 1;
 			SPSAchievement3 = +1;
+			Sounds(1);
 		}
 	}
 }

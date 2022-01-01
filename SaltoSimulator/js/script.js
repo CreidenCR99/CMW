@@ -70,20 +70,18 @@ async function Load() {
 	document.getElementById("ClickByFive").src = "img/Upgrades/ByFive.png";
 	await sleep(Math.floor(Math.random() * (500 - 250)) + 250);
 	LoadingText();
-	await sleep(400);
-	Loading = +1;
-	if (Loading == 1) {
-		if (Loaded == 17) {
-			document.getElementById("LoadedText").style = "display: none;"
-			document.getElementById("LoadingIcon").style = "display: none;"
-			await sleep(100);
-			document.getElementById("LoadScreen").style = "animation: 2500ms ease 0s 1 normal forwards running Loading;";
-			document.getElementById("GameScreen").style = "display: grid;";
-			await sleep(1500);
-			document.getElementById("LoadScreen").style = "display: none;";
-			Loading = +1;
-		};
-	};
+	await sleep(200);
+	Loaded += 1;
+	Loading += 1;
+	await sleep(500);
+	document.getElementById("LoadedText").style = "display: none;";
+	document.getElementById("LoadingIcon").style = "display: none;";
+	await sleep(100);
+	document.getElementById("LoadScreen").style = "animation: 2500ms ease 0s 1 normal forwards running Loading;";
+	document.getElementById("GameScreen").style = "display: grid;";
+	await sleep(1500);
+	document.getElementById("LoadScreen").style = "display: none;";
+	Loading += 1;
 };
 
 function sleep(ms) {
@@ -146,6 +144,7 @@ function render30() {
 	Saltos += (SPS / 30);
 	UpgradesRender();
 	Clicks();
+	Achievements();
 };
 
 function render1() {
@@ -168,7 +167,6 @@ function render1() {
 	ProducidoTotal += SPS;
 	Click = +Click.toFixed(2)
 	Stats();
-	Achievements();
 };
 
 setInterval(function () {
