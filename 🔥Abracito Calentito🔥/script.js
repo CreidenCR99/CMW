@@ -161,7 +161,7 @@ var Salto = setInterval(function () {
 
   var Saltodays = Math.floor(Saltodistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Salto").innerHTML = `Víctor <a class="${SaltoCumpleClassChange}" title="${SaltoCumpleTitleChange}" onclick="SaltoCumpleApodos();">${SaltoCumpleChangeApodos}</a><br><b class="h" id="SaltoFecha">${Saltodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>11/12</b>`;
+  document.getElementById("Salto").innerHTML = `Víctor <a class="${SaltoCumpleClassChange}" title="${SaltoCumpleTitleChange}" onclick="SaltoCumpleApodos();">${SaltoCumpleChangeApodos}</a><br><b class="h" id="SaltoFecha">${Saltodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>Todos los dias (11/12)</b>`;
 
   if (Saltodistance < 0) {
     clearInterval(Salto);
