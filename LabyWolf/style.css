@@ -9,26 +9,32 @@ body{
     background-color: #191919;
 }
 img{
-    top: 50%;
-    left: 25%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     width: 979px;
     height: 1040px;
-    position: absolute;
+    position: fixed;
     z-index: 1;
     filter: blur(5px);
 }
-.div{
-    top: 50%;
-    left: 25%;
+div{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     width: 979px;
     height: 1040px;
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     z-index: -1;
     border: #191919 20px solid;
     filter: blur(5px);
 }
-.div:before{
+div:before{
     content: "";
     width: 150%;
     height: 150%;
@@ -46,10 +52,10 @@ img{
     left: -25%;
     top: -25%;
     animation-name: spin ;
-    animation-duration: 1.3s;
+    animation-duration: /*1.3s*/ 5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    animation-delay: 3s;
+    animation-delay: /*3s*/ 0s;
 }
 @keyframes spin{
     0%{
