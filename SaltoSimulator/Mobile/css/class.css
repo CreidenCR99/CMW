@@ -1,0 +1,149 @@
+.DatosObjetos {
+  color: #e7e287;
+  font-size: 130%;
+  font-weight: bolder;
+  text-align: left;
+  padding-left: 4.7%;
+}
+
+.ImagenObjetos {
+  width: 100%;
+  height: 100%;
+}
+
+.TotalObjetos {
+  padding-top: 12.5%;
+  color: #e7e287;
+  font-family: "Monaco", Monospace;
+  font-size: 200%;
+  font-weight: bold;
+}
+
+.Cabeza {
+  margin-top: 1.5%;
+  width: 85%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 75% 90% 70% 80%;
+  transition: transform 0.1s ease-in-out;
+}
+
+.Cabeza:hover {
+  transform: scale(1.03);
+}
+
+.Cabeza:active {
+  transform: scale(0.97);
+}
+
+.Saltos {
+  margin-block-start: 20px;
+  color: #e7e287;
+  font-family: "Monaco", Monospace;
+  font-size: 2em;
+}
+
+.SPS {
+  margin-block-start: -20px;
+  color: #e7e287;
+  font-family: "Monaco", Monospace;
+  font-size: 1.5em;
+}
+
+.TitleEstadisticas,
+.TitleLogros,
+.TitleOpciones  {
+  color: #e7e287;
+  text-decoration: underline #e7e287;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.TitleEstadisticas:hover,
+.TitleLogros:hover,
+.TitleOpciones:hover {
+  color: #797861;
+  text-decoration: underline #616167;
+}
+
+.TitleEstadisticas:active,
+.TitleLogros:active,
+.TitleOpciones:active {
+  color: #616167;
+  text-decoration: underline #303036;
+}
+
+.TitleEstadisticas {
+  font-size: 225%;
+}
+
+.TitleLogros {
+  font-size: 85%;
+}
+
+
+.TitleOpciones {
+  font-size: 250%;
+}
+
+.TitleSeleccion {
+  font-size: 300%;
+  margin-top: 20px;
+}
+
+.Upgrades {
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  border: #fff solid 2px;
+  margin-top: 7px;
+  margin-left: 7px;
+  background-color: rgba(127, 127, 127, 0.25);
+  transition: 0.5s;
+}
+
+.Upgrades:hover {
+  transform: scale(1.1);
+}
+
+.Upgrades:active {
+  transform: scale(1.05);
+}
+
+.TituloLogros {
+  color: #e7e287;
+  font-family: "Monaco", Monospace;
+  font-size: 250%;
+}
+
+.AchievementsEmoji {
+  height: 36px;
+  width: 36px;
+  margin: -10px;
+}
+
+.Version {
+  position: absolute;
+  padding: 0px;
+  margin: 5px;
+  font-size: medium;
+}
+
+.Seleccionh1 {
+  text-decoration: underline #e7e287;
+  color: #e7e287;
+  margin-top: 16.5%;
+  transition: 0.35s;
+}
+
+.Seleccionh1:hover {
+  transform: scale(1.1);
+  color: #797861;
+  text-decoration: underline #616167;
+}
+
+.Seleccionh1:active {
+  transform: scale(0.9);
+  color: #616167;
+  text-decoration: underline #303036;
+}

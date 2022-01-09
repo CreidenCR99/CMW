@@ -1,0 +1,80 @@
+@keyframes IconRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-1080deg);
+  }
+}
+
+head {
+  display: none;
+}
+
+body {
+  user-select: none;
+  margin: 0px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: #000;
+}
+
+::selection {
+  background-color: #e7e287;
+  color: #181d78;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgba(0, 139, 139, 1);
+  box-shadow: -5px 0px 10px 0px rgba(0, 139, 139, 0.75);
+}
+
+::-webkit-scrollbar:hover {
+  width: 10px;
+  background-color: rgba(0, 0, 0, 0.30);
+  box-shadow: -5px 0px 10px 0px rgba(0, 0, 0, 0.45);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(231, 226, 135, 1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(243, 240, 195, 1);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: rgba(121, 120, 97, 1);
+}
+
+#Title {
+  font-family: "Monaco", Monospace;
+  font-size: 250%;
+  position: absolute;
+  z-index: 0;
+  text-align: center;
+  color: #fff;
+  margin-top: 50vh;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+}
+
+.LoadingIcon {
+  position: absolute;
+  z-index: 1;
+  width: 256px;
+  height: 256px;
+  margin-left: auto;
+  margin-top: 5vh;
+  margin-right: auto;
+  margin-bottom: auto;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  animation: 13000ms ease-in-out 1000ms IconRotate;
+}
