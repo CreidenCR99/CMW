@@ -7,9 +7,8 @@ function AutoDetector() {
 	} else {
 		Mobile = false;
 		console.log(Mobile)
-	}
-	SelectTimer();
-}
+	};
+};
 
 var Timer = 15;
 
@@ -18,20 +17,17 @@ const Interval = setInterval(function() {
 	document.getElementById("Title").innerHTML = `Salto Simulator<br>Autoselect: ${Timer}s`
 	console.log(Timer);
 	if (Timer == 0) {
+		AutoDetector();
 		if (Mobile == false) {
 			window.location.href = "https://creidencr99.github.io/CMW/SaltoSimulator/PC/";
 		} else if (Mobile == true) {
-			window.location.href = "https://creidencr99.github.io/CMW/SaltoSimulator/Mobile/"
-		};
+			window.location.href = "https://creidencr99.github.io/CMW/SaltoSimulator/Mobile/";
+		} else {
+			window.location.href = "https://creidencr99.github.io/CMW/SaltoSimulator/";
+		}
 		clearInterval(Interval);
 	};
 }, 1000);
-
-function SelectTimer() {
-
-}
-
-AutoDetector();
 
 function sleep(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
