@@ -1,0 +1,91 @@
+body {
+	color: #fff;
+	background-color: #000;
+	margin: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+	background-color: rgba(255, 255, 255, 0);
+	color: #fff;
+	border: 2px solid #fff;
+	font-weight: bold;
+	font-size: 16px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+  
+button:hover {
+	background-color: #555;
+	color: #fff;
+	border: 2px solid #000;
+	box-shadow: 0px 0px 5px 1px #fff;
+}
+
+img {
+	cursor: pointer;
+}
+
+.Game {
+	width: 450px;
+	height: 450px;
+	margin: auto;
+	position: fixed;
+	left: 0;
+	top: 20%;
+	right: 0;
+	bottom: 0;
+	border: #fff 3px solid;
+	display: grid;
+	grid-template-columns: 150px 150px 150px;
+	grid-template-rows: 150px 150px 150px;
+	grid-auto-columns: 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas: "C1 C2 C3" "C4 C5 C6" "C7 C8 C9";
+}
+
+.C1 {
+	grid-area: C1;
+	border: #fff 3px solid;
+}
+
+.C2 {
+	grid-area: C2;
+		border: #fff 3px solid;
+}
+
+.C3 {
+	grid-area: C3;
+	border: #fff 3px solid;
+}
+
+.C4 {
+	grid-area: C4;
+	border: #fff 3px solid;
+}
+
+.C5 {
+	grid-area: C5;
+	border: #fff 3px solid;
+}
+
+.C6 {
+	grid-area: C6;
+	border: #fff 3px solid;
+}
+
+.C7 {
+	grid-area: C7;
+	border: #fff 3px solid;
+}
+
+.C8 {
+	grid-area: C8;
+	border: #fff 3px solid;
+}
+
+.C9 {
+	grid-area: C9;
+	border: #fff 3px solid;
+}
