@@ -1,7 +1,6 @@
 .Main {
   background-color: #181d78;
-  border: #008b8b solid 4px;
-  padding: 0px;
+  border-top: #008b8b solid 4px;
   margin: 0px;
   height: 90vh;
   width: 100%;
