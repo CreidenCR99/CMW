@@ -19,9 +19,9 @@ const Interval = setInterval(function() {
 	console.log(Timer);
 	if (Timer == 0) {
 		if (Mobile == false) {
-			window.location.href = "file:///C:/Users/Rogelio/Documents/GitHub/CreidenCR99/SaltoSimulator/PC/index.html#";
+			window.location.href = "https://creidencr99.github.io/CMW/SaltoSimulator/PC/";
 		} else if (Mobile == true) {
-			window.location.href = "file:///C:/Users/Rogelio/Documents/GitHub/CreidenCR99/SaltoSimulator/index.html"
+			window.location.href = "https://creidencr99.github.io/CMW/SaltoSimulator/Mobile/"
 		};
 		clearInterval(Interval);
 	};
