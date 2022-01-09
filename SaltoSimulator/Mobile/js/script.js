@@ -176,6 +176,17 @@ function render1() {
 			document.getElementById("title").innerHTML = `Salto Simulator - ${(Saltos / 1e6).toFixed(3) + "M"} Saltos`;
 		};
 	};
+	if (Math.floor(Saltos) == 0) {
+		document.getElementById("SaltosShop").innerHTML = `0 Saltos`;
+	} else if (Math.floor(Saltos) == 1) {
+		document.getElementById("SaltosShop").innerHTML = `1 Salto`;
+	} else if (Saltos >= 2 && Saltos <= 999) {
+		document.getElementById("SaltosShop").innerHTML = `${Math.floor(Saltos)} Saltos`;
+	} else if (Saltos >= 1000 && Saltos <= 999999) {
+		document.getElementById("SaltosShop").innerHTML = `${((Saltos / 1e3)).toFixed(3)} Saltos`;
+	} else if (Saltos >= 1000000) {
+		document.getElementById("SaltosShop").innerHTML = `${(Saltos / 1e6).toFixed(3) + "M"} Saltos`;
+	};
 	SaltosSiempre += SPS;
 	ProducidoTotal += SPS;
 	Click = +Click.toFixed(2)
