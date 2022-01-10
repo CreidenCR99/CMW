@@ -130,29 +130,29 @@
 }
 
 .LoadScreen {
+  z-index: 1;
   cursor: none;
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
-  margin: 0px;
   background-color: #000;
   opacity: 1;
 }
 
 .LoadedText {
-  position: absolute;
   color: #fff;
   text-align: center;
-  margin-top: 50vh;
-  margin-left: 70vh;
 }
 
 .LoadingIcon {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
   width: 256px;
   height: 256px;
-  position: absolute;
-  margin-top: 12.5vh;
-  margin-left: 75vh;
+  position: fixed;
+  margin: auto;
   animation: 1000ms linear 100ms infinite IconRotate;
 }
 
