@@ -13,7 +13,6 @@
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas: "Mejoras" "Tienda";
-  grid-area: Centro;
   border-top: #008b8b solid 4px;
 }
 
@@ -33,13 +32,12 @@
 }
 
 .Objetos {
+  margin: 1.5%;
+  margin-left: auto;
+  margin-right: auto;
   cursor: pointer;
   width: 80%;
   border: #008b8b solid 4px;
-  left: 0px;
-  right: 0px;
-  margin: auto;
-  gap: 10px;
   display: grid;
   grid-template-columns: 30% 55% 15%;
   grid-template-rows: 1fr;
@@ -51,11 +49,11 @@
 }
 
 .Objetos:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 .Objetos:active {
-  transform: scale(0.97);
+  transform: scale(0.95);
 }
 
 .Imagen {
@@ -66,10 +64,8 @@
 .Datos {
   grid-area: Datos;
   border-left: #008b8b solid 2px;
-  border-right: currentColor;
 }
 
 .Total {
   grid-area: Total;
-  border-left: currentColor;
 }

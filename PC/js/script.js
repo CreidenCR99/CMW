@@ -30,17 +30,13 @@ var Loading = 0;
 var Loaded = 0;
 
 async function Load() {
+	document.getElementById("LoadedText").innerHTML = `Salto Simulator<br>${Loaded}/17 Loaded`
 	let rng = (Math.floor(Math.random() * (100 - 50)) + 50);
 	function LoadingText() {
 		Loaded += 1;
-		document.getElementById("LoadedText").innerHTML = `Salto Simulator<br>${Loaded}/18 Loaded`
+		document.getElementById("LoadedText").innerHTML = `Salto Simulator<br>${Loaded}/17 Loaded`
 	}
 	await sleep(Math.floor(Math.random() * (500 - 250)) + 250);
-	document.getElementById("CBZ").src = "img/BarCBZ.png";
-	document.getElementById("SHP").src = "img/texture.png";
-	document.getElementById("MOR").src = "img/BarMOR.png";
-	LoadingText();
-	await sleep(rng);
 	document.getElementById("CabezaLoad").src = "img/Cabeza.png";
 	LoadingText();
 	await sleep(rng);
@@ -82,7 +78,7 @@ async function Load() {
 	document.getElementById("LoadingIcon").style = "display: none;";
 	await sleep(100);
 	document.getElementById("LoadScreen").style = "animation: 2500ms ease 0s 1 normal forwards running Loading;";
-	document.getElementById("GameScreen").style = "display: block;";
+	document.getElementById("GameScreen").style = "display: grid;";
 	await sleep(1500);
 	document.getElementById("LoadScreen").style = "display: none;";
 	Loading += 1;
@@ -96,46 +92,32 @@ document.oncontextmenu = function () {
 	return false;
 };
 
-function More(Seleccion) {
+function Derecha(Seleccion) {
 	if(Seleccion == 0) {
-		document.getElementById("MoreSeleccion").style.display = "grid";
-		document.getElementById("Opciones").style.display = "none";
-		document.getElementById("Estadisticas").style.display = "none";
-		document.getElementById("Logros").style.display = "none";
-	} else if (Seleccion == 1) {
-		document.getElementById("MoreSeleccion").style.display = "none";
-		document.getElementById("Opciones").style.display = "grid";
-		document.getElementById("Estadisticas").style.display = "none";
-		document.getElementById("Logros").style.display = "none";
-	} else if (Seleccion == 2) {
-		document.getElementById("MoreSeleccion").style.display = "none";
-		document.getElementById("Opciones").style.display = "none";
-		document.getElementById("Estadisticas").style.display = "grid";
-		document.getElementById("Logros").style.display = "none";
-	} else if (Seleccion == 3) {
-		document.getElementById("MoreSeleccion").style.display = "none";
-		document.getElementById("Opciones").style.display = "none";
-		document.getElementById("Estadisticas").style.display = "none";
-		document.getElementById("Logros").style.display = "grid";
-	};
-};
-
-function ChangeScreen(Screen) {
-	if (Screen == 0) {
-		document.getElementById("Main").style = "display: block;";
-		document.getElementById("Shop").style = "display: none;";
-		document.getElementById("More").style = "display: none;";
-	} else if (Screen == 1) {
-		document.getElementById("Main").style = "display: none;";
-		document.getElementById("Shop").style = "display: block;";
-		document.getElementById("More").style = "display: none;";
-	} else if (Screen == 2) {
-		document.getElementById("Main").style = "display: none;";
-		document.getElementById("Shop").style = "display: none;";
-		document.getElementById("More").style = "display: block;";
-		More(0);
-	};
-};
+		document.getElementById("DerechaSeleccion").style = "display: grid;"
+		document.getElementById("Opciones").style = "display: none;"
+		document.getElementById("Estadisticas").style = "display: none;"
+		document.getElementById("Logros").style = "display: none;"
+	}
+	else if (Seleccion == 1) {
+		document.getElementById("DerechaSeleccion").style = "display: none;"
+		document.getElementById("Opciones").style = "display: grid;"
+		document.getElementById("Estadisticas").style = "display: none;"
+		document.getElementById("Logros").style = "display: none;"
+	}
+	else if (Seleccion == 2) {
+		document.getElementById("DerechaSeleccion").style = "display: none;"
+		document.getElementById("Opciones").style = "display: none;"
+		document.getElementById("Estadisticas").style = "display: grid;"
+		document.getElementById("Logros").style = "display: none;"
+	}
+	else if (Seleccion == 3) {
+		document.getElementById("DerechaSeleccion").style = "display: none;"
+		document.getElementById("Opciones").style = "display: none;"
+		document.getElementById("Estadisticas").style = "display: none;"
+		document.getElementById("Logros").style = "display: grid;"
+	}
+}
 
 function render60() {
 	if (Math.floor(Saltos) == 0) {
@@ -180,17 +162,6 @@ function render1() {
 		} else if (Saltos >= 1000000) {
 			document.getElementById("title").innerHTML = `Salto Simulator - ${(Saltos / 1e6).toFixed(3) + "M"} Saltos`;
 		};
-	};
-	if (Math.floor(Saltos) == 0) {
-		document.getElementById("SaltosShop").innerHTML = `0 Saltos`;
-	} else if (Math.floor(Saltos) == 1) {
-		document.getElementById("SaltosShop").innerHTML = `1 Salto`;
-	} else if (Saltos >= 2 && Saltos <= 999) {
-		document.getElementById("SaltosShop").innerHTML = `${Math.floor(Saltos)} Saltos`;
-	} else if (Saltos >= 1000 && Saltos <= 999999) {
-		document.getElementById("SaltosShop").innerHTML = `${((Saltos / 1e3)).toFixed(3)} Saltos`;
-	} else if (Saltos >= 1000000) {
-		document.getElementById("SaltosShop").innerHTML = `${(Saltos / 1e6).toFixed(3) + "M"} Saltos`;
 	};
 	SaltosSiempre += SPS;
 	ProducidoTotal += SPS;
