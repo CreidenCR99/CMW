@@ -1,0 +1,254 @@
+.GameScreen {
+  background-color: #181d78;
+  padding: 0px;
+  margin: 0px;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 33% 34% 33%;
+  grid-template-rows: 100%;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Izquierda Centro Derecha";
+}
+
+.Izquierda {
+  height: auto;
+  grid-area: Izquierda;
+  border-right: #008b8b solid 2px;
+  border-top: #008b8b solid 4px;
+  border-bottom: #008b8b solid 4px;
+  border-left: #008b8b solid 4px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.Centro {
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 80%;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Mejoras" "Tienda";
+  grid-area: Centro;
+  border: #008b8b solid 2px;
+  border-top: #008b8b solid 4px;
+  border-bottom: #008b8b solid 4px;
+}
+
+.Mejoras {
+  grid-area: Mejoras;
+  border-bottom: #008b8b solid 2px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.Tienda {
+  text-align: center;
+  grid-area: Tienda;
+  border-top: #008b8b solid 2px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Torchic" "Cramorant" "Kabutops" "Crobat";
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.Torchic {
+  grid-area: Torchic;
+}
+
+.Cramorant {
+  grid-area: Cramorant;
+}
+
+.Kabutops {
+  grid-area: Kabutops;
+}
+
+.Crobat {
+  grid-area: Crobat;
+}
+
+.Objetos {
+  cursor: pointer;
+  width: 80%;
+  border: #008b8b solid 4px;
+  margin-left: 10%;
+  margin-top: 2%;
+  display: grid;
+  grid-template-columns: 30% 55% 15%;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Imagen Datos Total";
+  transition: transform 0.1s;
+}
+
+.Objetos:hover {
+  transform: scale(1.03);
+}
+
+.Objetos:active {
+  transform: scale(0.97);
+}
+
+.Imagen {
+  grid-area: Imagen;
+  border-right: #008b8b solid 2px;
+}
+
+.Datos {
+  grid-area: Datos;
+  border-left: #008b8b solid 2px;
+  border-right: currentColor;
+}
+
+.Total {
+  grid-area: Total;
+  border-left: currentColor;
+}
+
+.Derecha {
+  height: auto;
+  border: #008b8b solid 2px;
+  border-top: #008b8b solid 4px;
+  border-bottom: #008b8b solid 4px;
+  border-right: #008b8b solid 4px;
+}
+
+.Estadisticas {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15% 85%;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "TituloEstadisticas" "ContenidoEstadisticas";
+}
+
+.TituloEstadisticas {
+  grid-area: TituloEstadisticas;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  border-bottom: #008b8b solid 4px;
+}
+
+.ContenidoEstadisticas {
+  grid-area: ContenidoEstadisticas;
+  font-size: small;
+  padding-left: 10%;
+  text-align: left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.Logros {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15% 85%;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "TituloLogros" "ContenidoLogros";
+}
+
+.TituloLogros {
+  grid-area: TituloLogros;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  border-bottom: #008b8b solid 4px;
+}
+
+.ContenidoLogros {
+  grid-area: ContenidoLogros;
+  font-size: small;
+  padding-left: 10%;
+  text-align: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.Opciones {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15% 85%;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "TituloOpciones" "ContenidoOpciones";
+}
+
+.TituloOpciones {
+  grid-area: TituloOpciones;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  border-bottom: #008b8b solid 4px;
+}
+
+.ContenidoOpciones {
+  grid-area: ContenidoOpciones;
+  font-size: small;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.DerechaSeleccion {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15% 85%;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "TituloDerechaSeleccion" "ContenidoDerechaSeleccion";
+}
+
+.TituloDerechaSeleccion {
+  grid-area: TituloDerechaSeleccion;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  border-bottom: #008b8b solid 4px;
+}
+
+.ContenidoDerechaSeleccion {
+	grid-area: ContenidoDerechaSeleccion;
+	text-align: center;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 33% 34% 33%;
+	grid-auto-columns: 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas: "DerechaSeleccionOpciones" "DerechaSeleccionEstadisticas" "DerechaSeleccionLogros";
+}
+
+.DerechaSeleccionOpciones {
+	grid-area: DerechaSeleccionOpciones;
+  border-bottom: #008b8b solid 2px;
+}
+
+.DerechaSeleccionEstadisticas {
+	grid-area: DerechaSeleccionEstadisticas;
+  border-top: #008b8b solid 2px;
+  border-bottom: #008b8b solid 2px;
+}
+
+.DerechaSeleccionLogros {
+	grid-area: DerechaSeleccionLogros;
+  border-top: #008b8b solid 2px;
+  border-bottom: #008b8b solid 4px;
+}

@@ -1,131 +1,133 @@
 .More {
-    height: auto;
-  }
-  
-  .Estadisticas {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 15% 85%;
-    grid-auto-columns: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas: "TituloEstadisticas" "ContenidoEstadisticas";
-  }
-  
-  .TituloEstadisticas {
-    grid-area: TituloEstadisticas;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    border-bottom: #008b8b solid 4px;
-  }
-  
-  .ContenidoEstadisticas {
-    grid-area: ContenidoEstadisticas;
-    font-size: small;
-    padding-left: 10%;
-    text-align: left;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-  
-  .Logros {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 15% 85%;
-    grid-auto-columns: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas: "TituloLogros" "ContenidoLogros";
-  }
-  
-  .TituloLogros {
-    grid-area: TituloLogros;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    border-bottom: #008b8b solid 4px;
-  }
-  
-  .ContenidoLogros {
-    grid-area: ContenidoLogros;
-    font-size: small;
-    padding-left: 10%;
-    text-align: center;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-  
-  .Opciones {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 15% 85%;
-    grid-auto-columns: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas: "TituloOpciones" "ContenidoOpciones";
-  }
-  
-  .TituloOpciones {
-    grid-area: TituloOpciones;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    border-bottom: #008b8b solid 4px;
-  }
-  
-  .ContenidoOpciones {
-    grid-area: ContenidoOpciones;
-    font-size: small;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-  
-  .DerechaSeleccion {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 15% 85%;
-    grid-auto-columns: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas: "TituloDerechaSeleccion" "ContenidoDerechaSeleccion";
-  }
-  
-  .TituloDerechaSeleccion {
-    grid-area: TituloDerechaSeleccion;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    border-bottom: #008b8b solid 4px;
-  }
-  
-  .ContenidoDerechaSeleccion {
-      grid-area: ContenidoDerechaSeleccion;
-      text-align: center;
-      overflow-y: scroll;
-      overflow-x: hidden;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 33% 34% 33%;
-      grid-auto-columns: 1fr;
-      gap: 0px 0px;
-      grid-auto-flow: row;
-      grid-template-areas: "DerechaSeleccionOpciones" "DerechaSeleccionEstadisticas" "DerechaSeleccionLogros";
-  }
-  
-  .DerechaSeleccionOpciones {
-      grid-area: DerechaSeleccionOpciones;
-    border-bottom: #008b8b solid 2px;
-  }
-  
-  .DerechaSeleccionEstadisticas {
-      grid-area: DerechaSeleccionEstadisticas;
-    border-top: #008b8b solid 2px;
-    border-bottom: #008b8b solid 2px;
-  }
-  
-  .DerechaSeleccionLogros {
-      grid-area: DerechaSeleccionLogros;
-    border-top: #008b8b solid 2px;
-    border-bottom: #008b8b solid 4px;
-  }
+	height: 90vh;
+	position: relative;
+	text-align: center;
+}
+
+.Estadisticas {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 15% 85%;
+	grid-auto-columns: 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas: "TituloEstadisticas" "ContenidoEstadisticas";
+}
+
+.TituloEstadisticas {
+	grid-area: TituloEstadisticas;
+  padding: 5%;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	border-bottom: #008b8b solid 4px;
+}
+
+.ContenidoEstadisticas {
+	grid-area: ContenidoEstadisticas;
+	font-size: medium;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.Logros {  
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 15% 85%;
+	grid-auto-columns: 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas: "TituloLogros" "ContenidoLogros";
+}
+
+.TituloLogros {
+  padding: 5%;
+	grid-area: TituloLogros;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	border-bottom: #008b8b solid 4px;
+}
+
+.ContenidoLogros {
+	grid-area: ContenidoLogros;
+	font-size: medium;
+	padding-left: 10%;
+	text-align: center;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.Opciones {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 15% 85%;
+	grid-auto-columns: 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas: "TituloOpciones" "ContenidoOpciones";
+}
+
+.TituloOpciones {
+  padding: 5%;
+	grid-area: TituloOpciones;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	border-bottom: #008b8b solid 4px;
+}
+
+.ContenidoOpciones {
+	grid-area: ContenidoOpciones;
+	font-size: small;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.MoreSeleccion {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0.2fr 0.8fr;
+	grid-auto-columns: 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas: "TituloMoreSeleccion" "ContenidoMoreSeleccion";
+}
+
+.TituloMoreSeleccion {
+	grid-area: TituloMoreSeleccion;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	border-bottom: #008b8b solid 4px;
+}
+
+.ContenidoMoreSeleccion {
+	grid-area: ContenidoMoreSeleccion;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 30% 30% 40%;
+	grid-auto-columns: 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas: "MoreSeleccionOpciones" "MoreSeleccionEstadisticas" "MoreSeleccionLogros";
+}
+
+.MoreSeleccionOpciones {
+	grid-area: MoreSeleccionOpciones;
+	border-bottom: #008b8b solid 2px;
+}
+
+.MoreSeleccionEstadisticas {
+	grid-area: MoreSeleccionEstadisticas;
+	border-top: #008b8b solid 2px;
+	border-bottom: #008b8b solid 2px;
+}
+
+.MoreSeleccionLogros {
+	grid-area: MoreSeleccionLogros;
+	border-top: #008b8b solid 2px;
+	border-bottom: #008b8b solid 4px;
+}

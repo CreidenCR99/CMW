@@ -16,32 +16,22 @@
 		<script src="js/achievements.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" type="text/css" href="css/class.css"/>
+		<link rel="stylesheet" type="text/css" href="css/grids.css"/>
 		<link rel="stylesheet" type="text/css" href="css/animations.css"/>
-		<link rel="stylesheet" type="text/css" href="css/Screens/Load.css"/>
-		<link rel="stylesheet" type="text/css" href="css/Screens/Bar.css"/>
-		<link rel="stylesheet" type="text/css" href="css/Screens/Main.css"/>
-		<link rel="stylesheet" type="text/css" href="css/Screens/Shop.css"/>
-		<link rel="stylesheet" type="text/css" href="css/Screens/More.css"/>
 	</head>
 	<body onload="Load(); Loaded += 1;">
+		<h3 class="Version">open_alp-1.3.5</h3>
 		<div class="LoadScreen" id="LoadScreen">
 			<img draggable="false" class="LoadingIcon" id="LoadingIcon" src="img/icon.png"><br>
-			<h1 class="LoadedText" id="LoadedText">Salto Simulator<br>0/18 Loaded</h1>
+			<h1 class="LoadedText" id="LoadedText">Salto Simulator<br>0/17 Loaded</h1>
 		</div>
-		<div class="GameScreen" id="GameScreen">
-			<div class="Bar">
-				<div class="CBZ"><img onclick="ChangeScreen(0);" id="CBZ" src="img/BarCBZ.png" style="cursor: pointer;" width="76px" height="76px"></div>
-				<div class="SHP"><img onclick="ChangeScreen(1);" id="SHP" src="img/texture.png" style="cursor: pointer;" width="76px" height="76px"></div>
-				<div class="MOR"><img onclick="ChangeScreen(2);" id="MOR" src="img/BarMOR.png" style="cursor: pointer;" width="76px" height="76px"></div>
-			</div>
-			<div class="Main" id="Main" style="display: block;">
-				<h3 class="Version">open_alp-1.3.5</h3>
-				<h1>Salto Simulator</h1>
+		<div class="GameScreen" id="GameScreen" style="display: none;">
+			<div class="Izquierda">
 				<h2 class="Saltos" id="Saltos">0 Saltos</h2>
 				<h3 class="SPS" id="SPS">0 SPS</h3>
 				<img id="CabezaLoad" draggable="false" class="Cabeza" onclick="ClickCabeza();" src="img/Cabeza.png" width="200px" height="250px"/>
 			</div>
-			<div class="Shop" id="Shop" style="display: none;">
+			<div class="Centro">
 				<button style="width: 1%; height: 1%; display: block; position: absolute; opacity: 0; cursor: none;" onclick="TorchicInv=10;CramorantInv=10;KabutopsInv=10;CrobatInv=10;Saltos=25000;"></button>
 				<div class="Mejoras">
 					<img draggable="false" style="display: none;" class="Upgrades" src="img/Upgrades/PercentajeSales.png" id="PercentajeSales" onclick="PercentajeSaleUpgrade();" title="Precio: 500 saltos"/>
@@ -54,7 +44,7 @@
 					<div class="Torchic">
 						<div onclick="ComprarTorchic();" class="Objetos">
 							<div class="Imagen">
-								<img id="TorchicLoad" class="ImagenObjetos" draggable="false" style="top: -950px; left: -950px;" src="img/pkmns/Torchic.png"/>
+								<img id="TorchicLoad" class="ImagenObjetos" draggable="false" style="top: -950px; left: -950px;" src="img/pkmns/pkmns.png"/>
 							</div>
 							<div class="Datos">
 								<h1 id="DatosTorchic" class="DatosObjetos">Torchic<br>15 saltos<br>1 SPS</h1>
@@ -67,7 +57,7 @@
 					<div class="Cramorant">
 						<div onclick="ComprarCramorant();" class="Objetos">
 							<div class="Imagen">
-								<img id="CramorantLoad" class="ImagenObjetos" draggable="false" style="top: 0px; left: 0px;" src="img/pkmns/Cramorant.png"/>
+								<img id="CramorantLoad" class="ImagenObjetos" draggable="false" style="top: 0px; left: 0px;" src="img/pkmns/pkmns.png"/>
 							</div>
 							<div class="Datos">
 								<h1 id="DatosCramorant" class="DatosObjetos">Cramorant<br>100 saltos<br>3 SPS</h1>
@@ -80,7 +70,7 @@
 					<div class="Kabutops">
 						<div onclick="ComprarKabutops();" class="Objetos">
 							<div class="Imagen">
-								<img id="KabutopsLoad" class="ImagenObjetos" draggable="false" style="top: -950px; left: 0px;" src="img/pkmns/Kabutops.png"/> 
+								<img id="KabutopsLoad" class="ImagenObjetos" draggable="false" style="top: -950px; left: 0px;" src="img/pkmns/pkmns.png"/> 
 							</div>
 							<div class="Datos">
 								<h1 id="DatosKabutops" class="DatosObjetos">Kabutops<br>1100 saltos<br>8 SPS</h1>
@@ -104,43 +94,42 @@
 						</div>
 					</div>
 				</div>
-				<h2 class="Saltos" id="SaltosShop">0 Saltos</h2>
 			</div>
-			<div class="More" id="More" style="display: none;">
-				<div id="MoreSeleccion" class="MoreSeleccion">
-					<div class="TituloMoreSeleccion">
+			<div class="Derecha">
+				<div id="DerechaSeleccion" class="DerechaSeleccion">
+					<div class="TituloDerechaSeleccion">
 						<h1 class="TitleSeleccion">Salto Simulator</h1>
 					</div>
-					<div class="ContenidoMoreSeleccion">
-						<div class="MoreSeleccionOpciones">
-							<h1 onclick="More(1);" class="Seleccionh1">Opciones</h1>
-						</div>
-						<div class="MoreSeleccionEstadisticas">
-							<h1 onclick="More(2);" class="Seleccionh1">Estadisticas</h1>
-						</div>
-						<div class="MoreSeleccionLogros">
-							<h1 onclick="More(3);" class="Seleccionh1">Logros</h1>
-						</div>
+				<div class="ContenidoDerechaSeleccion">
+					<div class="DerechaSeleccionOpciones">
+						<h1 onclick="Derecha(1);" class="Seleccionh1">Opciones</h1>
 					</div>
+					<div class="DerechaSeleccionEstadisticas">
+						<h1 onclick="Derecha(2);" class="Seleccionh1">Estadisticas</h1>
+					</div>
+					<div class="DerechaSeleccionLogros">
+						<h1 onclick="Derecha(3);" class="Seleccionh1">Logros</h1>
+					</div>
+				  </div>
 				</div>
-				<div id="Opciones" class="Opciones" style="display: none;">
+				<div id="Opciones" class="Opciones">
 					<div class="TituloOpciones">
-						<h1 onclick="More(0);" class="TitleOpciones">Opciones</h1>
+						<h1 onclick="Derecha(0);" class="TitleOpciones">Opciones</h1>
 					</div>
 					<div class="ContenidoOpciones">
 					</div>
 				</div>
-				<div id="Estadisticas" class="Estadisticas" style="display: none;">
+				<div id="Estadisticas" class="Estadisticas">
 					<div class="TituloEstadisticas">
-						<h1 onclick="More(0);" class="TitleEstadisticas">Estadisticas</h1>
+						<h1 onclick="Derecha(0);" class="TitleEstadisticas">Estadisticas</h1>
 					</div>
 					<div class="ContenidoEstadisticas">
 						<h3 id="Stats"></h3>
 					</div>
 				</div>
-				<div id="Logros" class="Logros" style="display: none;">
+				<div id="Logros" class="Logros">
 					<div class="TituloLogros">
-						<h1 onclick="More(0);" class="TitleLogros">
+						<h1 onclick="Derecha(0);" class="TitleLogros">
 							<img draggable="false" id="AchievementEmojiLeft" class="AchievementsEmoji" src="img/texture.png"> Logros <img draggable="false" id="AchievementEmojiRight" class="AchievementsEmoji" src="img/texture.png">
 						</h1>
 					</div>
