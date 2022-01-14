@@ -37,7 +37,7 @@ async function Load() {
 	}
 	await sleep(Math.floor(Math.random() * (500 - 250)) + 250);
 	document.getElementById("CBZ").src = "img/BarCBZ.png";
-	document.getElementById("SHP").src = "img/texture.png";
+	document.getElementById("SHP").src = "img/BarSHP.png";
 	document.getElementById("MOR").src = "img/BarMOR.png";
 	LoadingText();
 	await sleep(rng);
