@@ -1,4 +1,5 @@
 .More {
+	border-top: #008b8b solid 4px;
 	height: 90vh;
 	position: relative;
 	text-align: center;
@@ -17,7 +18,7 @@
 
 .TituloEstadisticas {
 	grid-area: TituloEstadisticas;
-  padding: 5%;
+	padding: 5%;
 	overflow-y: hidden;
 	overflow-x: hidden;
 	border-bottom: #008b8b solid 4px;
