@@ -137,6 +137,16 @@ function ChangeScreen(Screen) {
 	};
 };
 
+function VersionLong() {
+	document.getElementById("VersionShort").style = "display: none;";
+	document.getElementById("VersionLong").style = "display: block;";
+};
+
+function VersionShort() {
+	document.getElementById("VersionLong").style = "display: none;";
+	document.getElementById("VersionShort").style = "display: block;";
+};
+
 function render60() {
 	if (Math.floor(Saltos) == 0) {
 		document.getElementById("Saltos").innerHTML = `0 Saltos`;
