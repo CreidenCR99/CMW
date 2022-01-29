@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <title id="title">Mine - CTW</title>
+    <link rel="icon" type="image/png" sizes="1000x1000" href="icon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+  <body>
+    <h1 id="FPS"></h1>
+    <div id="Inventory" style="opacity: 0;">
+      <h2 id="InventoryTitle">Inventory:</h2>
+      <h3 id="InventoryMoney"style="display: none;"></h3>
+      <h3 id="InventoryPickaxe" style="display: none;"></h3>
+      <h3 id="InventoryRock" onclick="Sell(1);" style="display: none;"></h3>
+      <h3 id="InventoryCoal" onclick="Sell(2);" style="display: none;"></h3>
+      <h3 id="InventoryRawIron" onclick="Sell(3);" style="display: none;"></h3>
+      <h3 id="InventoryIron" onclick="Sell(4);" style="display: none;"></h3>
+      <button id="SellBtn" onclick="Sell(0);" title="Click to sell all" style="display: none;">Sell</button>
+    </div>
+    <h1 id="Title">Mine - CTW</h1>
+    <h2 id="Earned"></h2>
+    <button onclick="Mine();" id="MineBtn">Mine</button>
+    <div id="Shop" style="opacity: 0;">
+    <h2>Shop:</h2>
+      <button style="display: none;" title="Stone Pickaxe (250$ + Rock x100)" onclick="Buy(1);" id="StonePickaxe">Stone Pickaxe (250$ + Rock x100)</button>
+      <button style="display: none;" title="Iron Pickaxe (1500$ + Iron x50)" onclick="Buy(2);" id="IronPickaxe">Iron Pickaxe (1500$ + Iron x50)</button>
+    </div>
+    <div id="Craft" style="opacity: 0;">
+      <h2>Craft:</h2>
+      <button id="FurnaceBuy" onclick="Craft(1);" title="Furnace (Rock x500 + Coal x250)" style="display: none;">Furnace (Rock x500 + Coal x250)</button>
+    </div>
+    <div id="FurnaceOpen" style="display: none;">
+      <h2>Furnace</h2>
+      <button onclick="FurnaceScreen(1);">Open</button>
+    </div>
+    <div style="display: none;" id="FurnaceBackground"></div>
+    <div style="display: none;" id="Furnace">
+      <div onclick="FurnaceScreen(0);" id="close"></div>
+      <div id="Extra">
+        <h2>Furnace:</h2>
+        <button onclick="FurnaceAddContainer();">AddContainer</button>
+        <h3 id="FurnaceContainer"></h2>
+        <button onclick="FurnaceAddFuel();">AddFuel</button>
+        <h3 id="FurnaceFuel"></h2>
+        <button onclick="FurnaceFuntion();">Burn</button>
+      </div>
+      <div id="progressBar">
+        <div id="progressGradient">
+          <div id="progress">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

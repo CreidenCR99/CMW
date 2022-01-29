@@ -1,0 +1,176 @@
+html, body {
+    font-family: 'Courier New', Courier, monospace;
+    user-select: none;
+    margin: 0px;
+    overflow: hidden;
+}
+
+head {
+    display: none;
+}
+
+#FPS {
+    position: absolute;
+    margin: auto;
+    font-size: medium;
+}
+
+#MineBtn {
+    font-size: xx-large;
+    width: 128px;
+    height: 128px;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin: auto;
+    display: block;
+    position: fixed;
+    padding: 0px;
+}
+
+#Earned {
+    text-align: center;
+    margin: auto;
+    top: 6%;
+    bottom: 94%;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+}
+
+#Title {
+    text-align: center;
+    margin: auto;
+    top: 1%;
+    bottom: 99%;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+}
+
+/* div#Inventory */
+
+div#Inventory{
+    height: 100%;
+    width: 25%;
+    border: 2px solid black;
+    right: 25%;
+    left: 75%;
+    top: 0px;
+    bottom: 0px;
+    position: absolute;
+    margin: auto;
+    transition: 1s;
+}
+
+div#Inventory h2 {
+    font-size: xx-large;
+    margin-left: 10px;
+    width: max-content;
+}
+
+div#Inventory h3 {
+    font-size: x-large;
+    margin-left: 10px;
+    width: max-content;
+    margin-block-end: auto;
+    margin-block-start: auto;
+}
+
+div#Inventory button#SellBtn {
+    font-size: x-large;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+/* div#Furnace */
+
+div#FurnaceBackground {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+}
+
+div#Furnace {
+	width: 70%;
+	height: 95%;
+	position: absolute;
+	margin: auto;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 25%;
+	background:#796853;
+	border: #5f9ea0 3px solid;
+	border-radius: 5%;
+}
+
+div#Furnace div#close::after {
+	width: auto;
+	height: auto;
+	cursor: pointer;
+	position: absolute;
+	top: -1%;
+	left: -1%;
+	content: "\274c";
+	font-size: 35px; 
+	color: #FFF;
+	line-height: 40px;
+	text-align: center;
+    filter: grayscale(0.9);
+	filter: sepia(0.9);
+	border-radius: 100%;
+}
+div#Furnace div#progressBar {
+	margin-left: 25%;
+	margin-top: 7%;
+	margin-bottom: auto;
+	margin-right: auto;
+	position: relative;
+}
+div#Furnace div#progress {
+	max-width: 100%;
+	height: 200px;
+	background-color: rgba(0, 0, 0, 1);
+    border-bottom: rgba(0, 0, 0, 0.9) 2px solid;
+	margin: 0px;
+    transition: 0.5s ease-in-out;
+}
+div#Furnace div#progressGradient {
+	background: linear-gradient(to top, #f20 0%, #ff0 50%, #0f4 100%);
+    border: #000 3px solid;
+    border-radius: 5% 5% 5% 5%;
+	width: 50px;
+	height: 200px;
+	margin: 0px;
+	position: absolute;
+}
+div#Furnace div#Extra {
+	position: absolute;
+	margin-left: 3%;
+	margin-top: 3%;
+	color: #fff;
+	filter: sepia(1);
+}
+
+/* div#Shop */
+
+div#Shop {
+    transition: 1s;
+}
+
+/* div#Craft */
+
+div#Craft {
+    transition: 1s;
+}
