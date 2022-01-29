@@ -14,18 +14,17 @@ var height = 100;
 var expiresdate = new Date(2040, 1, 01, 00, 00);
 
 function cookies() {
-	document.cookie = "Money=" + encodeURIComponent(`${Money};`) + "; expires=" + expiresdate.toUTCString();
-	document.cookie = "Rock=" + encodeURIComponent(`${Rock};`) + "; expires=" + expiresdate.toUTCString();
-	document.cookie = "Coal=" + encodeURIComponent(`${Coal};`) + "; expires=" + expiresdate.toUTCString();
-	document.cookie = "RawIron=" + encodeURIComponent(`${RawIron};`) + "; expires=" + expiresdate.toUTCString();
-	document.cookie = "Iron=" + encodeURIComponent(`${Iron};`) + "; expires=" + expiresdate.toUTCString();
-	document.cookie = "Pickaxe=" + encodeURIComponent(`${Pickaxe};`) + "; expires=" + expiresdate.toUTCString();
-	document.cookie = "Furnace=" + encodeURIComponent(`${Furnace};`) + "; expires=" + expiresdate.toUTCString();
-	document.cookie = "FurnaceContainer=" + encodeURIComponent(`${FurnaceContainer};`) + "; expires=" + expiresdate.toUTCString();
-	document.cookie = "FurnaceFuel=" + encodeURIComponent(`${FurnaceFuel};`) + "; expires=" + expiresdate.toUTCString();
-	document.cookie = "IronUnlocked=" + encodeURIComponent(`${IronUnlocked};`) + "; expires=" + expiresdate.toUTCString();
-	document.cookie = "SellToggle=" + encodeURIComponent(`${SellToggle};`) + "; expires=" + expiresdate.toUTCString();
-	document.cookie = "height=" + encodeURIComponent(`${height};`) + "; expires=" + expiresdate.toUTCString();
+	document.cookie = "Money=" + encodeURIComponent(`Money = ${Money}`) + "; expires=" + expiresdate.toUTCString();
+	document.cookie = "Rock=" + encodeURIComponent(`Rock = ${Rock}`) + "; expires=" + expiresdate.toUTCString();
+	document.cookie = "Coal=" + encodeURIComponent(`Coal = ${Coal}`) + "; expires=" + expiresdate.toUTCString();
+	document.cookie = "RawIron=" + encodeURIComponent(`RawIron = ${RawIron}`) + "; expires=" + expiresdate.toUTCString();
+	document.cookie = "Iron=" + encodeURIComponent(`Iron = ${Iron}`) + "; expires=" + expiresdate.toUTCString();
+	document.cookie = "Pickaxe=" + encodeURIComponent(`Pickaxe = "${Pickaxe}"`) + "; expires=" + expiresdate.toUTCString();
+	document.cookie = "Furnace=" + encodeURIComponent(`Furnace = ${Furnace}`) + "; expires=" + expiresdate.toUTCString();
+	document.cookie = "FurnaceContainer=" + encodeURIComponent(`FurnaceContainer = ${FurnaceContainer}`) + "; expires=" + expiresdate.toUTCString();
+	document.cookie = "FurnaceFuel=" + encodeURIComponent(`FurnaceFuel = ${FurnaceFuel}`) + "; expires=" + expiresdate.toUTCString();
+	document.cookie = "IronUnlocked=" + encodeURIComponent(`IronUnlocked = ${IronUnlocked}`) + "; expires=" + expiresdate.toUTCString();
+	document.cookie = "SellToggle=" + encodeURIComponent(`SellToggle = ${SellToggle}`) + "; expires=" + expiresdate.toUTCString();
 }
 
 async function Mine() {
