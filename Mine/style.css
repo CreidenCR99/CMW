@@ -3,6 +3,8 @@ html, body {
     user-select: none;
     margin: 0px;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 head {
@@ -13,6 +15,15 @@ head {
     position: absolute;
     margin: auto;
     font-size: medium;
+}
+
+#Saving {
+    position: absolute;
+    right: 26%;
+    left: auto;
+    text-align: right;
+    font-size: large;
+    transition: 5s;
 }
 
 #MineBtn {
@@ -32,7 +43,7 @@ head {
 #Earned {
     text-align: center;
     margin: auto;
-    top: 6%;
+    top: 7%;
     bottom: 94%;
     left: 0px;
     right: 0px;
@@ -54,7 +65,6 @@ head {
 div#Inventory{
     height: 100%;
     width: 25%;
-    border: 2px solid black;
     right: 25%;
     left: 75%;
     top: 0px;
@@ -83,9 +93,19 @@ div#Inventory button#SellBtn {
     width: 64px;
     height: 64px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 0px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
     margin-top: 10px;
+}
+
+div#Inventory h3#InventoryRock,
+div#Inventory h3#InventoryCoal,
+div#Inventory h3#InventoryRawIron,
+div#Inventory h3#InventoryIron {
+    cursor: pointer;
 }
 
 /* div#Furnace */
@@ -132,8 +152,8 @@ div#Furnace div#close::after {
 	border-radius: 100%;
 }
 div#Furnace div#progressBar {
-	margin-left: 25%;
-	margin-top: 7%;
+	margin-left: 50%;
+	margin-top: 10%;
 	margin-bottom: auto;
 	margin-right: auto;
 	position: relative;
@@ -163,14 +183,12 @@ div#Furnace div#Extra {
 	filter: sepia(1);
 }
 
-/* div#Shop */
+/* div#Shop */ /* div#Craft */
 
-div#Shop {
+div#Shop,
+div#Craft,
+div#FurnaceOpen {
     transition: 1s;
-}
-
-/* div#Craft */
-
-div#Craft {
-    transition: 1s;
+    margin-left: 1%;
+    width: max-content;
 }

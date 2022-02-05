@@ -38,6 +38,7 @@ h2,
 h3 {
   color: #e6e6e6;
   font-family: verdana;
+  width: auto;
 }
 
 h2 {
@@ -62,6 +63,8 @@ h2 {
 }
 
 video {
+  width: 45%;
+  height: auto;
   border: 2px #800030 solid;
   cursor: pointer;
   background-color: #000;
@@ -92,12 +95,16 @@ img:hover {
   height:3px;
 }
 ::-webkit-scrollbar-track-piece {
-  background-color:#000;
+  background-color:rgba(0, 0, 0, 1);
 }
 ::-webkit-scrollbar-thumb {
-  height:50px;
-  background-color: #616161;
+  background-color: rgb(100, 100, 100);
+  border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #aaaaaa;
+  background-color: rgb(170, 170, 170);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: rgb(50, 50, 50);
 }

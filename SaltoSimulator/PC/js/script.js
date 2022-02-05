@@ -129,6 +129,19 @@ function VersionShort() {
 	document.getElementById("VersionShort").style = "display: block;";
 };
 
+var startTime = Date.now();
+var frame = 0;
+function tick() {
+    var timeFPS = Date.now();
+    frame++;
+    if (timeFPS - startTime > 1000) {
+        document.getElementById("FPS").innerHTML = (frame / ((timeFPS - startTime) / 1000)).toFixed(2) + "FPS";
+        startTime = timeFPS;
+        frame = 0;
+    }
+window.requestAnimationFrame(tick);
+}
+tick();
 
 function render60() {
 	if (Math.floor(Saltos) == 0) {
