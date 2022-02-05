@@ -176,3 +176,13 @@
   color: #616167;
   text-decoration: underline #303036;
 }
+
+.FPS {
+  position: absolute;
+  right: 7px;
+  left: auto;
+  top: 5px;
+  bottom: 0;
+  margin: auto;
+  font-size: medium;
+}
