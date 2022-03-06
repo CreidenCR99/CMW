@@ -39,7 +39,7 @@ function SaltoApodos() {
 }
 
 function CilindroApodos() {
-  document.getElementById("CilindroApodos").innerHTML = "(Chikito; Heladero; Cilindro; b·h; Psicologo de <del>poca</del> confianza)"
+  document.getElementById("CilindroApodos").innerHTML = "(Chikito; Serdina🐟; Cilindro; b·h; Psicologo de <del>poca</del> confianza)"
   document.getElementById("CilindroApodos").className = ""
   document.getElementById("CilindroApodos").title = ""
 }
@@ -51,7 +51,7 @@ function DiegoApodos() {
 }
 
 function IoApodos() {
-  document.getElementById("IoApodos").innerHTML = "(Pirómano; Suicida; Credenciales; Pato; Io)"
+  document.getElementById("IoApodos").innerHTML = "(Pirómano; Suicida; Credenciales; Pato 🦆; Io; Barbie)"
   document.getElementById("IoApodos").className = ""
   document.getElementById("IoApodos").title = ""
 }
@@ -100,7 +100,7 @@ var CilindroCumpleClassChange = ["a"]
 var CilindroCumpleTitleChange = ["Click para ver más"]
 
 function CilindroCumpleApodos() {
-  CilindroCumpleChangeApodos = ["(Chikito; Heladero; Cilindro; b·h; Psicologo de <del>poca</del> confianza)"]
+  CilindroCumpleChangeApodos = ["(Chikito; Serdina🐟; Cilindro; b·h; Psicologo de <del>poca</del> confianza)"]
   CilindroCumpleClassChange = [""]
   CilindroCumpleTitleChange = [""]
 }
@@ -110,7 +110,7 @@ var IoCumpleClassChange = ["a"]
 var IoCumpleTitleChange = ["Click para ver más"]
 
 function IoCumpleApodos() {
-  IoCumpleChangeApodos = ["(Pirómano; Suicida; Credenciales; Pato; Io)"]
+  IoCumpleChangeApodos = ["(Pirómano; Suicida; Credenciales; Pato 🦆; Io; Barbie)"]
   IoCumpleClassChange = [""]
   IoCumpleTitleChange = [""]
 }
@@ -197,7 +197,7 @@ var Paula = setInterval(function () {
 
   var Pauladays = Math.floor(Pauladistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Paula").innerHTML = `Paula (Capitana del ship)<br><b class="h" id="PaulaFecha">${Pauladays}d ${Hours}h ${Minutes}m ${Seconds}s<br>27/11</b>`;
+  document.getElementById("Paula").innerHTML = `Paula (Capitana del ship; 🐱)<br><b class="h" id="PaulaFecha">${Pauladays}d ${Hours}h ${Minutes}m ${Seconds}s<br>27/11</b>`;
 
   if (Pauladistance < 0) {
     clearInterval(Paula);
@@ -225,7 +225,7 @@ var Valeria = setInterval(function () {
 
 // ----- Almudena ----- \\
 
-var AlmudenaCumple = new Date("Feb 12, 2022 00:00:00").getTime();
+var AlmudenaCumple = new Date("Feb 12, 2023 00:00:00").getTime();
 
 var Almudena = setInterval(function () {
 
@@ -243,7 +243,7 @@ var Almudena = setInterval(function () {
 
 // ----- Sergio ----- \\
 
-var SergioCumple = new Date("Feb 10, 2022 00:00:00").getTime();
+var SergioCumple = new Date("Feb 10, 2023 00:00:00").getTime();
 
 var Almudena = setInterval(function () {
 
@@ -287,7 +287,7 @@ var Olaya = setInterval(function () {
 
   var Olayadays = Math.floor(Olayadistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Olaya").innerHTML = `Olaya (La de los audios; Mamii :D)<br><b class="h" id="OlayaFecha">${Olayadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>6/9</b>`;
+  document.getElementById("Olaya").innerHTML = `Olaya (Ciervo; Mamii :D)<br><b class="h" id="OlayaFecha">${Olayadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>6/9</b>`;
 
   if (Olayadistance < 0) {
     clearInterval(Olaya);
