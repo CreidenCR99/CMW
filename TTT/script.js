@@ -15,6 +15,8 @@ var WinO = 0;
 
 // Var (Casillas)
 
+var Casilla = None
+
 var C1 = None;
 var C2 = None;
 var C3 = None;
@@ -38,79 +40,82 @@ var Diagonal2 = 0;
 
 // Functions
 
-function Play(Casilla) {
+function Play(C) {
+	Casilla = C;
 	if (Player == X) {
-		if (Casilla == 1) {
+		if (Casilla == 1 && C1 == None) {
 			document.getElementById("C1").src = "img/X.png"
 			Player = 10;
 			C1 = 1;
-		} else if (Casilla == 2) {
+		} else if (Casilla == 2 && C2 == None) {
 			document.getElementById("C2").src = "img/X.png"
 			Player = 10;
 			C2 = 1;
-		} else if (Casilla == 3) {
+		} else if (Casilla == 3 && C3 == None) {
 			document.getElementById("C3").src = "img/X.png"
 			Player = 10;
-			C3 =1;
-		} else if (Casilla == 4) {
+			C3 = 1;
+		} else if (Casilla == 4 && C4 == None) {
 			document.getElementById("C4").src = "img/X.png"
 			Player = 10;
 			C4 = 1;
-		} else if (Casilla == 5) {
+		} else if (Casilla == 5 && C5 == None) {
 			document.getElementById("C5").src = "img/X.png"
 			Player = 10;
 			C5 = 1;
-		} else if (Casilla == 6) {
+		} else if (Casilla == 6 && C6 == None) {
 			document.getElementById("C6").src = "img/X.png"
 			Player = 10;
 			C6 = 1;
-		} else if (Casilla == 7) {
+		} else if (Casilla == 7 && C7 == None) {
 			document.getElementById("C7").src = "img/X.png"
 			Player = 10;
 			C7 = 1;
-		} else if (Casilla == 8) {
+		} else if (Casilla == 8 && C8 == None) {
 			document.getElementById("C8").src = "img/X.png"
 			Player = 10;
 			C8 = 1;
-		} else if (Casilla == 9) {
+		} else if (Casilla == 9 && C9 == None) {
 			document.getElementById("C9").src = "img/X.png"
 			Player = 10;
 			C9 = 1;
 		};
 	} else if (Player == O) {
-		if (Casilla == 1) {
+		Casilla = (Math.floor(Math.random() * 9) + 1);
+		console.log(Casilla)
+		if (Casilla == 1 && C1 == None) {
 			document.getElementById("C1").src = "img/O.png"
 			Player = 1;
 			C1 = 10;
-		} else if (Casilla == 2) {
+		} else if (Casilla == 2 && C2 == None) {
 			document.getElementById("C2").src = "img/O.png"
 			Player = 1;
 			C2 = 10;
-		} else if (Casilla == 3) {
+		} else if (Casilla == 3 && C3 == None) {
 			document.getElementById("C3").src = "img/O.png"
 			Player = 1;
 			C3 = 10;
-		} else if (Casilla == 4) {
+		} else if (Casilla == 4  && C4 == None) {
 			document.getElementById("C4").src = "img/O.png"
 			Player = 1;
 			C4 = 10;
-		} else if (Casilla == 5) {
+		} else if (Casilla == 5 && C5 == None) {
 			document.getElementById("C5").src = "img/O.png"
 			Player = 1;
 			C5 = 10;
-		} else if (Casilla == 6) {
+		} else if (Casilla == 6 && C6 == None) {
 			document.getElementById("C6").src = "img/O.png"
 			Player = 1;
 			C6 = 10;
-		} else if (Casilla == 7) {
+		} else if (Casilla == 7 && C7 == None) {
 			document.getElementById("C7").src = "img/O.png"
 			Player = 1;
 			C7 = 10;
-		} else if (Casilla == 8) {
+		} else if (Casilla == 8 && C8 == None) {
 			document.getElementById("C8").src = "img/O.png"
 			Player = 1;
 			C8 = 10;
-		} else if (Casilla == 9) {
+		} else if (Casilla == 9 && C9 == None) {
 			document.getElementById("C9").src = "img/O.png"
 			Player = 1;
 			C9 = 10;
@@ -134,51 +139,39 @@ function Win() {
 	Diagonal1 = (C1 + C5 + C9);
 	Diagonal2 = (C3 + C5 + C7);
 
-	if (Row1 == 3 || Row2 == 3 || Row3 == 3) {
+	if ((Row1 == 3 || Row2 == 3 || Row3 == 3)
+	 || (Column1 == 3 || Column2 == 3 || Column3 == 3)
+	 || (Diagonal1 == 3 || Diagonal2 == 3)) {
 		WinX++;
-		CNone();
-	};
-	if (Row1 == 30 || Row2 == 30 || Row3 == 30) {
+		CReset(-1);
+	} else if ((Row1 == 30 || Row2 == 30 || Row3 == 30)
+	 || (Column1 == 30 || Column2 == 30 || Column3 == 30)
+	 || (Diagonal1 == 30 || Diagonal2 == 30)) {
 		WinO++;
-		CNone();
-	};
-	if (Column1 == 3 || Column2 == 3 || Column3 == 3) {
-		WinX++;
-		CNone();
-	};
-	if (Column1 == 30 || Column2 == 30 || Column3 == 30) {
-		WinO++;
-		CNone();
-	};
-	if (Diagonal1 == 3 || Diagonal2 == 3) {
-		WinX++;
-		CNone();
-	};
-	if (Diagonal1 == 30 || Diagonal2 == 30) {
-		WinO++;
-		CNone();
+		CReset(-1);
 	};
 };
 
 // Function (Reset)
 
 function Reset() {
-	CNone();
+	CReset(None);
 	imgNone();
 	Player = X;
-}
+};
 
-function CNone() {
- 	C1 = None;
- 	C2 = None;
- 	C3 = None;
- 	C4 = None;
- 	C5 = None;
- 	C6 = None;
- 	C7 = None;
- 	C8 = None;
- 	C9 = None;
-}
+function CReset(x) {
+	Casilla = x;
+ 	C1 = x;
+ 	C2 = x;
+ 	C3 = x;
+ 	C4 = x;
+ 	C5 = x;
+ 	C6 = x;
+ 	C7 = x;
+ 	C8 = x;
+ 	C9 = x;
+};
 
 function imgNone() {
 	document.getElementById("C1").src = "img/None.png"
@@ -190,16 +183,40 @@ function imgNone() {
 	document.getElementById("C7").src = "img/None.png"
 	document.getElementById("C8").src = "img/None.png"
 	document.getElementById("C9").src = "img/None.png"
-}
+};
 
 // Sleep();
 
 function sleep(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
-}
+};
 
 // Intervals
 
 setInterval(function () {
 	Win();
+	document.getElementById("informacion").innerHTML = `
+		Casilla = C${Casilla}<br>
+		<br>
+		C1 = ${C1}<br>
+		C2 = ${C2}<br>
+		C3 = ${C3}<br>
+		C4 = ${C4}<br>
+		C5 = ${C5}<br>
+		C6 = ${C6}<br>
+		C7 = ${C7}<br>
+		C8 = ${C8}<br>
+		C9 = ${C9}<br>
+		<br>
+		Row1 = ${Row1}<br>
+		Row2 = ${Row2}<br>
+		Row3 = ${Row3}<br>
+		<br>
+		Column1 = ${Column1}<br>
+		Column2 = ${Column2}<br>
+		Column3 = ${Column3}<br>
+		<br>
+		Diagonal1 =	${Diagonal1}<br>
+		Diagonal2 =	${Diagonal2}
+	`
 }, 1000 / 60);

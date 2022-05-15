@@ -9,10 +9,20 @@
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 	</head>
 	<body>
-		<h1 id="Title">Mine - CTW</h1>
+		<div style="display: none;" id="OptionsBackground"></div>
+		<div style="display: none; opacity: 0;" id="Options">
+			<h1 onclick="OptionsScreen(0);" id="TitleOptions">Mine - CTW</h1>
+			<div id="container">
+				<button id="Reset" onclick="Restart();">Restart</button><br>
+				<button id="Save" onclick="saveCookies();">Save</button><br>
+				<h3>Autosave time in seconds:</h3>
+				<input type="number" placeholder="90" id="AutoSaveTime" name="AutoSaveTimeInput" min="30" max="180" value="90">
+			</div>
+		</div>
+		<h1 onclick="OptionsScreen(1);" id="Title">Mine - CTW</h1>
 		<button onclick="Mine();" id="MineBtn">Mine</button>
 		<h2 id="Earned"></h2>
-		<h1 id="FPS"></h1>
+		<h1 id="FPS">00.00 FPS</h1>
 		<h1 id="Saving" style="opacity: 0;">Saving...</h1>
 		<div id="Inventory" style="opacity: 0;">
 			<h2 id="InventoryTitle">Inventory:</h2>
@@ -20,8 +30,9 @@
 			<h3 id="InventoryPickaxe" style="display: none;"></h3>
 			<h3 id="InventoryRock" onclick="Sell(1);" style="display: none;"></h3>
 			<h3 id="InventoryCoal" onclick="Sell(2);" style="display: none;"></h3>
-			<h3 id="InventoryRawIron" onclick="Sell(3);" style="display: none;"></h3>
-			<h3 id="InventoryIron" onclick="Sell(4);" style="display: none;"></h3>
+			<h3 id="InventoryLapis" onclick="Sell(3);" style="display: none;"></h3>
+			<h3 id="InventoryRawIron" onclick="Sell(4);" style="display: none;"></h3>
+			<h3 id="InventoryIron" onclick="Sell(5);" style="display: none;"></h3>
 			<button id="SellBtn" onclick="Sell(0);" title="Click to sell all" style="display: none;">Sell</button>
 		</div>
 		<div id="Shop" style="opacity: 0;">
