@@ -13,7 +13,8 @@ var Money = 0,
 	IronPickaxeUses = 0,
 	AutoSaveTime = 90,
 	Lapis = 0,
-LapisUnlocked = false;
+	LapisUnlocked = false,
+XP = 0;
 
 function Mine() {
 
@@ -23,6 +24,7 @@ function Mine() {
 	var EarnCoal = 0;
 	var EarnRawIron = 0;
 	var EarnLapis = 0;
+	var EarnXP = 0;
 
 	// --- Basic Pickaxe ---
 
@@ -96,9 +98,13 @@ function Mine() {
 			if (LapisIron >= 97.5) {
 				EarnLapis = +Math.floor(Math.random() * 5) + 1;
 				Lapis += EarnLapis;
+				if (EarnLapis >= 1) {
+						eval("EarnXP = EarnXP + (+Math.floor(Math.random() * 5) + 1);".repeat(EarnLapis));
+						XP += EarnXP;
+					};
+				};
 			};
-		};
-	};
+		}; 
 
 	// Earned
 
@@ -111,6 +117,9 @@ function Mine() {
 	};
 	if (EarnLapis >= 1) {
 		document.getElementById("Earned").innerHTML += ("+" + EarnLapis + " lapis<br>");
+	};
+	if (EarnXP >= 1) {
+		document.getElementById("Earned").innerHTML += ("+" + EarnXP + " XP<br>");
 	};
 };
 
@@ -271,8 +280,6 @@ function render60() {
 		};
 	};
 
-
-
     // Numbers
 
 	Money = Number(Money);
@@ -312,8 +319,13 @@ function render60() {
 	};
 	if (Lapis <= 999) {
 		var LapisDisplay = Lapis;
-	} else if (Iron >= 1000) {
+	} else if (Lapis >= 1000) {
 		var LapisDisplay = ((Lapis / 1e3)).toFixed(3);
+	};
+	if (XP <= 999) {
+		var XPDisplay = XP;
+	} else if (XP >= 1000) {
+		var XPDisplay = ((XP / 1e3)).toFixed(3);
 	};
 
     // Unlock
@@ -327,6 +339,9 @@ function render60() {
 	if (Money >= 0.01) {
 		document.getElementById("InventoryMoney").removeAttribute("style");
 	};
+	if (XP >= 1) {
+		document.getElementById("InventoryXP").removeAttribute("style");
+	};
 	if (Rock >= 100) {
 		document.getElementById("InventoryMoney").removeAttribute("style");
 	};
@@ -335,7 +350,8 @@ function render60() {
 	};
 	if (Furnace == 0 && Pickaxe == "Stone") {
 		document.getElementById("FurnaceBuy").removeAttribute("style");
-	} else if (Furnace >= 1) {
+	};
+	if (Furnace >= 1) {
 		document.getElementById("FurnaceOpen").removeAttribute("style");
 		document.getElementById("FurnaceBuy").style.display = "none";
 	};
@@ -378,6 +394,7 @@ function render60() {
     // Texts
 
 	document.getElementById("InventoryMoney").innerHTML = `Money: ${MoneyDisplay}$`;
+	document.getElementById("InventoryXP").innerHTML = `XP: ${XPDisplay}`;
 	document.getElementById("InventoryRock").innerHTML = `Rock: x${RockDisplay}`;
 	document.getElementById("InventoryCoal").innerHTML = `Coal: x${CoalDisplay}`;
 
