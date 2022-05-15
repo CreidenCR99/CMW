@@ -1,3 +1,7 @@
+* {
+    transition: 1s;
+}
+
 html, body {
     font-family: 'Courier New', Courier, monospace;
     user-select: none;
@@ -5,22 +9,47 @@ html, body {
     overflow: hidden;
     width: 100%;
     height: 100%;
+    background-color: #dfddff;
+    color: #1e1e1e;
 }
 
 head {
     display: none;
 }
 
+button {
+    background-color: #808080;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.25s;
+    border: #000 2px solid;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #404040;
+    color: #ddd;
+}
+
+button:active {
+    background-color: #202020;
+    color: #bbb;
+}
+
 #FPS {
     position: absolute;
     margin: auto;
     font-size: medium;
+    transition: 0.1s;
+    left: 0px;
+    top: 0px;
 }
 
 #Saving {
     position: absolute;
     right: 26%;
     left: auto;
+    top: auto;
     text-align: right;
     font-size: large;
     transition: 5s;
@@ -36,7 +65,7 @@ head {
     right: 0px;
     margin: auto;
     display: block;
-    position: fixed;
+    position: absolute;
     padding: 0px;
 }
 
@@ -58,6 +87,7 @@ head {
     left: 0px;
     right: 0px;
     position: absolute;
+    cursor: pointer;
 }
 
 /* div#Inventory */
@@ -86,6 +116,7 @@ div#Inventory h3 {
     width: max-content;
     margin-block-end: auto;
     margin-block-start: auto;
+    cursor: pointer;
 }
 
 div#Inventory button#SellBtn {
@@ -101,13 +132,6 @@ div#Inventory button#SellBtn {
     margin-top: 10px;
 }
 
-div#Inventory h3#InventoryRock,
-div#Inventory h3#InventoryCoal,
-div#Inventory h3#InventoryRawIron,
-div#Inventory h3#InventoryIron {
-    cursor: pointer;
-}
-
 /* div#Furnace */
 
 div#FurnaceBackground {
@@ -120,7 +144,6 @@ div#FurnaceBackground {
 	bottom: 0px;
 	right: 0px;
 }
-
 div#Furnace {
 	width: 70%;
 	height: 95%;
@@ -132,9 +155,8 @@ div#Furnace {
 	right: 25%;
 	background:#796853;
 	border: #5f9ea0 3px solid;
-	border-radius: 5%;
+	border-radius: 25px;
 }
-
 div#Furnace div#close::after {
 	width: auto;
 	height: auto;
@@ -147,7 +169,6 @@ div#Furnace div#close::after {
 	color: #FFF;
 	line-height: 40px;
 	text-align: center;
-    filter: grayscale(0.9);
 	filter: sepia(0.9);
 	border-radius: 100%;
 }
@@ -182,6 +203,18 @@ div#Furnace div#Extra {
 	color: #fff;
 	filter: sepia(1);
 }
+div#Furnace button {
+    font-weight: bold;
+    color: #000;
+}
+div#Furnace button:hover {
+    font-weight: bold;
+    color: #999;
+}
+div#Furnace button:active {
+    font-weight: bold;
+    color: #eee;
+}
 
 /* div#Shop */ /* div#Craft */
 
@@ -191,4 +224,70 @@ div#FurnaceOpen {
     transition: 1s;
     margin-left: 1%;
     width: max-content;
+}
+
+/* div#Opciones */
+
+div#OptionsBackground {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+}
+div#Options {
+	width: 98%;
+	height: 98%;
+	position: absolute;
+	margin: auto;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+    background-color: #dfddff;
+    color: #1e1e1e;
+	border: #000 3px solid;
+	border-radius: 5%;
+}
+
+div#Options div#container {
+    width: 88%;
+    height: 88%;
+	position: absolute;
+	margin: auto;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+}
+div#Options h1#TitleOptions {
+    text-align: center;
+    margin: auto;
+    top: 1%;
+    bottom: 99%;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+    cursor: pointer;
+}
+div#Options div#container button,
+div#Options div#container input,
+div#Options div#container h3 {
+    margin: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div#Options div#container button:hover {
+    filter: grayscale(0.3);
+}
+div#Options div#container button:active {
+    filter: grayscale(0.7);
+}
+div#Options div#container button#Reset {
+    background-color: #ff0000;
+}
+div#Options div#container button#Save {
+    background-color: #00ff00;
 }

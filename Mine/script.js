@@ -1,138 +1,123 @@
-var Money = 0;
-var Rock = 0;
-var Coal = 0;
-var RawIron = 0;
-var Iron = 0;
-var Pickaxe = "Basic";
-var Furnace = 0;
-var FurnaceContainer = 0;
-var FurnaceFuel = 0;
-var IronUnlocked = false;
-var SellToggle = false;
-var height = 100;
+var Money = 0,
+	Rock = 0,
+	Coal = 0,
+	RawIron = 0,
+	Iron = 0,
+	Pickaxe = "Basic",
+	Furnace = 0,
+	FurnaceContainer = 0,
+	FurnaceFuel = 0,
+	IronUnlocked = false,
+	SellToggle = false,
+	height = 100,
+	IronPickaxeUses = 0,
+	AutoSaveTime = 90,
+	Lapis = 0,
+LapisUnlocked = false;
 
 function Mine() {
+
+	// Var Earn
+
+	var EarnRock = 0;
+	var EarnCoal = 0;
+	var EarnRawIron = 0;
+	var EarnLapis = 0;
 
 	// --- Basic Pickaxe ---
 
 	if (Pickaxe == "Basic") {
 		if (Rock <= 15) {
-			let EarnRock = +Math.floor(Math.random() * 3) + 1;
+			EarnRock = +Math.floor(Math.random() * 3) + 1;
 			Rock += EarnRock;
-			document.getElementById("Earned").innerHTML = `+${EarnRock} rock<br>`;
 		} else {
-			let EarnRock = +Math.floor(Math.random() * 5) + 1;
+			EarnRock = +Math.floor(Math.random() * 5) + 1;
 			Rock += EarnRock;
 			let CoalBasic = +Math.floor(Math.random() * 100);
 			if (CoalBasic >= 90) {
-				let EarnCoal = +Math.floor(Math.random() * 3) + 1;
+				EarnCoal = +Math.floor(Math.random() * 3) + 1;
 				Coal += EarnCoal;
-				document.getElementById("Earned").innerHTML = `+${EarnRock} rock<br>+${EarnCoal} coal`;
-			} else {
-				document.getElementById("Earned").innerHTML = `+${EarnRock} rock<br>`;
 			};
 		};
 
 		// --- Stone Pickaxe ---
 
 	} else if (Pickaxe == "Stone") {
-		let EarnRock = +Math.floor(Math.random() * 7) + 1;
+		EarnRock = +Math.floor(Math.random() * 7) + 1;
 		Rock += EarnRock;
-		let EarnCoal = +Math.floor(Math.random() * 5);
+		EarnCoal = +Math.floor(Math.random() * 5);
 		Coal += EarnCoal;
 		let RawIronStone = +(Math.random() * 100).toFixed(1);
 		if (IronUnlocked = false) {
 			if (Furnace >= 1) {
 				if (RawIronStone >= 90) {
-					let EarnRawIron = +Math.floor(Math.random() * 3) + 1;
+					EarnRawIron = +Math.floor(Math.random() * 3) + 1;
 					RawIron += EarnRawIron;
-					if (EarnCoal >= 1) {
-						document.getElementById("Earned").innerHTML = `+${EarnRock} rock<br>+${EarnCoal} coal<br>+${EarnRawIron} raw iron`;
-					} else if (EarnCoal == 0) {
-						document.getElementById("Earned").innerHTML = `+${EarnRock} rock<br>+${EarnRawIron} raw iron`;
-					};
-				} else {
-					if (EarnCoal >= 1) {
-						document.getElementById("Earned").innerHTML = `+${EarnRock} rock<br>+${EarnCoal} coal`;
-					} else if (EarnCoal == 0) {
-						document.getElementById("Earned").innerHTML = `+${EarnRock} rock`;
-					};
 				};
 			} else if (Furnace == 0) {
 				if (RawIronStone >= 99.5) {
-					let EarnRawIron = +Math.floor(Math.random() * 3) + 1;
+					EarnRawIron = +Math.floor(Math.random() * 3) + 1;
 					RawIron += EarnRawIron;
-					if (EarnCoal >= 1) {
-						document.getElementById("Earned").innerHTML = `+${EarnRock} rock<br>+${EarnCoal} coal<br>+${EarnRawIron} raw iron`;
-					} else if (EarnCoal == 0) {
-						document.getElementById("Earned").innerHTML = `+${EarnRock} rock<br>+${EarnRawIron} raw iron`;
-					};
-				} else {
-					if (EarnCoal >= 1) {
-						document.getElementById("Earned").innerHTML = `+${EarnRock} rock<br>+${EarnCoal} coal`;
-					} else if (EarnCoal == 0) {
-						document.getElementById("Earned").innerHTML = `+${EarnRock} rock`;
-					};
 				};
 			};
 		} else if (IronUnlocked = true) {
 			if (Furnace >= 1) {
 				if (RawIronStone >= 85) {
-					let EarnRawIron = +Math.floor(Math.random() * 3) + 1;
+					EarnRawIron = +Math.floor(Math.random() * 3) + 1;
 					RawIron += EarnRawIron;
-					if (EarnCoal >= 1) {
-						document.getElementById("Earned").innerHTML = `+${EarnRock} rock<br>+${EarnCoal} coal<br>+${EarnRawIron} raw iron`;
-					} else if (EarnCoal == 0) {
-						document.getElementById("Earned").innerHTML = `+${EarnRock} rock<br>+${EarnRawIron} raw iron`;
-					};
-				} else {
-					if (EarnCoal >= 1) {
-						document.getElementById("Earned").innerHTML = `+${EarnRock} rock<br>+${EarnCoal} coal`;
-					} else if (EarnCoal == 0) {
-						document.getElementById("Earned").innerHTML = `+${EarnRock} rock`;
-					};
 				};
 			} else if (Furnace == 0) {
 				if (RawIronStone >= 94.5) {
-					let EarnRawIron = +Math.floor(Math.random() * 3) + 1;
+					EarnRawIron = +Math.floor(Math.random() * 3) + 1;
 					RawIron += EarnRawIron;
-					if (EarnCoal >= 1) {
-						document.getElementById("Earned").innerHTML = `+${EarnRock} rock<br>+${EarnCoal} coal<br>+${EarnRawIron} raw iron`;
-					} else if (EarnCoal == 0) {
-						document.getElementById("Earned").innerHTML = `+${EarnRock} rock<br>+${EarnRawIron} raw iron`;
-					};
-				} else {
-					if (EarnCoal >= 1) {
-						document.getElementById("Earned").innerHTML = `+${EarnRock} rock<br>+${EarnCoal} coal`;
-					} else if (EarnCoal == 0) {
-						document.getElementById("Earned").innerHTML = `+${EarnRock} rock`;
-					};
 				};
 			};
 		};
 
 		// --- Iron Pickaxe ---
 
-		var IronPickaxeUses = 0;
-
 	} else if (Pickaxe == "Iron") {
-		let EarnRock = +Math.floor(Math.random() * 10) + 1;
-		Rock += EarnRock;
-		let EarnCoal = +Math.floor(Math.random() * 7) + 1;
-		Coal += EarnCoal;
-		let EarnRawIron = +Math.floor(Math.random() * 6);
-		RawIron += EarnRawIron;
-		if (EarnRawIron >= 1) {
-			document.getElementById("Earned").innerHTML = `+${EarnRock} rock<br>+${EarnCoal} coal<br>+${EarnRawIron} raw iron`;
-		} else if (EarnRawIron == 0) {
-			document.getElementById("Earned").innerHTML = `+${EarnRock} rock<br>+${EarnCoal} coal`;
+		IronPickaxeUses++;
+		if (IronPickaxeUses <= 10) {
+			EarnRock = +Math.floor(Math.random() * 10) + 1;
+			Rock += EarnRock;
+			EarnCoal = +Math.floor(Math.random() * 7) + 1;
+			Coal += EarnCoal;
+			EarnRawIron = +Math.floor(Math.random() * 6);
+			RawIron += EarnRawIron;
+		} else if (IronPickaxeUses >= 10) {
+			EarnRock = +Math.floor(Math.random() * 10) + 1;
+			Rock += EarnRock;
+			EarnCoal = +Math.floor(Math.random() * 7) + 1;
+			Coal += EarnCoal;
+			EarnRawIron = +Math.floor(Math.random() * 6);
+			RawIron += EarnRawIron;
+			let LapisIron = +(Math.random() * 100).toFixed(1);
+			if (LapisIron >= 97.5) {
+				EarnLapis = +Math.floor(Math.random() * 5) + 1;
+				Lapis += EarnLapis;
+			};
 		};
+	};
+
+	// Earned
+
+	document.getElementById("Earned").innerHTML = "+" + EarnRock + " rock<br>";
+	if (EarnCoal >= 1) {
+		document.getElementById("Earned").innerHTML += "+" + EarnCoal + " coal<br>";
+	};
+	if (EarnRawIron >= 1) {
+		document.getElementById("Earned").innerHTML += ("+" + EarnRawIron + " raw iron<br>");
+	};
+	if (EarnLapis >= 1) {
+		document.getElementById("Earned").innerHTML += ("+" + EarnLapis + " lapis<br>");
 	};
 };
 
 // ItemID
 
 function Sell(ItemID) {
+	document.getElementById("Earned").innerHTML = "";
 	if (SellToggle == true) {
 		if (ItemID == 1 || ItemID == 0) {
 			Money += Rock * 0.75;
@@ -143,10 +128,14 @@ function Sell(ItemID) {
 			Coal -= Coal;
 		};
 		if (ItemID == 3 || ItemID == 0) {
+			Money += Lapis * 1.5;
+			Lapis -= Lapis;
+		};
+		if (ItemID == 4 || ItemID == 0) {
 			Money += RawIron * 2;
 			RawIron -= RawIron;
 		};
-		if (ItemID == 4 || ItemID == 0) {
+		if (ItemID == 5 || ItemID == 0) {
 			Money += Iron * 4;
 			Iron -= Iron;
 		};
@@ -208,10 +197,41 @@ function FurnaceScreen(Screen) {
 		document.getElementById("Furnace").style.display = "none";
 		document.getElementById("FurnaceBackground").style.display = "none";
 	} else if (Screen == 1) {
-		document.getElementById("Furnace").style.display = "block";
-		document.getElementById("FurnaceBackground").style.display = "block";
+		document.getElementById("Furnace").removeAttribute("style");
+		document.getElementById("FurnaceBackground").removeAttribute("style");
 	}
 }
+
+var OptionsOpen = false;
+
+function OptionsScreen(Screen) {
+	if (Screen == 0) {
+		OptionsOpen = false;
+		document.getElementById("Options").style.display = "none";
+		document.getElementById("OptionsBackground").style.display = "none";
+		document.getElementById("FPS").style.left = "0px";
+		document.getElementById("FPS").style.top = "0px";
+		document.getElementById("Saving").style.right = "26%";
+		document.getElementById("Saving").style.left = "auto";
+		document.getElementById("Saving").style.top = "auto";
+		document.getElementById("Title").style.display = "block";
+		document.getElementById("Earned").style.display = "block";
+		document.getElementById("MineBtn").style.display = "block";
+	} else if (Screen == 1) {
+		OptionsOpen = true;
+		document.getElementById("Options").style.display = "block";
+		document.getElementById("Options").style.opacity = "1";
+		document.getElementById("OptionsBackground").style.display = "block";
+		document.getElementById("FPS").style.left = "50px";
+		document.getElementById("FPS").style.top = "10px";
+		document.getElementById("Saving").style.right = "auto";
+		document.getElementById("Saving").style.left = "50px";
+		document.getElementById("Saving").style.top = "15px";
+		document.getElementById("Title").style.display = "none";
+		document.getElementById("Earned").style.display = "none";
+		document.getElementById("MineBtn").style.display = "none";
+	};
+};
 
 function render60() {
 
@@ -263,8 +283,9 @@ function render60() {
 	Furnace = Number(Furnace);
 	FurnaceContainer = Number(FurnaceContainer);
 	FurnaceFuel = Number(FurnaceFuel);
-	// IronUnlocked = false;
-	// SellToggle = false;
+	IronPickaxeUses = Number(IronPickaxeUses);
+	AutoSaveTime = Number(AutoSaveTime);
+	Lapis = Number(Lapis);
 
 	// Short Numbers
 
@@ -289,10 +310,17 @@ function render60() {
 	} else if (Iron >= 1000) {
 		var IronDisplay = ((Iron / 1e3)).toFixed(3);
 	};
+	if (Lapis <= 999) {
+		var LapisDisplay = Lapis;
+	} else if (Iron >= 1000) {
+		var LapisDisplay = ((Lapis / 1e3)).toFixed(3);
+	};
 
     // Unlock
 
-	if (Rock >= 1 || Money >= 0.01 || Pickaxe != "Basic") {
+	 if (OptionsOpen == true){
+		document.getElementById("Inventory").style.display = "none";
+	 } else if (Rock >= 1 || Money >= 0.01 || Pickaxe != "Basic") {
 		document.getElementById("InventoryRock").removeAttribute("style");
 		document.getElementById("Inventory").removeAttribute("style");
 	};
@@ -311,12 +339,12 @@ function render60() {
 		document.getElementById("FurnaceOpen").removeAttribute("style");
 		document.getElementById("FurnaceBuy").style.display = "none";
 	};
-	if (RawIron >= 1 || Iron >= 1) {
+	if (RawIron >= 1 || Iron >= 1 || FurnaceContainer >= 1 || LapisUnlocked == true || IronUnlocked == true || Pickaxe == "Iron") {
 		document.getElementById("InventoryRawIron").removeAttribute("style");
 		document.getElementById("InventoryIron").removeAttribute("style");
 		IronUnlocked = true;
 	};
-	if (Rock >= 50 || Money >= 0.01 || Pickaxe != "Basic") {
+	if (Rock >= 50 || Money >= 0.01 || Pickaxe != "Basic" || IronUnlocked == true) {
 		document.getElementById("Shop").removeAttribute("style");
 		document.getElementById("Craft").removeAttribute("style");
 		SellToggle = true;
@@ -336,8 +364,15 @@ function render60() {
 	if (Pickaxe == "Iron") {
 		document.getElementById("IronPickaxe").style.display = "none";
 	};
-	if (Iron >= 3 && Pickaxe == "Stone") {
+	if ((Iron >= 3 || (RawIron >= 25 || FurnaceContainer >= 25)) && Pickaxe == "Stone") {
 		document.getElementById("IronPickaxe").removeAttribute("style");
+	};
+	if (Lapis >= 1 || LapisUnlocked == true) {
+		document.getElementById("InventoryLapis").removeAttribute("style");
+		LapisUnlocked = true;
+	};
+	if (IronPickaxeUses >= 250) {
+
 	};
 
     // Texts
@@ -353,15 +388,24 @@ function render60() {
 	if (IronUnlocked == true) {
 		document.getElementById("InventoryRawIron").innerHTML = `Raw Iron: x${RawIronDisplay}`;
 		document.getElementById("InventoryIron").innerHTML = `Iron: x${IronDisplay}`;
-	}
+	};
 
+	if (LapisUnlocked == true) {
+		document.getElementById("InventoryLapis").innerHTML = `Lapis: x${LapisDisplay}`;
+	};
+	
 	if (SellToggle == true) {
 		document.getElementById("InventoryRock").title = `Click to sell all of Rock (${Rock*0.75}$)`;
 		document.getElementById("InventoryCoal").title = `Click to sell all of Coal (${Coal*1}$)`;
+		if (LapisUnlocked == true) {
+			document.getElementById("InventoryLapis").title = `Click to sell all of Lapis (${Lapis*1.5}$)`;
+		};
+		if (IronUnlocked == true) {
 		document.getElementById("InventoryRawIron").title = `Click to sell all of RawIron (${RawIron*2}$)`;
 		document.getElementById("InventoryIron").title = `Click to sell all of Iron (${Iron*4}$)`;
-		document.getElementById("SellBtn").title = `Click to sell all (${(Rock*0.75)+(Coal*1)+(RawIron*2)+(Iron*4)}$)`
-	}
+		};
+		document.getElementById("SellBtn").title = `Click to sell all (${(Rock*0.75)+(Coal*1)+(Lapis*1.5)+(RawIron*2)+(Iron*4)}$)`
+	};
 
 	if (Furnace >= 1) {
 		document.getElementById("FurnaceContainer").innerHTML = `Raw Iron: x${FurnaceContainer}`;
@@ -369,11 +413,19 @@ function render60() {
 	};
 };
 
-setInterval(function () {
-	render60();
-}, 1000 / 60);
+function render1() {
 
-// Save
+	// Inputs
+
+	if (AutoSaveTime == 0) {
+		document.getElementById("AutoSaveTime").value = "0";
+	} else if (AutoSaveTime <= 30) {
+		document.getElementById("AutoSaveTime").value = "30";
+	} else if (AutoSaveTime >= 180) {
+		document.getElementById("AutoSaveTime").value = "180";
+	};
+	AutoSaveTime = Number(document.getElementById("AutoSaveTime").value);
+};
 
 function save() {console.log
 	(window.btoa(
@@ -406,8 +458,13 @@ async function saveCookies() {
 	document.cookie = "cookie.Furnace=" + Furnace + "; expires=" + expiresDate.toUTCString();
 	document.cookie = "cookie.FurnaceContainer=" + FurnaceContainer + "; expires=" + expiresDate.toUTCString();
 	document.cookie = "cookie.FurnaceFuel=" + FurnaceFuel + "; expires=" + expiresDate.toUTCString();
+	document.cookie = "cookie.IronPickaxeUses=" + IronPickaxeUses + "; expires=" + expiresDate.toUTCString();
+	document.cookie = "cookie.AutoSaveTime=" + AutoSaveTime + "; expires=" + expiresDate.toUTCString();
+	document.cookie = "cookie.IronUnlocked=" + IronUnlocked + "; expires=" + expiresDate.toUTCString();
+	document.cookie = "cookie.Lapis=" + Lapis + "; expires=" + expiresDate.toUTCString();
+	document.cookie = "cookie.LapisUnlocked=" + LapisUnlocked + "; expires=" + expiresDate.toUTCString();
 	if (document.cookie != "") {
-		document.getElementById("Saving").removeAttribute("style");
+		document.getElementById("Saving").style.opacity = "1";
 		await sleep(3500);
 		document.getElementById("Saving").style.opacity = "0";
 	};
@@ -417,162 +474,131 @@ if (document.cookie == "") {
 	saveCookies();
 }
 
-// Options
-// var AutoSaveTime = prompt("",90);
-var AutoSaveTime = 90;
-// AutoSaveTime = Number(AutoSaveTime);
-
-setInterval(async function() {
-	saveCookies();
-}, 1000*AutoSaveTime);
-
 function leerCookieMoney() {
 	var lista = document.cookie.split(";");
 	for (i in lista) {
-		var busca = lista[i].search("cookie.Money");
-		if (busca > -1) {
-			var micookie = lista[i];
-		};
+		if (lista[i].search("cookie.Money") > -1) var micookie = lista[i];
 	};
-	var igual = micookie.indexOf("=");
-	var valor = micookie.substring(igual + 1);
-	if (Number(valor) >= 1) {
-		return Number(Money = valor);
-	} else {
-		return Number(Money = 0);
-	};
+	var igual = micookie.indexOf("="),
+        valor = micookie.substring(igual + 1);
+	return Number(valor) >= 1 ? Number(Money = valor) : Number(Money = 0);
 };
-
 function leerCookieRock() {
 	var lista = document.cookie.split(";");
 	for (i in lista) {
-		var busca = lista[i].search("cookie.Rock");
-		if (busca > -1) {
-			var micookie = lista[i];
-		};
+		if (lista[i].search("cookie.Rock") > -1) var micookie = lista[i];
 	};
-	var igual = micookie.indexOf("=");
-	var valor = micookie.substring(igual + 1);
- 	if (Number(valor >= 1)) {
-		return Number(Rock = valor);
-	} else {
-		return Number(Rock = 0);
-	};
+	var igual = micookie.indexOf("="),
+        valor = micookie.substring(igual + 1);
+	return Number(valor) >= 1 ? Number(Rock = valor) : Number(Rock = 0);
 };
-
 function leerCookieCoal() {
 	var lista = document.cookie.split(";");
 	for (i in lista) {
-		var busca = lista[i].search("cookie.Coal");
-		if (busca > -1) {
-			var micookie = lista[i];
-		};
+		if (lista[i].search("cookie.Coal") > -1) var micookie = lista[i];
 	};
-	var igual = micookie.indexOf("=");
-	var valor = micookie.substring(igual + 1);
- 	if (Number(valor >= 1)) {
-		return Number(Coal = valor);
-	} else {
-		return Number(Coal = 0);
-	};
+	var igual = micookie.indexOf("="),
+        valor = micookie.substring(igual + 1);
+	return Number(valor) >= 1 ? Number(Coal = valor) : Number(Coal = 0);
 };
-
 function leerCookieRawIron() {
 	var lista = document.cookie.split(";");
 	for (i in lista) {
-		var busca = lista[i].search("cookie.RawIron");
-		if (busca > -1) {
-			var micookie = lista[i];
-		};
+		if (lista[i].search("cookie.RawIron") > -1) var micookie = lista[i];
 	};
-	var igual = micookie.indexOf("=");
-	var valor = micookie.substring(igual + 1);
- 	if (Number(valor >= 1)) {
-		return Number(RawIron = valor);
-	} else {
-		return Number(RawIron = 0);
-	};
+	var igual = micookie.indexOf("="),
+        valor = micookie.substring(igual + 1);
+	return Number(valor) >= 1 ? Number(RawIron = valor) : Number(RawIron = 0);
 };
-
 function leerCookieIron() {
 	var lista = document.cookie.split(";");
 	for (i in lista) {
-		var busca = lista[i].search("cookie.Iron");
-		if (busca > -1) {
-			var micookie = lista[i];
-		};
+		if (lista[i].search("cookie.Iron") > -1) var micookie = lista[i];
 	};
-	var igual = micookie.indexOf("=");
-	var valor = micookie.substring(igual + 1);
- 	if (Number(valor >= 1)) {
-		return Number(Iron = valor);
-	} else {
-		return Number(Iron = 0);
-	};
+	var igual = micookie.indexOf("="),
+        valor = micookie.substring(igual + 1);
+	return Number(valor) >= 1 ? Number(Iron = valor) : Number(Iron = 0);
 };
-
 function leerCookiePickaxe() {
 	var lista = document.cookie.split(";");
 	for (i in lista) {
-		var busca = lista[i].search("cookie.Pickaxe");
-		if (busca > -1) {
-			var micookie = lista[i];
-		};
-	};
-	var igual = micookie.indexOf("=");
-	var valor = micookie.substring(igual + 1);
- 	return Pickaxe = valor;
+		if (lista[i].search("cookie.Pickaxe") > -1) var micookie = lista[i];
+	}
+	var igual = micookie.indexOf("="),
+		valor = micookie.substring(igual + 1);
+	return Pickaxe = valor;
 };
-
 function leerCookieFurnace() {
 	var lista = document.cookie.split(";");
 	for (i in lista) {
-		var busca = lista[i].search("cookie.Furnace");
-		if (busca > -1) {
-			var micookie = lista[i];
-		};
+		if (lista[i].search("cookie.Furnace") > -1) var micookie = lista[i];
 	};
-	var igual = micookie.indexOf("=");
-	var valor = micookie.substring(igual + 1);
- 	if (Number(valor >= 1)) {
-		return Number(Furnace = valor);
-	} else {
-		return Number(Furnace = 0);
-	};
+	var igual = micookie.indexOf("="),
+        valor = micookie.substring(igual + 1);
+	return Number(valor) >= 1 ? Number(Furnace = valor) : Number(Furnace = 0);
 };
-
 function leerCookieFurnaceContainer() {
 	var lista = document.cookie.split(";");
 	for (i in lista) {
-		var busca = lista[i].search("cookie.FurnaceContainer");
-		if (busca > -1) {
-			var micookie = lista[i];
-		};
+		if (lista[i].search("cookie.FurnaceContainer") > -1) var micookie = lista[i];
 	};
-	var igual = micookie.indexOf("=");
-	var valor = micookie.substring(igual + 1);
- 	if (Number(valor >= 1)) {
-		return Number(FurnaceContainer = valor);
-	} else {
-		return Number(FurnaceContainer = 0);
-	};
+	var igual = micookie.indexOf("="),
+        valor = micookie.substring(igual + 1);
+	return Number(valor) >= 1 ? Number(FurnaceContainer = valor) : Number(FurnaceContainer = 0);
 };
-
 function leerCookieFurnaceFuel() {
 	var lista = document.cookie.split(";");
 	for (i in lista) {
-		var busca = lista[i].search("cookie.FurnaceFuel");
-		if (busca > -1) {
-			var micookie = lista[i];
-		};
+		if (lista[i].search("cookie.FurnaceFuel") > -1) var micookie = lista[i];
 	};
-	var igual = micookie.indexOf("=");
-	var valor = micookie.substring(igual + 1);
- 	if (Number(valor >= 1)) {
-		return Number(FurnaceFuel = valor);
-	} else {
-		return Number(FurnaceFuel = 0);
+	var igual = micookie.indexOf("="),
+        valor = micookie.substring(igual + 1);
+	return Number(valor) >= 1 ? Number(FurnaceFuel = valor) : Number(FurnaceFuel = 0);
+};
+function leerCookieIronPickaxeUses() {
+	var lista = document.cookie.split(";");
+	for (i in lista) {
+		if (lista[i].search("cookie.IronPickaxeUses") > -1) var micookie = lista[i];
 	};
+	var igual = micookie.indexOf("="),
+        valor = micookie.substring(igual + 1);
+	return Number(valor) >= 1 ? Number(IronPickaxeUses = valor) : Number(IronPickaxeUses = 0);
+};
+function leerCookieAutoSaveTime() {
+	var lista = document.cookie.split(";");
+	for (i in lista) {
+		if (lista[i].search("cookie.AutoSaveTime") > -1) var micookie = lista[i];
+	};
+	var igual = micookie.indexOf("="),
+        valor = micookie.substring(igual + 1);
+	return Number(valor) >= 1 ? Number(AutoSaveTime = valor) : Number(AutoSaveTime = 0);
+};
+function leerCookieIronUnlocked() {
+	var lista = document.cookie.split(";");
+	for (i in lista) {
+		if (lista[i].search("cookie.IronUnlocked") > -1) var micookie = lista[i]
+	};
+	var igual = micookie.indexOf("="),
+	    valor = micookie.substring(igual + 1);
+	return Number(valor >= 1) ? IronUnlocked = true : IronUnlocked = false;
+};
+function leerCookieLapis() {
+	var lista = document.cookie.split(";");
+	for (i in lista) {
+		if (lista[i].search("cookie.Lapis") > -1) var micookie = lista[i];
+	};
+	var igual = micookie.indexOf("="),
+        valor = micookie.substring(igual + 1);
+	return Number(valor) >= 1 ? Number(Lapis = valor) : Number(Lapis = 0);
+};
+function leerCookieLapisUnlocked() {
+	var lista = document.cookie.split(";");
+	for (i in lista) {
+		if (lista[i].search("cookie.LapisUnlocked") > -1) var micookie = lista[i]
+	};
+	var igual = micookie.indexOf("="),
+	    valor = micookie.substring(igual + 1);
+	return Number(valor >= 1) ? LapisUnlocked = true : LapisUnlocked = false;
 };
 
 function leerCookies() {
@@ -585,22 +611,46 @@ function leerCookies() {
 	leerCookieFurnace();
 	leerCookieFurnaceContainer();
 	leerCookieFurnaceFuel();
+	leerCookieIronPickaxeUses();
+	leerCookieAutoSaveTime();
+	leerCookieIronUnlocked();
+	leerCookieLapis();
+	leerCookieLapisUnlocked();
 };
 
 leerCookies();
 
 function Restart() {
-	document.cookie = "cookie.Money=" + 0 + "; expires=" + deleteDate.toUTCString();
-	document.cookie = "cookie.Rock=" + 0 + "; expires=" + deleteDate.toUTCString();
-	document.cookie = "cookie.Coal=" + 0 + "; expires=" + deleteDate.toUTCString();
-	document.cookie = "cookie.RawIron=" + 0 + "; expires=" + deleteDate.toUTCString();
-	document.cookie = "cookie.Iron=" + 0 + "; expires=" + deleteDate.toUTCString();
-	document.cookie = "cookie.Pickaxe=" + 0 + "; expires=" + deleteDate.toUTCString();
-	document.cookie = "cookie.Furnace=" + 0 + "; expires=" + deleteDate.toUTCString();
-	document.cookie = "cookie.FurnaceContainer=" + 0 + "; expires=" + deleteDate.toUTCString();
-	document.cookie = "cookie.FurnaceFuel=" + 0 + "; expires=" + deleteDate.toUTCString();
+	document.cookie = "cookie.Money=" + (-1) + "; expires=" + deleteDate.toUTCString();
+	document.cookie = "cookie.Rock=" + (-1) + "; expires=" + deleteDate.toUTCString();
+	document.cookie = "cookie.Coal=" + (-1) + "; expires=" + deleteDate.toUTCString();
+	document.cookie = "cookie.RawIron=" + (-1) + "; expires=" + deleteDate.toUTCString();
+	document.cookie = "cookie.Iron=" + (-1) + "; expires=" + deleteDate.toUTCString();
+	document.cookie = "cookie.Pickaxe=" + (-1) + "; expires=" + deleteDate.toUTCString();
+	document.cookie = "cookie.Furnace=" + (-1) + "; expires=" + deleteDate.toUTCString();
+	document.cookie = "cookie.FurnaceContainer=" + (-1) + "; expires=" + deleteDate.toUTCString();
+	document.cookie = "cookie.FurnaceFuel=" + (-1) + "; expires=" + deleteDate.toUTCString();
+	document.cookie = "cookie.IronPickaxeUses=" + (-1) + "; expires=" + deleteDate.toUTCString();
+	document.cookie = "cookie.AutoSaveTime=" + (-1) + "; expires=" + deleteDate.toUTCString();
+	document.cookie = "cookie.IronUnlocked=" + (-1) + "; expires=" + deleteDate.toUTCString();
+	document.cookie = "cookie.Lapis=" + (-1) + "; expires=" + deleteDate.toUTCString();
+	document.cookie = "cookie.LapisUnlocked=" + (-1) + "; expires=" + deleteDate.toUTCString();
 	window.location.reload();
 };
+
+// Intervals
+
+setInterval(function () {
+	render60();
+}, 1000 / 60);
+
+setInterval(function () {
+	render1();
+}, 1000);
+
+setInterval(function() {
+	saveCookies();
+}, 1000*AutoSaveTime);
 
 // Other
 
@@ -614,7 +664,7 @@ function tick() {
     var time = Date.now();
     frame++;
     if (time - startTime > 1000) {
-        document.getElementById("FPS").innerHTML = (frame / ((time - startTime) / 1000)).toFixed(2) + " FPS";
+        document.getElementById("FPS").innerHTML = "~" + (frame / ((time - startTime) / 1000)).toFixed(2) + " FPS";
         startTime = time;
         frame = 0;
     };
