@@ -82,6 +82,10 @@ function Play(C) {
 		};
 	} else if (Player == O) {
 		Casilla = (Math.floor(Math.random() * 9) + 1);
+		// if casilla ocuped, repeat
+		while (Casilla == 1 && C1 != None || Casilla == 2 && C2 != None || Casilla == 3 && C3 != None || Casilla == 4 && C4 != None || Casilla == 5 && C5 != None || Casilla == 6 && C6 != None || Casilla == 7 && C7 != None || Casilla == 8 && C8 != None || Casilla == 9 && C9 != None) {
+			Casilla = (Math.floor(Math.random() * 9) + 1);
+		};
 		console.log(Casilla)
 		if (Casilla == 1 && C1 == None) {
 			document.getElementById("C1").src = "img/O.png"
