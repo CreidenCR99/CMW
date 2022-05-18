@@ -295,24 +295,6 @@ var Sofia = setInterval(function () {
   }
 }, 1000);
 
-// ----- Leo ----- \\
-
-var LeoCumple = new Date("Aug 17, 2022 00:00:00").getTime();
-
-var Leo = setInterval(function () {
-
-  var Leodistance = LeoCumple - now;
-
-  var Leodays = Math.floor(Leodistance / (1000 * 60 * 60 * 24));
-
-  document.getElementById("Leo").innerHTML = `Leo<br><b class="h" id="LeoFecha">${Leodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>7/8</b>`;
-
-  if (Leodistance < 0) {
-    clearInterval(Leo);
-    document.getElementById("LeoFecha").innerHTML = "¡Hoy!";
-  }
-}, 1000);
-
 // ----- Laura ----- \\
 
 var LauraCumple = new Date("Dec 17, 2022 00:00:00").getTime();
@@ -328,5 +310,23 @@ var Laura = setInterval(function () {
   if (Lauradistance < 0) {
     clearInterval(Laura);
     document.getElementById("LauraFecha").innerHTML = "¡Hoy!";
+  }
+}, 1000);
+
+// ----- Leo ----- \\
+
+var LeoCumple = new Date("Aug 17, 2022 00:00:00").getTime();
+
+var Leo = setInterval(function () {
+
+  var Leodistance = LeoCumple - now;
+
+  var Leodays = Math.floor(Leodistance / (1000 * 60 * 60 * 24));
+
+  document.getElementById("Leo").innerHTML = `Leo<br><b class="h" id="LeoFecha">${Leodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>7/8</b>`;
+
+  if (Leodistance < 0) {
+    clearInterval(Leo);
+    document.getElementById("LeoFecha").innerHTML = "¡Hoy!";
   }
 }, 1000);
