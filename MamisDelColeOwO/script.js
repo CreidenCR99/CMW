@@ -197,7 +197,7 @@ var Paula = setInterval(function () {
 
   var Pauladays = Math.floor(Pauladistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Paula").innerHTML = `Paula (Capitana del ship; 🐱)<br><b class="h" id="PaulaFecha">${Pauladays}d ${Hours}h ${Minutes}m ${Seconds}s<br>27/11</b>`;
+  document.getElementById("Paula").innerHTML = `Paula (Pau; Paucopata; Capitane del ship; 🐱)<br><b class="h" id="PaulaFecha">${Pauladays}d ${Hours}h ${Minutes}m ${Seconds}s<br>27/11</b>`;
 
   if (Pauladistance < 0) {
     clearInterval(Paula);
@@ -215,7 +215,7 @@ var Valeria = setInterval(function () {
 
   var Valeriadays = Math.floor(Valeriadistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Valeria").innerHTML = `Valeria<br><b class="h" id="ValeriaFecha">${Valeriadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>14/7</b>`;
+  document.getElementById("Valeria").innerHTML = `Valeria (Minion)<br><b class="h" id="ValeriaFecha">${Valeriadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>14/7</b>`;
 
   if (Valeriadistance < 0) {
     clearInterval(Valeria);
@@ -233,47 +233,11 @@ var Almudena = setInterval(function () {
 
   var Almudenadays = Math.floor(Almudenadistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Almudena").innerHTML = `Almudena<br><b class="h" id="AlmudenaFecha">${Almudenadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>12/2</b>`;
+  document.getElementById("Almudena").innerHTML = `Almudena (Wructi)<br><b class="h" id="AlmudenaFecha">${Almudenadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>12/2</b>`;
 
   if (Almudenadistance < 0) {
     clearInterval(Almudena);
     document.getElementById("AlmudenaFecha").innerHTML = "¡Hoy!";
-  }
-}, 1000);
-
-// ----- Sergio ----- \\
-
-var SergioCumple = new Date("Feb 10, 2023 00:00:00").getTime();
-
-var Almudena = setInterval(function () {
-
-  var Sergiodistance = SergioCumple - now;
-
-  var Sergiodays = Math.floor(Sergiodistance / (1000 * 60 * 60 * 24));
-
-  document.getElementById("Sergio").innerHTML = `Sergio (Casquete; Papa)<br><b class="h" id="SergioFecha">${Sergiodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>10/2</b>`;
-
-  if (Sergiodistance < 0) {
-    clearInterval(Sergio);
-    document.getElementById("SergioFecha").innerHTML = "¡Hoy!";
-  }
-}, 1000);
-
-// ----- Nel ----- \\
-
-var NelCumple = new Date("Dec 18, 2022 00:00:00").getTime();
-
-var Nel = setInterval(function () {
-
-  var Neldistance = NelCumple - now;
-
-  var Neldays = Math.floor(Neldistance / (1000 * 60 * 60 * 24));
-
-  document.getElementById("Nel").innerHTML = `Nel (Nelini; Pranket; Nel Caprichoso)<br><b class="h" id="NelFecha">${Neldays}d ${Hours}h ${Minutes}m ${Seconds}s<br>18/12</b>`;
-
-  if (Neldistance < 0) {
-    clearInterval(Nel);
-    document.getElementById("NelFecha").innerHTML = "¡Hoy!";
   }
 }, 1000);
 
@@ -295,7 +259,25 @@ var Olaya = setInterval(function () {
   }
 }, 1000);
 
-// ----- Olaya ----- \\
+// ---- Danna ----- \\
+
+var DannaCumple = new Date("Feb 5, 2023 00:00:00").getTime();
+
+var Danna = setInterval(function () {
+
+  var Dannadistance = DannaCumple - now;
+
+  var Dannadays = Math.floor(Dannadistance / (1000 * 60 * 60 * 24));
+
+  document.getElementById("Danna").innerHTML = `Danna (Danno)<br><b class="h" id="DannaFecha">${Dannadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>12/12</b>`;
+
+  if (Dannadistance < 0) {
+    clearInterval(Danna);
+    document.getElementById("DannaFecha").innerHTML = "¡Hoy!";
+  }
+}, 1000);
+
+// ----- Sofia ----- \\
 
 var SofiaCumple = new Date("Aug 7, 2022 00:00:00").getTime();
 
@@ -307,8 +289,44 @@ var Sofia = setInterval(function () {
 
   document.getElementById("Sofia").innerHTML = `Sofia<br><b class="h" id="SofiaFecha">${Sofiadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>7/8</b>`;
 
-  if (Olayadistance < 0) {
+  if (Sofiadistance < 0) {
     clearInterval(Olaya);
     document.getElementById("SofiaFecha").innerHTML = "¡Hoy!";
+  }
+}, 1000);
+
+// ----- Leo ----- \\
+
+var LeoCumple = new Date("Aug 17, 2022 00:00:00").getTime();
+
+var Leo = setInterval(function () {
+
+  var Leodistance = LeoCumple - now;
+
+  var Leodays = Math.floor(Leodistance / (1000 * 60 * 60 * 24));
+
+  document.getElementById("Leo").innerHTML = `Leo<br><b class="h" id="LeoFecha">${Leodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>7/8</b>`;
+
+  if (Leodistance < 0) {
+    clearInterval(Leo);
+    document.getElementById("LeoFecha").innerHTML = "¡Hoy!";
+  }
+}, 1000);
+
+// ----- Laura ----- \\
+
+var LauraCumple = new Date("Dec 17, 2022 00:00:00").getTime();
+
+var Laura = setInterval(function () {
+
+  var Lauradistance = LauraCumple - now;
+
+  var Lauradays = Math.floor(Lauradistance / (1000 * 60 * 60 * 24));
+
+  document.getElementById("Laura").innerHTML = `Laura<br><b class="h" id="LauraFecha">${Lauradays}d ${Hours}h ${Minutes}m ${Seconds}s<br>17/12</b>`;
+
+  if (Lauradistance < 0) {
+    clearInterval(Laura);
+    document.getElementById("LauraFecha").innerHTML = "¡Hoy!";
   }
 }, 1000);
