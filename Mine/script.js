@@ -1,3 +1,4 @@
+saveCookies();
 var Money = 0,
 	Rock = 0,
 	Coal = 0,
@@ -14,7 +15,8 @@ var Money = 0,
 	AutoSaveTime = 90,
 	Lapis = 0,
 	LapisUnlocked = false,
-XP = 0;
+	XP = 0,
+EarnTexts = true;
 
 function Mine() {
 
@@ -108,18 +110,34 @@ function Mine() {
 
 	// Earned
 
-	document.getElementById("Earned").innerHTML = "+" + EarnRock + " rock<br>";
-	if (EarnCoal >= 1) {
-		document.getElementById("Earned").innerHTML += "+" + EarnCoal + " coal<br>";
+	if (EarnTexts == true) {
+		document.getElementById("Earned").innerHTML = "+" + EarnRock + " rock<br>";
+		if (EarnCoal >= 1) {
+			document.getElementById("Earned").innerHTML += "+" + EarnCoal + " coal<br>";
+		};
+		if (EarnRawIron >= 1) {
+			document.getElementById("Earned").innerHTML += ("+" + EarnRawIron + " raw iron<br>");
+		};
+		if (EarnLapis >= 1) {
+			document.getElementById("Earned").innerHTML += ("+" + EarnLapis + " lapis<br>");
+		};
+		if (EarnXP >= 1) {
+			document.getElementById("Earned").innerHTML += ("+" + EarnXP + " XP<br>");
+		};
+	} else if (EarnTexts == false) {
+		document.getElementById("Earned").innerHTML = "";
 	};
-	if (EarnRawIron >= 1) {
-		document.getElementById("Earned").innerHTML += ("+" + EarnRawIron + " raw iron<br>");
-	};
-	if (EarnLapis >= 1) {
-		document.getElementById("Earned").innerHTML += ("+" + EarnLapis + " lapis<br>");
-	};
-	if (EarnXP >= 1) {
-		document.getElementById("Earned").innerHTML += ("+" + EarnXP + " XP<br>");
+};
+
+function ToggleEarnTexts() {
+	if (EarnTexts == true) {
+		EarnTexts = false;
+		document.getElementById("EarnTexts").innerHTML = "Earn Texts: Off";
+		document.getElementById("EarnTexts").style = "background-color: red;";
+	} else if (EarnTexts == false) {
+		EarnTexts = true;
+		document.getElementById("EarnTexts").innerHTML = "Earn Texts: On";
+		document.getElementById("EarnTexts").style = "background-color: green;";
 	};
 };
 
@@ -480,6 +498,7 @@ async function saveCookies() {
 	document.cookie = "cookie.IronUnlocked=" + IronUnlocked + "; expires=" + expiresDate.toUTCString();
 	document.cookie = "cookie.Lapis=" + Lapis + "; expires=" + expiresDate.toUTCString();
 	document.cookie = "cookie.LapisUnlocked=" + LapisUnlocked + "; expires=" + expiresDate.toUTCString();
+	document.cookie = "cookie.XP=" + XP + "; expires=" + expiresDate.toUTCString();
 	if (document.cookie != "") {
 		document.getElementById("Saving").style.opacity = "1";
 		await sleep(3500);
@@ -617,6 +636,15 @@ function leerCookieLapisUnlocked() {
 	    valor = micookie.substring(igual + 1);
 	return Number(valor >= 1) ? LapisUnlocked = true : LapisUnlocked = false;
 };
+function leerCookieXP() {
+	var lista = document.cookie.split(";");
+	for (i in lista) {
+		if (lista[i].search("cookie.XP") > -1) var micookie = lista[i];
+	};
+	var igual = micookie.indexOf("="),
+        valor = micookie.substring(igual + 1);
+	return Number(valor) >= 1 ? Number(XP = valor) : Number(XP = 0);
+};
 
 function leerCookies() {
 	leerCookieMoney();
@@ -633,6 +661,7 @@ function leerCookies() {
 	leerCookieIronUnlocked();
 	leerCookieLapis();
 	leerCookieLapisUnlocked();
+	leerCookieXP();
 };
 
 leerCookies();
@@ -652,6 +681,7 @@ function Restart() {
 	document.cookie = "cookie.IronUnlocked=" + (-1) + "; expires=" + deleteDate.toUTCString();
 	document.cookie = "cookie.Lapis=" + (-1) + "; expires=" + deleteDate.toUTCString();
 	document.cookie = "cookie.LapisUnlocked=" + (-1) + "; expires=" + deleteDate.toUTCString();
+	document.cookie = "cookie.XP=" + (-1) + "; expires=" + deleteDate.toUTCString();
 	window.location.reload();
 };
 
@@ -681,7 +711,7 @@ function tick() {
     var time = Date.now();
     frame++;
     if (time - startTime > 1000) {
-        document.getElementById("FPS").innerHTML = "~" + (frame / ((time - startTime) / 1000)).toFixed(2) + " FPS";
+        document.getElementById("FPS").innerHTML = (frame / ((time - startTime) / 1000)).toFixed(2) + " FPS";
         startTime = time;
         frame = 0;
     };

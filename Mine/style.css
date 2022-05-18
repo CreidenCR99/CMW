@@ -286,8 +286,11 @@ div#Options div#container button:active {
     filter: grayscale(0.7);
 }
 div#Options div#container button#Reset {
-    background-color: #ff0000;
+    background-color: #f00;
 }
 div#Options div#container button#Save {
-    background-color: #00ff00;
+    background-color: #080;
+}
+div#Options div#container button#EarnTexts {
+    background-color: #080;
 }
