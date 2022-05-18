@@ -323,7 +323,7 @@ var Laura = setInterval(function () {
 
   var Lauradays = Math.floor(Lauradistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Laura").innerHTML = `Laura<br><b class="h" id="LauraFecha">${Lauradays}d ${Hours}h ${Minutes}m ${Seconds}s<br>17/12</b>`;
+  document.getElementById("Laura").innerHTML = `Laura (Juan)<br><b class="h" id="LauraFecha">${Lauradays}d ${Hours}h ${Minutes}m ${Seconds}s<br>17/12</b>`;
 
   if (Lauradistance < 0) {
     clearInterval(Laura);
