@@ -24,12 +24,6 @@ function Cumples() {
   document.getElementById("h2Cumples").title = "Calendario de cumpleaños"
 }
 
-function Ships() {
-  document.getElementById("Ships").style = "display: block;"
-  document.getElementById("h2Ships").style = "cursor: default;"
-  document.getElementById("h2Ships").title = "No."
-}
-
 // ---------- Frases ---------- \\
 
 function SaltoApodos() {
