@@ -165,7 +165,7 @@ var Salto = setInterval(function () {
 
 // ----- Cilindro ----- \\
 
-var CilindroCumple = new Date("Aug 12, 2022 00:00:00").getTime();
+var CilindroCumple = new Date("Aug 12, 2023 00:00:00").getTime();
 
 var Cilindro = setInterval(function () {
 
@@ -201,7 +201,7 @@ var Paula = setInterval(function () {
 
 // ----- Valeria ----- \\
 
-var ValeriaCumple = new Date("Jul 14, 2022 00:00:00").getTime();
+var ValeriaCumple = new Date("Jul 14, 2023 00:00:00").getTime();
 
 var Valeria = setInterval(function () {
 
@@ -273,7 +273,7 @@ var Danna = setInterval(function () {
 
 // ----- Sofia ----- \\
 
-var SofiaCumple = new Date("Aug 7, 2022 00:00:00").getTime();
+var SofiaCumple = new Date("Aug 7, 2023 00:00:00").getTime();
 
 var Sofia = setInterval(function () {
 
@@ -309,7 +309,7 @@ var Laura = setInterval(function () {
 
 // ----- Leo ----- \\
 
-var LeoCumple = new Date("Aug 17, 2022 00:00:00").getTime();
+var LeoCumple = new Date("Aug 17, 2023 00:00:00").getTime();
 
 var Leo = setInterval(function () {
 
