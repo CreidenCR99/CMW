@@ -45,84 +45,87 @@ function Play(C) {
 	if (Player == X) {
 		if (Casilla == 1 && C1 == None) {
 			document.getElementById("C1").src = "img/X.png"
-			Player = 10;
-			C1 = 1;
+			Player = O;
+			C1 = X;
 		} else if (Casilla == 2 && C2 == None) {
 			document.getElementById("C2").src = "img/X.png"
-			Player = 10;
-			C2 = 1;
+			Player = O;
+			C2 = X;
 		} else if (Casilla == 3 && C3 == None) {
 			document.getElementById("C3").src = "img/X.png"
-			Player = 10;
-			C3 = 1;
+			Player = O;
+			C3 = X;
 		} else if (Casilla == 4 && C4 == None) {
 			document.getElementById("C4").src = "img/X.png"
-			Player = 10;
-			C4 = 1;
+			Player = O;
+			C4 = X;
 		} else if (Casilla == 5 && C5 == None) {
 			document.getElementById("C5").src = "img/X.png"
-			Player = 10;
-			C5 = 1;
+			Player = O;
+			C5 = X;
 		} else if (Casilla == 6 && C6 == None) {
 			document.getElementById("C6").src = "img/X.png"
-			Player = 10;
-			C6 = 1;
+			Player = O;
+			C6 = X;
 		} else if (Casilla == 7 && C7 == None) {
 			document.getElementById("C7").src = "img/X.png"
-			Player = 10;
-			C7 = 1;
+			Player = O;
+			C7 = X;
 		} else if (Casilla == 8 && C8 == None) {
 			document.getElementById("C8").src = "img/X.png"
-			Player = 10;
-			C8 = 1;
+			Player = O;
+			C8 = X;
 		} else if (Casilla == 9 && C9 == None) {
 			document.getElementById("C9").src = "img/X.png"
-			Player = 10;
-			C9 = 1;
+			Player = O;
+			C9 = X;
 		};
+		sleep(5000);
+		Play();
 	} else if (Player == O) {
+		if (Row1 == 10) {
 		Casilla = (Math.floor(Math.random() * 9) + 1);
-		// if casilla ocuped, repeat
+		};
 		while (Casilla == 1 && C1 != None || Casilla == 2 && C2 != None || Casilla == 3 && C3 != None || Casilla == 4 && C4 != None || Casilla == 5 && C5 != None || Casilla == 6 && C6 != None || Casilla == 7 && C7 != None || Casilla == 8 && C8 != None || Casilla == 9 && C9 != None) {
 			Casilla = (Math.floor(Math.random() * 9) + 1);
 		};
 		console.log(Casilla)
 		if (Casilla == 1 && C1 == None) {
 			document.getElementById("C1").src = "img/O.png"
-			Player = 1;
-			C1 = 10;
+			Player = X;
+			C1 = O;
 		} else if (Casilla == 2 && C2 == None) {
 			document.getElementById("C2").src = "img/O.png"
-			Player = 1;
-			C2 = 10;
+			Player = X;
+			C2 = O;
 		} else if (Casilla == 3 && C3 == None) {
 			document.getElementById("C3").src = "img/O.png"
 			Player = 1;
-			C3 = 10;
+			C3 = O;
 		} else if (Casilla == 4  && C4 == None) {
 			document.getElementById("C4").src = "img/O.png"
-			Player = 1;
-			C4 = 10;
+			Player = X;
+			C4 = O;
 		} else if (Casilla == 5 && C5 == None) {
 			document.getElementById("C5").src = "img/O.png"
-			Player = 1;
-			C5 = 10;
+			Player = X;
+			C5 = O;
 		} else if (Casilla == 6 && C6 == None) {
 			document.getElementById("C6").src = "img/O.png"
-			Player = 1;
-			C6 = 10;
+			Player = X;
+			C6 = O;
 		} else if (Casilla == 7 && C7 == None) {
 			document.getElementById("C7").src = "img/O.png"
-			Player = 1;
-			C7 = 10;
+			Player = X;
+			C7 = O;
 		} else if (Casilla == 8 && C8 == None) {
 			document.getElementById("C8").src = "img/O.png"
-			Player = 1;
-			C8 = 10;
+			Player = X;
+			C8 = O;
 		} else if (Casilla == 9 && C9 == None) {
 			document.getElementById("C9").src = "img/O.png"
-			Player = 1;
-			C9 = 10;
+			Player = X;
+			C9 = O;
 		};
 	};
 };
