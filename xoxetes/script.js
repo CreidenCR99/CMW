@@ -50,8 +50,6 @@ function IoApodos() {
   document.getElementById("IoApodos").title = ""
 }
 
-// ---------- Cumples ---------- \\
-
 // ------- General ------- \\
 
 var Hours = 0;
@@ -108,6 +106,8 @@ function IoCumpleApodos() {
   IoCumpleClassChange = [""]
   IoCumpleTitleChange = [""]
 }
+
+// ---------- Cumples ---------- \\
 
 // ----- Grupo ----- \\
 
