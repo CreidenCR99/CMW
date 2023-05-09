@@ -235,6 +235,24 @@ var Deivid = setInterval(function () {
   }
 }, 1000);
 
+// ----- Guille ----- \\
+
+var GuilleCumple = new Date("Jul 21, 2023 00:00:00").getTime();
+
+var Guille = setInterval(function () {
+
+  var Guilledistance = GuilleCumple - now;
+
+  var Guilledays = Math.floor(Guilledistance / (1000 * 60 * 60 * 24));
+
+  document.getElementById("Guille").innerHTML = `Guille<br><b class="h" id="GuilleFecha">${Guilledays}d ${Hours}h ${Minutes}m ${Seconds}s<br>21/07</b>`;
+
+  if (Guilledistance < 0) {
+    clearInterval(Guille);
+    document.getElementById("GuilleFecha").innerHTML = "¡Hoy!";
+  }
+}, 1000);
+
 // ----- Sofia ----- \\
 
 var SofiaCumple = new Date("Aug 7, 2023 00:00:00").getTime();
@@ -343,21 +361,39 @@ var Io = setInterval(function () {
   }
 }, 1000);
 
-// ----- Sara ----- \\
+// ----- Runa ----- \\
 
-var SaraCumple = new Date("Oct 9, 2023 00:00:00").getTime();
+var RunaCumple = new Date("Oct 9, 2023 00:00:00").getTime();
 
-var Sara = setInterval(function () {
+var Runa = setInterval(function () {
 
-  var Saradistance = SaraCumple - now;
+  var Runadistance = RunaCumple - now;
 
-  var Saradays = Math.floor(Saradistance / (1000 * 60 * 60 * 24));
+  var Runadays = Math.floor(Runadistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Sara").innerHTML = `Sara (Runa)<br><b class="h" id="SaraFecha">${Saradays}d ${Hours}h ${Minutes}m ${Seconds}s<br>09/10</b>`;
+  document.getElementById("Runa").innerHTML = `Runa (Sara)<br><b class="h" id="RunaFecha">${Runadays}d ${Hours}h ${Minutes}m ${Seconds}s<br>09/10</b>`;
 
-  if (Saradistance < 0) {
-    clearInterval(Sara);
-    document.getElementById("SaraFecha").innerHTML = "¡Hoy!";
+  if (Runadistance < 0) {
+    clearInterval(Runa);
+    document.getElementById("RunaFecha").innerHTML = "¡Hoy!";
+  }
+}, 1000);
+
+// ----- Nadine ----- \\
+
+var NadineCumple = new Date("Oct 19, 2023 00:00:00").getTime();
+
+var Nadine = setInterval(function () {
+
+  var Nadinedistance = NadineCumple - now;
+
+  var Nadinedays = Math.floor(Nadinedistance / (1000 * 60 * 60 * 24));
+
+  document.getElementById("Nadine").innerHTML = `Nadine<br><b class="h" id="NadineFecha">${Nadinedays}d ${Hours}h ${Minutes}m ${Seconds}s<br>19/10</b>`;
+
+  if (Nadinedistance < 0) {
+    clearInterval(Nadine);
+    document.getElementById("NadineFecha").innerHTML = "¡Hoy!";
   }
 }, 1000);
 
@@ -407,48 +443,10 @@ var Diego = setInterval(function () {
 
   var Diegodays = Math.floor(Diegodistance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("Diego").innerHTML = `Diego (Juan)<br><b class="h" id="DiegoFecha">${Diegodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>26/12</b>`;
+  document.getElementById("Diego").innerHTML = `Diego<br><b class="h" id="DiegoFecha">${Diegodays}d ${Hours}h ${Minutes}m ${Seconds}s<br>26/12</b>`;
 
   if (Diegodistance < 0) {
     clearInterval(Diego);
     document.getElementById("DiegoFecha").innerHTML = "¡Hoy!";
-  }
-}, 1000);
-
-/////////////////////////////////////
-
-// ----- Nadine ----- \\
-
-var NadineCumple = new Date("Jul 14, 2023 00:00:00").getTime();
-
-var Nadine = setInterval(function () {
-
-  var Nadinedistance = NadineCumple - now;
-
-  var Nadinedays = Math.floor(Nadinedistance / (1000 * 60 * 60 * 24));
-
-  document.getElementById("Nadine").innerHTML = `Nadine<br><b class="h" id="NadineFecha">${Nadinedays}d ${Hours}h ${Minutes}m ${Seconds}s<br>NaN</b>`;
-
-  if (Nadinedistance < 0) {
-    clearInterval(Nadine);
-    document.getElementById("NadineFecha").innerHTML = "¡Hoy!";
-  }
-}, 1000);
-
-// ----- Guille ----- \\
-
-var GuilleCumple = new Date("Jul 14, 2023 00:00:00").getTime();
-
-var Guille = setInterval(function () {
-
-  var Guilledistance = GuilleCumple - now;
-
-  var Guilledays = Math.floor(Guilledistance / (1000 * 60 * 60 * 24));
-
-  document.getElementById("Guille").innerHTML = `Guille<br><b class="h" id="GuilleFecha">${Guilledays}d ${Hours}h ${Minutes}m ${Seconds}s<br>NaN</b>`;
-
-  if (Guilledistance < 0) {
-    clearInterval(Guille);
-    document.getElementById("GuilleFecha").innerHTML = "¡Hoy!";
   }
 }, 1000);
