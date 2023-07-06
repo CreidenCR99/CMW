@@ -1,0 +1,39 @@
+*{
+    font-family: Requema;
+    text-align: center;
+    color:white;
+    text-shadow: 10px  0px 0px black,
+                 0px  10px 0px black,
+                -10px  0px 0px black,
+                 0px -10px 0px black;
+}
+h1{
+    font-size: 125px;
+}
+h2{
+    font-size: 100px;
+}
+h3{
+    font-size: 85px;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+#id_title{
+    margin-top: 2.5%;
+}
+#id_km{
+    margin-top: -10%;
+}
+#id_kmh{
+    margin-top: -10%;
+}
+#id_boton{
+    height: 640px;
+    width: 640px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
