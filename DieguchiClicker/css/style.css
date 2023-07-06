@@ -11,6 +11,11 @@ html{
     width: 1080px;
     height: 2400px;
 }
+body{
+    user-select: none;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
 h1{
     font-size: 125px;
 }
