@@ -7,6 +7,10 @@
                 -10px  0px 0px black,
                  0px -10px 0px black;
 }
+html{
+    width: 1080px;
+    height: 2400px;
+}
 h1{
     font-size: 125px;
 }
@@ -15,10 +19,6 @@ h2{
 }
 h3{
     font-size: 85px;
-}
-html{
-    width: 100%;
-    height: 100%;
 }
 #id_title{
     margin-top: 2.5%;
