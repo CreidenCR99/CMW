@@ -1,11 +1,19 @@
 @keyframes Loading {
-    100% {
-      opacity: 1;
-    }
-    75% {
-      opacity: 1;
-    }
-    0% {
-      opacity: 0;
-    }
+  100% {
+    opacity: 1;
   }
+  75% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100vh;
+  }
+}
