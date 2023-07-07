@@ -10,7 +10,7 @@ function AutoDetector() {
 	};
 };
 
-var Timer = 15;
+var Timer = 3;
 
 const Interval = setInterval(function() {
 	Timer --;
