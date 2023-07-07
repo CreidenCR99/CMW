@@ -14,6 +14,10 @@ html, body{
     overflow-y: hidden;
     overflow-x: hidden;
 }
+body{
+    background: url(../img/Fondos/1_Tierra.png);
+    background-size: 100vw;
+}
 h1{
     font-size: 11.75vw;
 }
