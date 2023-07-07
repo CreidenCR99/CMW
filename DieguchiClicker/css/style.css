@@ -38,3 +38,9 @@ h3{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+#id_version{
+    font-size: 40px;
+    position: absolute;
+    top: -40px;
+    left: 10px;
+}
