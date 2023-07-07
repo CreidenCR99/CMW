@@ -1,16 +1,30 @@
-var km = 0;
-var kmh = 0;
+var u = 0; // Unidad (m, km)
+var ups = 0; // Unidad por tiempo (m/s, km/h)
 function f_clic() {
-    km++;
+    u++;
 };
 
-function f_kms() {
-		document.getElementById("id_km").innerHTML =
-		`${km} km`;
-		document.getElementById("id_kmh").innerHTML =
-		`${kmh} km/h`;
-};
+function f_ups() {
+	if (u <= 999) {
+		document.getElementById("id_u").innerHTML =
+		`${u} m`;
+	} else if (u >= 1000) {
+		document.getElementById("id_u").innerHTML =
+		`${u/1000} km`
+	}
+	if (ups <= 999) {
+		document.getElementById("id_ups").innerHTML =
+		`${ups} m/s`;
+	} else if (u >= 1000) {
+		document.getElementById("id_ups").innerHTML =
+		`${ups/1000} km/s`
+	}
+}
+
+function sleep(ms) {
+	return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 setInterval(function() {
-	f_kms();
+	f_ups();
 }, 1000 / 60);

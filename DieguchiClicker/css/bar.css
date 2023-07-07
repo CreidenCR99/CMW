@@ -1,0 +1,25 @@
+.bar {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 33.33vw 33.33vw 33.33vw;
+    grid-template-rows: 10vh;
+    grid-auto-columns: 100vw;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "main shop other";
+    bottom: 0vh;
+}
+.main {
+    grid-area: main;
+    background-color: blue;
+}
+.shop {
+    grid-area: shop;
+    background-color: lime;
+}
+.other {
+    grid-area: other;
+    background-color: red;
+}
+  
