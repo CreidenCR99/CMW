@@ -8,31 +8,30 @@
                  0px -10px 0px black;
 }
 html, body{
-    width: 1080px;
-    height: 100%;
-    max-height: max-content;
+    width: 100vw;
+    height: 100vh;
     user-select: none;
     overflow-y: hidden;
     overflow-x: hidden;
 }
 h1{
-    font-size: 125px;
+    font-size: 11.75vw;
 }
 h2{
-    font-size: 100px;
+    font-size: 9vw;
 }
 h3{
-    font-size: 85px;
+    font-size: 8vw;
 }
 #id_title{
-    margin-top: 2.5%;
+    margin-top: 1.5vh;
 }
 #id_km, #id_kmh{
-    margin-top: -10%;
+    margin-top: -5vh;
 }
 #id_boton{
-    height: 640px;
-    width: 640px;
+    width: 75vw;
+    height: auto;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -43,4 +42,8 @@ h3{
     position: absolute;
     top: -40px;
     left: 10px;
+    text-shadow: 5px  0px 0px black,
+                 0px  5px 0px black,
+                -5px  0px 0px black,
+                 0px -5px 0px black;
 }
