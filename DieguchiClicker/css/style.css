@@ -2,10 +2,10 @@
     font-family: Requema;
     text-align: center;
     color:white;
-    text-shadow: 10px  0px 0px black,
-                 0px  10px 0px black,
-                -10px  0px 0px black,
-                 0px -10px 0px black;
+    text-shadow: 0.5vw  0px 0px black,
+                 0px  0.5vh 0px black,
+                -0.5vw  0px 0px black,
+                 0px -0.5vh 0px black;
 }
 html, body{
     width: 100vw;
@@ -38,12 +38,12 @@ h3{
     transform: translate(-50%, -50%);
 }
 #id_version{
-    font-size: 40px;
+    font-size: 25px;
     position: absolute;
-    top: -40px;
-    left: 10px;
-    text-shadow: 5px  0px 0px black,
-                 0px  5px 0px black,
-                -5px  0px 0px black,
-                 0px -5px 0px black;
+    top: -30px;
+    left: 0px;
+    text-shadow: 0.35vw  0px 0px black,
+                 0px  0.35vh 0px black,
+                -0.35vw  0px 0px black,
+                 0px -0.35vh 0px black;
 }
