@@ -16,7 +16,7 @@ html, body{
     overflow-x: hidden;
 }
 body{
-    background: url(../img/Fondos/1_Tierra.png);
+    background-image: url(../img/Fondos/1_Tierra.png);
     background-size: 100vw;
     animation: moveBackground 10s linear infinite;
 }
