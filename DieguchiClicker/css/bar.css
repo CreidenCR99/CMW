@@ -2,24 +2,35 @@
     position: absolute;
     display: grid;
     grid-template-columns: 33.33vw 33.33vw 33.33vw;
-    grid-template-rows: 10vh;
+    grid-template-rows: 14.5vh;
     grid-auto-columns: 100vw;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
     "main shop other";
     bottom: 0vh;
+    background-image: url(../img/bar/bgbar.png);
 }
 .main {
     grid-area: main;
-    background-color: blue;
+    background-image: url(../img/bar/bar1.png);
 }
 .shop {
     grid-area: shop;
-    background-color: lime;
+    background-image: url(../img/bar/bar2.png);
 }
 .other {
     grid-area: other;
-    background-color: red;
+    background-image: url(../img/bar/bar3.png);
 }
-  
+.main, .shop, .other {
+    background-size: 33.33vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+.iconsbar{
+    width: 22vw;
+    height: auto;
+}
