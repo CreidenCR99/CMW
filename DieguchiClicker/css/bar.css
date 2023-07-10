@@ -2,28 +2,28 @@
     position: absolute;
     display: grid;
     grid-template-columns: 33.33vw 33.33vw 33.33vw;
-    grid-template-rows: 14.5vh;
+    grid-template-rows: 14vh;
     grid-auto-columns: 100vw;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-    "main shop other";
+    "mainbar shopbar otherbar";
     bottom: 0vh;
     background-image: url(../img/bar/bgbar.png);
 }
-.main {
-    grid-area: main;
+.mainbar {
+    grid-area: mainbar;
     background-image: url(../img/bar/bar1.png);
 }
-.shop {
-    grid-area: shop;
+.shopbar {
+    grid-area: shopbar;
     background-image: url(../img/bar/bar2.png);
 }
-.other {
-    grid-area: other;
+.otherbar {
+    grid-area: otherbar;
     background-image: url(../img/bar/bar3.png);
 }
-.main, .shop, .other {
+.mainbar, .shopbar, .otherbar {
     background-size: 33.33vw;
     display: flex;
     justify-content: center;

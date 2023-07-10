@@ -1,9 +1,9 @@
 var u = 0; // Unidad (m, km)
 var ups = 0; // Unidad por tiempo (m/s, km/h)
 function f_clic() {
-    u++;
+    u += 0.1;
 	f_ups();
-};
+}
 
 function f_ups() {
 	if (u <= 999) {
@@ -22,10 +22,26 @@ function f_ups() {
 	}
 }
 
+function f_show(window) {
+	if (window == 1) {
+		$(".main").show();
+		$(".shop").hide();
+		$(".other").hide();
+	} else if (window == 2) {
+		$(".main").hide();
+		$(".shop").show();
+		$(".other").hide();
+	} else if (window == 3) {
+		$(".main").hide();
+		$(".shop").hide();
+		$(".other").show();
+	}
+}
+
 function sleep(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 setInterval(function() {
 	f_ups();
-}, 1000*10);
+}, 1000);

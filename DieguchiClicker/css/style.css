@@ -16,9 +16,7 @@ html, body{
     overflow-x: hidden;
 }
 body{
-    background-image: url(../img/Fondos/1_Tierra.png);
-    background-size: 100vw;
-    animation: moveBackground 10s linear infinite;
+    animation: moveBackground 10s linear infinite 1s;
 }
 h1{
     font-size: 11.75vw;
@@ -28,28 +26,4 @@ h2{
 }
 h3{
     font-size: 8vw;
-}
-#id_title{
-    margin-top: 1.5vh;
-}
-#id_u, #id_ups{
-    margin-top: -5vh;
-}
-#id_boton{
-    width: 75vw;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-#id_version{
-    font-size: 25px;
-    position: absolute;
-    top: -30px;
-    left: 0px;
-    text-shadow: 0.35vw  0px 0px black,
-                 0px  0.35vh 0px black,
-                -0.35vw  0px 0px black,
-                 0px -0.35vh 0px black;
 }
