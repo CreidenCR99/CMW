@@ -8,27 +8,30 @@
     <script src="js/jquery-3.7.0.min.js"></script>
 	<script src="js/script.js"></script>
     <link rel="stylesheet" type="text/css" href="css/fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/bar.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="stylesheet" type="text/css" href="css/animations.css">
-    <link rel="stylesheet" type="text/css" href="css/bar.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <meta name="description" content="Dieguchi chan clicker">
     <meta name="keywords" content="">
 </head>
-<body>
-    <p id="id_version">V2</p>
-    <h1 id="id_title">Dieguchi Clicker</h1>
-    <h2 id="id_u">0.0 m</h2>
-    <h3 id="id_ups">0.0 m/s</h3>
-    <img id="id_boton" onclick="f_clic();" draggable="false" src="img/texture2.png">
+<body background="img/Fondos/1_Tierra.png">
+    <div class="main">
+        <p id="id_version">V2.1</p>
+        <h1 id="id_title">Dieguchi Clicker</h1>
+        <h2 id="id_u">0.0 m</h2>
+        <h3 id="id_ups">0.0 m/s</h3>
+        <img id="id_boton" onclick="f_clic();" draggable="false" src="img/texture2.png">
+    </div>
     <div class="bar">
-        <div class="main">
-            <img class="iconsbar" alt="Main" src="img/texture.png">
+        <div class="mainbar">
+            <img class="iconsbar" alt="Main" src="img/texture.png" onclick="f_show(1);">
         </div>
-        <div class="shop">
-            <img class="iconsbar" alt="Shop" src="img/texture.png">
+        <div class="shopbar">
+            <img class="iconsbar" alt="Shop" src="img/texture.png" onclick="f_show(2);">
         </div>
-        <div class="other">
-            <img class="iconsbar" alt="Other" src="img/texture.png">
+        <div class="otherbar">
+            <img class="iconsbar" alt="Other" src="img/texture.png" onclick="f_show(3);">
         </div>
       </div>
 </body>
