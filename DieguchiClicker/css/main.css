@@ -1,4 +1,4 @@
-#id_title{
+.title{
     margin-top: 1.5vh;
 }
 #id_u, #id_ups{
@@ -12,7 +12,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#id_version{
+.version{
     font-size: 25px;
     position: absolute;
     top: -30px;
