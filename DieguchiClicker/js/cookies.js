@@ -13,8 +13,8 @@ function f_loadCookies() {
 	else{
 		var cookieValue = document.cookie
 			.split('; ')
-			.find(row => row.startsWith('savedData='))
-			.split('=')[1];
+			.find(row => row.startsWith('savedData='));
+			//.split('=')[1];
 
 		if (cookieValue) {
 			var valuePairs = cookieValue.split(',');
