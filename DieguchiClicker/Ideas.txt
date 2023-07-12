@@ -1,5 +1,10 @@
 Mejoras:
-- Carreteras cambiando
 - Aleron
 - Cambio de color (ciwik)
 - Copilot (Tesla)
+Renacimientos:
+Cambiar Carreteras
+Desbloquear coches nuevos
+Max: 3 reinicios
+Boss: Coche quemado despues de cada reinicio
+Reinicio 3 especial

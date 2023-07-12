@@ -33,4 +33,5 @@
 .iconsbar{
     width: 22vw;
     height: auto;
+    filter: brightness(1.25);
 }
