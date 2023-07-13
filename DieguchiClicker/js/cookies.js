@@ -25,8 +25,8 @@ function f_loadCookies() {
 
 		u = parseFloat(data.u);
 		ups = parseFloat(data.ups);
+		console.log("Cookies loaded")
 	}
-	console.log("Cookies loaded")
 }
 
 f_loadCookies();
