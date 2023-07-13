@@ -3,10 +3,10 @@ var ups = 0; // Unidad por tiempo (m/s, km/h)
 
 function f_clic() {
 	u += 0.1;
-	f_ups();
+	f_values();
 }
 
-function f_ups() {
+function f_values() {
 	if (u <= 999) {
 		document.getElementById("id_u").innerHTML =
 			`${u.toFixedDown(1)} m`;
@@ -47,6 +47,7 @@ function f_show(window) {
 
 function f_onload() {
 	console.log("Page loaded")
+	f_loadCookies();
 }
 
 Number.prototype.toFixedDown = function(digits) {
@@ -60,5 +61,5 @@ function sleep(ms) {
 }
 
 setInterval(function() {
-	f_ups();
+	f_values();
 }, 1000);
