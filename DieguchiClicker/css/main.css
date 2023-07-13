@@ -2,6 +2,7 @@
     margin-top: -5vh;
 }
 #id_boton{
+    user-select: none;
     width: 75vw;
     height: auto;
     position: absolute;
