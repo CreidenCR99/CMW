@@ -9,29 +9,26 @@ async function af_saveCookies() {
 }
 
 function f_loadCookies() {
-	if(document.cookie || document.cookie=='savedData=u:0,ups:0'){} 
-	else{
-		var cookieValue = document.cookie
-			.split('; ')
-			.find(row => row.startsWith('savedData='));
-			//.split('=')[1];
+	var cookieValue = document.cookie
+		.split('; ')
+		.find(row => row.startsWith('savedData='));
+		//.split('=')[1];
 
-		if (cookieValue) {
-			var valuePairs = cookieValue.split(',');
-			var data = {};
+	if (cookieValue) {
+		var valuePairs = cookieValue.split(',');
+		var data = {};
 
-			valuePairs.forEach(function(pair) {
-				var parts = pair.split(':');
-				var name = parts[0];
-				var value = parts[1];
-				data[name] = value;
-			});
+		valuePairs.forEach(function(pair) {
+			var parts = pair.split(':');
+			var name = parts[0];
+			var value = parts[1];
+			data[name] = value;
+		});
 
-			u = parseFloat(data.u);
-			ups = parseFloat(data.ups);
-		}
-		console.log("Cookies loaded")
+		u = parseFloat(data.u);
+		ups = parseFloat(data.ups);
 	}
+	console.log("Cookies loaded")
 }
 
 
