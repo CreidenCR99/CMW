@@ -1,5 +1,3 @@
-f_loadCookies();
-
 var AutoSaveTime = 15;
 
 async function af_saveCookies() {
@@ -11,8 +9,8 @@ async function af_saveCookies() {
 function f_loadCookies() {
 	var cookieValue = document.cookie
 		.split('; ')
-		.find(row => row.startsWith('savedData='));
-		//.split('=')[1];
+		.find(row => row.startsWith('savedData='))
+		.split('=')[1];
 
 	if (cookieValue) {
 		var valuePairs = cookieValue.split(',');
@@ -31,9 +29,10 @@ function f_loadCookies() {
 	console.log("Cookies loaded")
 }
 
+f_loadCookies();
 
 function Restart() {
-	document.cookie = "savedData=0; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/DieguchiClicker;";
+	document.cookie = "savedData=0; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/CMW/DieguchiClicker;";
 	window.location.reload();
 };
 
