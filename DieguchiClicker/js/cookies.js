@@ -30,7 +30,7 @@ function f_loadCookies() {
 }
 
 
-function Restart() {
+function f_Reset() {
 	document.cookie = "savedData=0; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/CMW/DieguchiClicker;";
 	document.cookie = "savedData=0; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/DieguchiClicker;";
 	window.location.reload();

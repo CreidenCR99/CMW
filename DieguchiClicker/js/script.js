@@ -1,9 +1,31 @@
 var u = 0; // Unidad (m, km)
 var ups = 0; // Unidad por tiempo (m/s, km/h)
 
+var c1p = 10, // Precio de los coches
+	c2p = 50,
+	c3p = 200,
+	c4p = 3000,
+	c5p = 8300,
+	c6p = 27125,
+	c7p = 66000,
+	c8p = 140000,
+	c9p = 900000,
+	c10p = 10300000,
+	c11p = 50350000,
+	c12p = 800000000,
+	c13p = 4480000000,
+	c14p = 8900000000,
+	c15p = 61890000000;
+
 function f_clic() {
 	u += 0.1;
 	f_values();
+}
+
+function f_cshop(car) {
+	if (car == 1 && u >= c1p) {
+
+	}
 }
 
 function f_values() {
