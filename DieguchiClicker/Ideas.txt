@@ -8,3 +8,20 @@ Desbloquear coches nuevos
 Max: 3 reinicios
 Boss: Coche quemado despues de cada reinicio
 Reinicio 3 especial
+
+Coches:
+1- Honda civic type r        15
+2- Lamborghini aventador     14
+3- Ferrari 448 pista         13
+4- Corvette c8               12
+5- Lexus lfa                 11
+6- Lamborghini huracan       10
+7- Lamborghini murcielago    9
+8- Corvette c7               8
+9- Mazda miata               7
+10- Hyundai tucson 2022      6
+11- Toyota rav 4             5
+12- Honda civic 1998         4
+13- Nissan micra             3
+14- Fiat multipla            2
+15- Tesla (cualquier modelo) 1

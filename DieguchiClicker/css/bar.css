@@ -35,3 +35,7 @@
     height: auto;
     filter: brightness(1.25);
 }
+.shop {
+    height: 86vh;
+    overflow-y: scroll;
+}

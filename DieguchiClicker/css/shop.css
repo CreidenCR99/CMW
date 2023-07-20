@@ -1,0 +1,18 @@
+.box {
+    margin-top: -2vh;
+    width: 90vw;
+    height: 14vh;
+    background-image: url(../img/shop/box.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-align: center;
+}
+div.box h3 {
+    display: block;
+    margin-top: 1vh;
+}
+div.box p {
+    display: block;
+    margin-top: 1vh;
+}
