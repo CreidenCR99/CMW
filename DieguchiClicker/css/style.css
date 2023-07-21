@@ -27,6 +27,14 @@ h2{
 h3{
     font-size: 8vw;
 }
+h4{
+    font-size: 7.5vw;
+    font-weight: 600;
+    text-shadow: 0.35vw  0px 0px black,
+    0px  0.35vh 0px black,
+   -0.35vw  0px 0px black,
+    0px -0.35vh 0px black;
+}
 .title{
     margin-top: 1.5vh;
 }

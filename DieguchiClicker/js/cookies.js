@@ -3,8 +3,8 @@ var AutoSaveTime = 15;
 async function af_saveCookies() {
 	var cookieValue = "u:" + u + ",ups:" + ups;
 	document.cookie = "savedData=" + cookieValue;
-	console.log("Cookies saved")
-}
+	console.log("Cookies saved");
+};
 
 function f_loadCookies() {
 	var cookieValue = document.cookie
@@ -26,9 +26,8 @@ function f_loadCookies() {
 		u = parseFloat(data.u);
 		ups = parseFloat(data.ups);
 		console.log("Cookies loaded");
-	}
-}
-
+	};
+};
 
 function f_Reset() {
 	document.cookie = "savedData=0; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/CMW/DieguchiClicker;";
