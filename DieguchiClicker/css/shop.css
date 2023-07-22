@@ -10,12 +10,13 @@ div.shop div.box {
     transform: translateX(-50%);
 }
 div.box h4 {
-    text-align: center;
+    text-align: left;
     margin-top: 2vh;
+    margin-left: 2vw;
 }
 div.box p {
     text-align: right;
-    font-size: 6vw;
+    font-size: 7vw;
     text-shadow: 0.35vw  0px 0px black,
     0px  0.35vh 0px black,
    -0.35vw  0px 0px black,
@@ -24,7 +25,8 @@ div.box p {
 div.box p.right{
     text-align: right;
     margin-right: 2vw;
-    margin-top: -5.25vh;
+    margin-top: -10vh;
+    line-height: 7.5vh;
 }
 div.box p.price{
     position: absolute;
