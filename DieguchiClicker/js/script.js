@@ -28,7 +28,7 @@ var c1p = 10,   		// Tesla (cualquier modelo)
 	c8ups = x,
 	c9p = 900000, 		// Lamborghini huracan
 	c9G = 0,
-	x9ups = x,
+	c9ups = x,
 	c10p = 10300000,    // Lamborghini murcielago
 	c10G = 0,
 	c10ups = x,
@@ -55,52 +55,63 @@ function f_clic() {
 
 function f_cshop(car) {
 	if (car >= 1 && car <= 15 && u >= this["c" + car + "p"]) {
-	  this["c" + car + "p"] += Math.floor(this["c" + car + "p"] / (313 / 50));
+		if (car == 1 && c1p == 10) {
+			c1p += 4
+		}
+		u -= this["c" + car + "p"];
+	  this["c" + car + "p"] += Math.floor(this["c" + car + "p"] / (313 / 50) ** 0.9071875 * 1.3); // Subida de precios, estaba haciendo pruebas con ello, mucha inflacion actualmente
 	  this["c" + car + "G"]++;
-	  document.getElementById("id_c" + car + "G").innerHTML = `Tienes: ${this["c" + car + "G"]}`;
-	  document.getElementById("id_c" + car + "p").innerHTML = `Precio: ${this["c" + car + "p"]}`;
+	  f_values();
 	}
   }
 
+function f_carValues(value){
+	if (value <= 999) {
+		return value.toFixed(0);
+	  } else if (value >= 1000 && value < 100000) {
+		return (value / 1000).toFixedDown(2) + "k";
+	  } else if (value >= 100000 && value < 1000000){
+		return (value / 1000).toFixedDown(0) + "k";
+	  } else if (value >= 1000000 && value < 10000000000) { // Hay mas texto arriba si no lo viste
+		return (value / 1000000).toFixedDown(2) + "M"; // Hay que hacer a partir de 100 M o 10 M no aparezcan decimales
+	  } else if (value >= 10000000000) { //					Tambien puedo hacer que a partir de 10 aparezca solo un decimal y luego ya no
+		return (value / 10000000000).toFixedDown(2) + "B"; // Hay que hacer a partir de 100 B o 10 B no aparezcan decimales
+	  }
+}
+
 function f_values() {
 	if (u <= 999) {
-		document.getElementById("id_u").innerHTML =
-			`${u.toFixedDown(1)} m`;
-	} else if (u >= 1000) {
-		document.getElementById("id_u").innerHTML =
-			`${(u/1000).toFixedDown(1)} km`
-	} else if ((u / 1000) >= 10) {
-		document.getElementById("id_u").innerHTML =
-			`${(u/1000).toFixedDown(0)} km`
-	}
+		document.getElementById("id_u").innerHTML = `${u.toFixedDown(1)} m`;
+	} else if (u >= 1000 && (u / 1000) < 10) {
+		document.getElementById("id_u").innerHTML = `${(u/1000).toFixedDown(1)} km`;
+	} else if ((u / 1000) >= 10 && (u / 1000) < 1000) {
+		document.getElementById("id_u").innerHTML = `${(u/1000).toFixedDown(0)} km`;
+	} else if ((u / 1000) >= 1000) {
+		document.getElementById("id_u").innerHTML = `${(u/1000000).toFixed(3)} km`;
+	};
 	if (ups <= 999) {
-		document.getElementById("id_ups").innerHTML =
-			`${ups.toFixedDown(1)} m/s`;
-	} else if (ups >= 1000) {
-		document.getElementById("id_ups").innerHTML =
-			`${(ups/1000).toFixedDown(1)} km/s`
-	} else if ((ups / 1000) >= 10) {
-		document.getElementById("id_ups").innerHTML =
-			`${(ups/1000).toFixedDown(0)} km/s`
+		document.getElementById("id_ups").innerHTML = `${ups.toFixedDown(1)} m/s`;
+	} else if (ups >= 1000 && (ups / 1000) < 10) {
+		document.getElementById("id_ups").innerHTML = `${(ups/1000).toFixedDown(1)} km/s`;
+	} else if ((ups / 1000) >= 10 && (ups / 1000) < 1000) {
+		document.getElementById("id_ups").innerHTML = `${(ups/1000).toFixedDown(0)} km/s`;
+	} else if ((ups / 1000) >= 1000) {
+		document.getElementById("id_ups").innerHTML = `${(ups/1000000).toFixed(3)} km/s`;
+	}
+	for (let i = 1; i <= 15; i++) {
+		let cValue = this["c" + i + "p"];
+		let price = f_carValues(cValue);
+		document.getElementById("id_c" + i + "p").innerHTML = `Precio: ${price}`;
+		document.getElementById("id_c" + i + "G").innerHTML = `Tienes: ${this["c" + i + "G"]}`;
 	}
 }
 
-
-// No funciona, sirve para sumar los ups a u, en el salto simulator se hace con
-// todo el texto pero yo soy cabezota y lo quiero acortar
-//
-//function f_calculateU() {
-//	for (let i = 1; i <= 15; i++) {
-//	  u += this["c" + i + "G"] * this["c" + i + "ups"];
-//	}
-//  
-//	u = u.toFixed(1);
-//  }
-//  
-//  // Ejemplo de uso:
-//  console.log("Valor de u antes de llamar a la función:", u);
-//  f_calculateU();
-//  console.log("Valor de u después de llamar a la función:", u);
+function f_calculateU() {
+	for (let i = 1; i <= 15; i++) {
+		u += Number((window['c' + i + 'G'] * window['c' + i + 'ups']));
+	}
+	u = Number((u).toFixed(1));
+  }
 
 function f_show(window) {
 	if (window == 1) {
@@ -118,8 +129,10 @@ function f_show(window) {
 	}
 }
 
+var HTMLloaded = false;
 function f_onload() {
-	console.log("Page loaded")
+	HTMLloaded = true
+	console.log("HTML loaded: " + HTMLloaded)
 	f_loadCookies();
 }
 
@@ -134,6 +147,13 @@ function sleep(ms) {
 }
 
 setInterval(function() {
-	f_calculateU();
-	f_values();
+	if(HTMLloaded == true) {
+		f_calculateU();
+	}
 }, 1000);
+
+setInterval(function() {
+	if(HTMLloaded == true) {
+		f_values();
+	}
+}, 1000 / 60)

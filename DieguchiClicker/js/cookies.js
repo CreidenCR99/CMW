@@ -2,7 +2,12 @@ var AutoSaveTime = 15;
 
 async function af_saveCookies() {
 	var cookieValue = "u:" + u + ",ups:" + ups;
+	for (let i = 1; i <= 15; i++) {
+		cookieValue += `,c${i}p:${this["c" + i + "p"]},c${i}G:${this["c" + i + "G"]}`;
+	}
+
 	document.cookie = "savedData=" + cookieValue;
+	console.log(cookieValue)
 	console.log("Cookies saved");
 };
 
@@ -25,9 +30,17 @@ function f_loadCookies() {
 
 		u = parseFloat(data.u);
 		ups = parseFloat(data.ups);
+		for (let i = 1; i <= 15; i++) {
+			this["c" + i + "p"] = parseFloat(data["c" + i + "p"]);
+			this["c" + i + "G"] = parseFloat(data["c" + i + "G"]);
+		}
 		console.log("Cookies loaded");
 	};
 };
+
+function Reset() {
+	f_Reset();
+}
 
 function f_Reset() {
 	document.cookie = "savedData=0; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/CMW/DieguchiClicker;";
