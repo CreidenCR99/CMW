@@ -109,9 +109,28 @@ function IoCumpleApodos() {
 
 // ---------- Cumples ---------- \\
 
+var DannaCumple = new Date("Feb 5, 2025 00:00:00").getTime();
+var AlmudenaCumple = new Date("Feb 12, 2025 00:00:00").getTime();
+var NereaCumple = new Date("Mar 18, 2025 00:00:00").getTime();
+var ValeriaCumple = new Date("Jul 14, 2024 00:00:00").getTime();
+var JairoCumple = new Date("Jul 14, 2024 00:00:00").getTime();
+var DeividCumple = new Date("Jul 20, 2024 00:00:00").getTime();
+var GuilleCumple = new Date("Jul 21, 2024 00:00:00").getTime();
+var SofiaCumple = new Date("Aug 7, 2024 00:00:00").getTime();
+var CilindroCumple = new Date("Aug 12, 2024 00:00:00").getTime();
+var LeoCumple = new Date("Aug 17, 2024 00:00:00").getTime();
+var DavoCumple = new Date("Sep 3, 2024 00:00:00").getTime();
+var OlayaCumple = new Date("Sep 6, 2024 00:00:00").getTime();
+var IoCumple = new Date("Sep 26, 2024 00:00:00").getTime();
+var RunaCumple = new Date("Oct 9, 2024 00:00:00").getTime();
+var NadineCumple = new Date("Oct 19, 2024 00:00:00").getTime();
+var PaulaCumple = new Date("Nov 27, 2024 00:00:00").getTime();
+var SaltoCumple = new Date("Dec 12, 2024 00:00:00").getTime();
+var DiegoCumple = new Date("Dec 26, 2024 00:00:00").getTime();
+
 // ----- Grupo ----- \\
 
-var GrupoCumple = new Date("Oct 6, 2023 00:00:00").getTime();
+var GrupoCumple = new Date("Oct 6, 2024 00:00:00").getTime();
 
 var Grupo = setInterval(function () {
 
@@ -129,8 +148,6 @@ var Grupo = setInterval(function () {
 
 // ---- Danna ----- \\
 
-var DannaCumple = new Date("Feb 5, 2024 00:00:00").getTime();
-
 var Danna = setInterval(function () {
 
   var Dannadistance = DannaCumple - now;
@@ -146,8 +163,6 @@ var Danna = setInterval(function () {
 }, 1000);
 
 // ----- Almudena ----- \\
-
-var AlmudenaCumple = new Date("Feb 12, 2024 00:00:00").getTime();
 
 var Almudena = setInterval(function () {
 
@@ -165,8 +180,6 @@ var Almudena = setInterval(function () {
 
 // ----- Nerea ----- \\
 
-var NereaCumple = new Date("mar 18, 2024 00:00:00").getTime();
-
 var Nerea = setInterval(function () {
 
   var Nereadistance = NereaCumple - now;
@@ -182,8 +195,6 @@ var Nerea = setInterval(function () {
 }, 1000);
 
 // ----- Valeria ----- \\
-
-var ValeriaCumple = new Date("Jul 14, 2023 00:00:00").getTime();
 
 var Valeria = setInterval(function () {
 
@@ -201,8 +212,6 @@ var Valeria = setInterval(function () {
 
 // ----- Jairo ----- \\
 
-var JairoCumple = new Date("Jul 14, 2023 00:00:00").getTime();
-
 var Jairo = setInterval(function () {
 
   var Jairodistance = JairoCumple - now;
@@ -218,8 +227,6 @@ var Jairo = setInterval(function () {
 }, 1000);
 
 // ----- Deivid ----- \\
-
-var DeividCumple = new Date("Jul 20, 2023 00:00:00").getTime();
 
 var Deivid = setInterval(function () {
 
@@ -237,8 +244,6 @@ var Deivid = setInterval(function () {
 
 // ----- Guille ----- \\
 
-var GuilleCumple = new Date("Jul 21, 2023 00:00:00").getTime();
-
 var Guille = setInterval(function () {
 
   var Guilledistance = GuilleCumple - now;
@@ -254,8 +259,6 @@ var Guille = setInterval(function () {
 }, 1000);
 
 // ----- Sofia ----- \\
-
-var SofiaCumple = new Date("Aug 7, 2023 00:00:00").getTime();
 
 var Sofia = setInterval(function () {
 
@@ -273,8 +276,6 @@ var Sofia = setInterval(function () {
 
 // ----- Cilindro ----- \\
 
-var CilindroCumple = new Date("Aug 12, 2023 00:00:00").getTime();
-
 var Cilindro = setInterval(function () {
 
   var Cilindrodistance = CilindroCumple - now;
@@ -290,8 +291,6 @@ var Cilindro = setInterval(function () {
 }, 1000);
 
 // ----- Leo ----- \\
-
-var LeoCumple = new Date("Aug 17, 2023 00:00:00").getTime();
 
 var Leo = setInterval(function () {
 
@@ -309,8 +308,6 @@ var Leo = setInterval(function () {
 
 // ----- Davo ----- \\
 
-var DavoCumple = new Date("Sep 3, 2023 00:00:00").getTime();
-
 var Davo = setInterval(function () {
 
   var Davodistance = DavoCumple - now;
@@ -326,8 +323,6 @@ var Davo = setInterval(function () {
 }, 1000);
 
 // ----- Olaya ----- \\
-
-var OlayaCumple = new Date("Sep 6, 2023 00:00:00").getTime();
 
 var Olaya = setInterval(function () {
 
@@ -345,8 +340,6 @@ var Olaya = setInterval(function () {
 
 // ----- Io ----- \\
 
-var IoCumple = new Date("Sep 26, 2023 00:00:00").getTime();
-
 var Io = setInterval(function () {
 
   var Iodistance = IoCumple - now;
@@ -362,8 +355,6 @@ var Io = setInterval(function () {
 }, 1000);
 
 // ----- Runa ----- \\
-
-var RunaCumple = new Date("Oct 9, 2023 00:00:00").getTime();
 
 var Runa = setInterval(function () {
 
@@ -381,8 +372,6 @@ var Runa = setInterval(function () {
 
 // ----- Nadine ----- \\
 
-var NadineCumple = new Date("Oct 19, 2023 00:00:00").getTime();
-
 var Nadine = setInterval(function () {
 
   var Nadinedistance = NadineCumple - now;
@@ -398,8 +387,6 @@ var Nadine = setInterval(function () {
 }, 1000);
 
 // ----- Paula ----- \\
-
-var PaulaCumple = new Date("Nov 27, 2023 00:00:00").getTime();
 
 var Paula = setInterval(function () {
 
@@ -417,8 +404,6 @@ var Paula = setInterval(function () {
 
 // ----- Salto ----- \\
 
-var SaltoCumple = new Date("Dec 12, 2023 00:00:00").getTime();
-
 var Salto = setInterval(function () {
 
   var Saltodistance = SaltoCumple - now;
@@ -434,8 +419,6 @@ var Salto = setInterval(function () {
 }, 1000);
 
 // ----- Diego ----- \\
-
-var DiegoCumple = new Date("Dec 26, 2023 00:00:00").getTime();
 
 var Diego = setInterval(function () {
 
