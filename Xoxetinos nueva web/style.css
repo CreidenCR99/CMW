@@ -1,0 +1,47 @@
+@keyframes loading {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    75% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  html {
+    user-select: none;
+  }
+  
+  body {
+    animation: loading 2.5s;
+    display: block;
+    margin: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: beige;
+    background: url("img/background-gradient.png"), linear-gradient(black, #77173e);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+/*rgb(125, 10, 50)
+    background-repeat: repeat-x;*/
+.box {
+    border: 7px;
+    border-style: solid;
+    border-radius: 25px;
+    border-color: #360416;
+    background-color: rgba(101, 8, 41, 0.25);
+    margin: 10px;
+    backdrop-filter: blur(5px);
+}
+.box h2 {
+    text-align: center;
+    margin: 10px;
+}
