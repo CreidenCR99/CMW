@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {name: "Gabino", date: "Mar 4, 2025", year: "(08)"},
         {name: "Nerea", date: "Mar 18, 2025", year: "(08)"},
         {name: "Lucas", date: "May 19, 2025", year: "(09)"},
-        {name: "Iyan", date: "Jun 18, 2025", year: "(07)"},
+        {name: "Iyan", date: "Jun 18, 2025", year: "(06)"},
         {name: "Val", date: "Jul 14, 2024", year: "(06)"},
         {name: "Deivid", date: "Jul 20, 2024", year: "(05)"},
         {name: "Guille", date: "Jul 21, 2024", year: "(07)"},
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {name: "Nadine", date: "Oct 19, 2024", year: "(07)"},
         {name: "Martín", date: "Oct 22, 2024", year: "(07)"},
         {name: "Pau", date: "Nov 27, 2024", year: "(06)"},
-        {name: "Salto", date: "Dec 12, 2024", year: "(06)"},
+        {name: "Salto", date: "Dec 11, 2024", year: "(06)"},
         {name: "Lau", date: "Dec 13, 2024", year: "(08)"},
         {name: "Valadri", date: "Dec 18, 2024", year: "(21)"},
         {name: "Dieguchi", date: "Dec 26, 2024", year: "(07)"}
