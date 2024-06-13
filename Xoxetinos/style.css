@@ -24,18 +24,19 @@
     animation: loading 2.5s;
     font-family: Arial, Helvetica, sans-serif;
     color: beige;
-    background: linear-gradient(black, #77173e);
+    background: linear-gradient(black, #6D1539);
     background-position: center;
     background-repeat: no-repeat;
     height: fit-content;
     width: auto;
   }
-/*rgb(125, 10, 50)
-    background-repeat: repeat-x;*/
+/*rgb(125, 10, 50)*/
 .background {
-  background: url("img/background-gradient.png");
-  height: max-content;
-  width: auto;
+  background: url("img/background-gradient.png"), center;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  transform: scaleY(100%);
 }
 .box {
     border: 7px;
