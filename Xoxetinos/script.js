@@ -125,17 +125,17 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-import { readFile, utils } from 'xlsx';
-var wb = readFile('tu_archivo.xlsx', { cellDates: true });
-var ws = wb.Sheets['Hoja1']; // Cambia 'Sheet1' al nombre de tu hoja
-const headerRow = utils.sheet_to_json(ws, { header: 1 })[0];
-const parametros = headerRow.slice(1); // Ignora la primera celda (que contiene el título)
-const data = utils.sheet_to_json(ws, { header: 1, range: 1 }); // Ignora la primera fila (encabezados)
-const arrayDeDatos = data.map((fila) => {
-    const obj = {};
-    parametros.forEach((parametro, indice) => {
-        obj[parametro] = fila[indice + 1]; // Ignora la primera celda (que contiene el nombre de la fila)
-    });
-    return obj;
-});
-console.log(arrayDeDatos)
+//import { readFile, utils } from 'xlsx';
+//var wb = readFile('tu_archivo.xlsx', { cellDates: true });
+//var ws = wb.Sheets['Hoja1']; // Cambia 'Sheet1' al nombre de tu hoja
+//const headerRow = utils.sheet_to_json(ws, { header: 1 })[0];
+//const parametros = headerRow.slice(1); // Ignora la primera celda (que contiene el título)
+//const data = utils.sheet_to_json(ws, { header: 1, range: 1 }); // Ignora la primera fila (encabezados)
+//const arrayDeDatos = data.map((fila) => {
+//    const obj = {};
+//    parametros.forEach((parametro, indice) => {
+//        obj[parametro] = fila[indice + 1]; // Ignora la primera celda (que contiene el nombre de la fila)
+//    });
+//    return obj;
+//});
+//console.log(arrayDeDatos)
