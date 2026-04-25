@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8"/>
+		<title id="title">Dinero - CMW</title>
+		<link rel="icon" type="image/png" sizes="1000x1000" href="icon.png"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<div id="app">
+			<!-- panel izquierdo: lista de ingresos/gastos -->
+			<aside id="ledgerPanel" class="ledger" aria-label="Listado de ingresos y gastos">
+				<h2>Ingresos / Gastos</h2>
+				<div id="ledgerList">
+					<!-- se renderiza dinámicamente -->
+				</div>
+			</aside>
+
+			<main class="main">
+				<h1 id="Saving" style="opacity: 0;">Saving...</h1>
+				<h1 class="amount" id="bigAmount">100€</h1>
+
+				<!-- botones principales -->
+				<div class="controls">
+					<button id="btnNuevoIngreso">Nuevo ingreso</button>
+					<button id="btnNuevoGasto">Nuevo gasto</button>
+				</div>
+
+				<!-- panel para nuevo ingreso (oculto por defecto) -->
+				<div id="ingresoPanel" class="panel hidden" aria-hidden="true">
+					<input id="ingresoNombre" type="text" placeholder="Nombre del ingreso" />
+					<button id="confirmIngreso" disabled>Agregar</button>
+
+					<!-- previsualización del monto y lista de monedas/billetes del seleccionado/temporal -->
+					<div id="ingresoPreview" class="preview">
+						<div class="preview-total">Total: €0.00</div>
+						<div class="preview-list" id="previewList"></div>
+					</div>
+				</div>
+
+				<!-- contenedor donde aparecerá la rejilla de denominaciones (2x4) o el panel de counts -->
+				<div id="tablaContainer" class="hidden" aria-hidden="true"></div>
+			</main>
+		</div>
+
+		<!-- ...totals panel eliminado: la cantidad grande ahora muestra el total neto directamente --> 
+	</body>
+</html>

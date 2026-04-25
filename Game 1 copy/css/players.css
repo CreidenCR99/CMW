@@ -1,0 +1,122 @@
+#PantallaPersonajes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* centra verticalmente */
+    width: calc(100% - 120px);
+    padding: 0;
+    min-height: 100vh;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden; /* bloquea el scroll */
+}
+
+.cuadrante {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.personaje {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 12px 10px;
+    transition: box-shadow 0.2s;
+    min-height: unset;
+    height: auto;
+}
+
+.imagenPersonaje {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #ccc;
+    background-color: #f1f1f1;
+    margin-right: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+    transition: border 0.2s;
+    flex-shrink: 0;
+}
+
+.datosPersonaje {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+}
+
+.datosPersonaje .fila-dato {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.datosPersonaje label {
+    min-width: 48px;
+    font-size: 0.97em;
+    color: #555;
+    font-weight: 500;
+    margin-right: 2px;
+}
+
+input[type="text"] {
+    margin-bottom: 4px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 8px;
+    font-size: 1em;
+    background: #f7f7f7;
+    transition: border 0.2s;
+    height: 28px;
+    box-sizing: border-box;
+    width: 100%;
+    /* Nombre ocupa todo el ancho */
+}
+
+input[type="number"] {
+    margin-bottom: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 6px;
+    font-size: 1em;
+    background: #f7f7f7;
+    transition: border 0.2s;
+    height: 28px;
+    box-sizing: border-box;
+    width: 100%;
+    /* Ahora poder y oro ocupan todo el ancho como el nombre */
+}
+
+.eliminarPersonaje {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    background-color: #fff;
+    border: 2px solid #e57373;
+    color: #e57373;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0,0,0,0.15);
+    transition: border 0.2s, color 0.2s;
+}
+.eliminarPersonaje:hover {
+    border: 2px solid #b71c1c;
+    color: #b71c1c;
+}

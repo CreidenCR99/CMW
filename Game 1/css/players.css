@@ -1,0 +1,188 @@
+#PantallaJugadores {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0;
+}
+
+#botonAñadirJugador {
+    margin: 32px 0 0 40px;
+    width: 220px;
+    padding: 14px 0;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
+    outline: none;
+    letter-spacing: 0.01em;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ccc;
+    box-sizing: border-box;
+    min-height: 44px;
+    align-self: flex-start;
+    display: block;
+}
+
+#botonAñadirJugador:hover {
+    background: #f5f5f5;
+    color: #222;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+#jugadoresGrid {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px 40px;
+    width: 100%;
+    max-width: 1100px;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+    padding: 0 40px;
+    min-height: 0;
+}
+
+@media (max-width: 1100px) {
+    #jugadoresGrid {
+        grid-template-columns: repeat(2, minmax(260px, 1fr));
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+@media (max-width: 700px) {
+    #jugadoresGrid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        gap: 24px 0;
+        padding: 0 8px;
+    }
+}
+
+.cuadrante {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.personaje {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 340px;
+    min-height: 140px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 18px 16px;
+    transition: box-shadow 0.2s;
+    position: relative;
+    gap: 18px;
+}
+
+.imagenPersonaje {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #ccc;
+    background-color: #f1f1f1;
+    margin-right: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+    transition: border 0.2s;
+    flex-shrink: 0;
+}
+
+.datosPersonaje {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    flex: 1 1 auto;
+}
+
+.datosPersonaje .fila-dato {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.datosPersonaje label {
+    min-width: 48px;
+    font-size: 1em;
+    color: #555;
+    font-weight: 500;
+    margin-right: 2px;
+}
+
+input[type="text"] {
+    margin-bottom: 4px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 8px;
+    font-size: 1em;
+    background: #f7f7f7;
+    transition: border 0.2s;
+    height: 32px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input[type="number"] {
+    margin-bottom: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 6px;
+    font-size: 1em;
+    background: #f7f7f7;
+    transition: border 0.2s;
+    height: 32px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.eliminarPersonaje {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    background-color: #fff;
+    border: 2px solid #e57373;
+    color: #e57373;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0,0,0,0.15);
+    transition: border 0.2s, color 0.2s;
+}
+.eliminarPersonaje:hover {
+    border: 2px solid #b71c1c;
+    color: #b71c1c;
+}
+
+/* Elimina el botón de inventario */
+.boton-inventario {
+    display: none !important;
+}

@@ -1,0 +1,231 @@
+#PantallaDados {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 120px;
+    width: calc(100vw - 120px);
+    height: 100vh;
+    background: #fff;
+    z-index: 100;
+}
+
+/* Botonera lateral simple, sin sombra ni fondo extra */
+#diceSelector, #diceSelector2 {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    height: auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 36px; /* Igual que ruleta */
+    padding: 0;
+    z-index: 20;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+}
+#diceSelector {
+    left: 140px;
+}
+#diceSelector2 {
+    left: 240px;
+}
+#diceSelector2[style*="display:none"] {
+    display: none !important;
+}
+
+/* Botón de dado igual a ruleta-circulo */
+.dice-circulo {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 4px solid #bbb;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 1.2em;
+    background: #fff;
+    color: #6366f1;
+    font-weight: bold;
+    user-select: none;
+}
+.dice-circulo.selected {
+    border: 4px solid #6366f1;
+    box-shadow: 0 0 0 4px #c7d2fe;
+    background: #e0e7ff;
+    color: #222;
+}
+.dice-circulo.disabled,
+#botonTirarDado.disabled {
+    opacity: 0.5;
+    filter: grayscale(0.3) brightness(0.85);
+    pointer-events: none;
+    cursor: not-allowed;
+    background: #f3f3f3;
+}
+
+.dice-centro {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 0;
+    min-height: 0;
+    width: 100%;
+    z-index: 1;
+    margin-left: 0;
+    gap: 48px;
+    position: relative;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
+#canvasDado, #canvasDado2 {
+    margin: 0 auto;
+    display: block;
+    border-radius: 24px;
+    background: #f8fafc;
+    border: 3px solid #e0e7ef;
+    box-shadow: none;
+    margin-bottom: 12px;
+    width: 300px !important;
+    height: 300px !important;
+}
+
+#resultadoDado, #resultadoDado2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #6366f1;
+    margin-bottom: 12px;
+    margin-top: 0;
+    min-height: 48px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-shadow: none;
+    opacity: 0;
+    transition: opacity 0.4s, color 0.3s, font-size 0.3s;
+    word-break: break-word;
+    max-width: 90vw;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    min-width: 0;
+    max-width: 220px;
+}
+#resultadoDado.visible, #resultadoDado2.visible {
+    opacity: 1;
+}
+
+#botonTirarDado {
+    display: none !important;
+}
+
+#dado2Area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 24px;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+}
+#dado2Area[style*="display:none"] {
+    display: none !important;
+}
+
+/* Responsive improvements */
+@media (max-width: 900px) {
+    #PantallaDados {
+        flex-direction: column;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    #diceSelector, #diceSelector2 {
+        position: static;
+        left: unset;
+        top: unset;
+        transform: none;
+        flex-direction: row;
+        width: 100vw;
+        justify-content: center;
+        margin-bottom: 18px;
+        box-shadow: none;
+        background: transparent;
+        padding: 0;
+        border: none;
+    }
+    .dice-centro {
+        margin-left: 0;
+        padding: 0;
+        gap: 18px;
+    }
+    #dado2Area {
+        margin-left: 0;
+    }
+    #canvasDado, #canvasDado2 {
+        width: 240px !important;
+        height: 240px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .dice-centro {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 0;
+    }
+    #canvasDado, #canvasDado2 {
+        width: 160px !important;
+        height: 160px !important;
+    }
+    #resultadoDado, #resultadoDado2 {
+        font-size: 1.2em;
+        min-width: 0;
+        max-width: 120px;
+    }
+}
+@media (max-width: 900px) {
+    #canvasDado, #canvasDado2 {
+        width: 180px !important;
+        height: 180px !important;
+    }
+
+@media (max-width: 600px) {
+    .dice-centro {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 0;
+    }
+    #canvasDado, #canvasDado2 {
+        width: 120px !important;
+        height: 120px !important;
+    }
+    #resultadoDado, #resultadoDado2 {
+        font-size: 1.2em;
+        min-width: 0;
+        max-width: 120px;
+    }
+}
+}

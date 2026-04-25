@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Game 1</title>
+		<link rel="icon" type="image/png" sizes="1000x1000" src="/Game 1/img/X.png"/>
+		<script src="js/script.js"></script>
+        <script src="js/players.js"></script>
+        <script src="js/wheel.js"></script>
+        <script src="js/dice.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/players.css">
+        <link rel="stylesheet" href="css/wheel.css">
+        <link rel="stylesheet" href="css/dice.css">
+        <link rel="stylesheet" href="css/color-themes.css">
+	</head>
+<body>
+    <div id="pantallaInicio">
+        <div class="titulo-inicio">Game 1</div>
+        <button id="botonJugar" onclick="irAJugadores()">Jugar</button>
+    </div>
+
+    <div id="barraLateral" style="display:none;">
+        <button id="botonInicio" class="button" onclick="volverInicio()">Jugadores</button>
+        <button id="botonRuleta" class="button" onclick="activarRuleta()">Ruleta</button>
+        <button id="botonDados" class="button" onclick="activarDados()">Dados</button>
+        <div id="colorModeGrid">
+            <button id="modo1" class="color-mode-btn selected" title="Modo actual"></button>
+            <button id="modo2" class="color-mode-btn" title="Modo arcoiris"></button>
+            <button id="modoClaro" class="color-mode-btn selected" title="Claro">🌞</button>
+            <button id="modoOscuro" class="color-mode-btn" title="Oscuro">🌙</button>
+        </div>
+    </div>
+
+    <div id="PantallaJugadores" style="display:none;">
+        <button id="botonAñadirJugador" onclick="añadirJugador()">Nuevo Jugador</button>
+        <div id="jugadoresGrid">
+            <div class="cuadrante" id="cuadrante1"></div>
+            <div class="cuadrante" id="cuadrante2"></div>
+            <div class="cuadrante" id="cuadrante3"></div>
+            <div class="cuadrante" id="cuadrante4"></div>
+            <div class="cuadrante" id="cuadrante5"></div>
+            <div class="cuadrante" id="cuadrante6"></div>
+        </div>
+    </div>
+
+    <div id="PantallaRuleta" style="display:none;">
+        <!-- Selector de ruletas predefinidas SOLO visible en PantallaRuleta -->
+        <div id="ruletaSelector">
+            <button class="ruleta-circulo selected" id="ruletaCasinoBtn" title="Casino"></button>
+            <button class="ruleta-circulo" id="ruletaGenericaBtn" title="Ruleta Genérica"></button>
+            <button class="ruleta-circulo" id="ruletaGoodBtn" title="Good Wheel"></button>
+            <button class="ruleta-circulo" id="ruletaButtonBtn" title="Button Wheel"></button>
+            <button class="ruleta-circulo" id="ruletaBadBtn" title="Bad Wheel"></button>
+        </div>
+        <div class="ruleta-centro">
+            <div id="resultadoRuleta"></div>
+            <canvas id="canvasRuleta" width="500" height="500"></canvas>
+        </div>
+        <div id="listaSegmentos"></div>
+    </div>
+
+    <div id="PantallaDados" style="display:none;">
+        <div id="diceSelector" style="position:fixed;top:50%;left:140px;transform:translateY(-50%);">
+            <button id="plusDadoBtn" class="dice-circulo" style="margin-bottom:10px;">+</button>
+            <div id="diceSelector1" style="display:flex;flex-direction:column;gap:28px;">
+                <button class="dice-circulo dado1" id="dice4Btn" title="D4">4</button>
+                <button class="dice-circulo dado1" id="dice6Btn" title="D6">6</button>
+                <button class="dice-circulo dado1" id="dice8Btn" title="D8">8</button>
+                <button class="dice-circulo dado1" id="dice12Btn" title="D12">12</button>
+                <button class="dice-circulo dado1" id="dice20Btn" title="D20">20</button>
+            </div>
+        </div>
+        <div id="diceSelector2" style="display:none;position:fixed;top:50%;left:240px;transform:translateY(-50%);flex-direction:column;gap:28px;">
+            <button class="dice-circulo dado2" id="dice4Btn2" title="D4">4</button>
+            <button class="dice-circulo dado2" id="dice6Btn2" title="D6">6</button>
+            <button class="dice-circulo dado2" id="dice8Btn2" title="D8">8</button>
+            <button class="dice-circulo dado2" id="dice12Btn2" title="D12">12</button>
+            <button class="dice-circulo dado2" id="dice20Btn2" title="D20">20</button>
+        </div>
+        <div class="dice-centro" style="flex-direction:row;gap:48px;align-items:flex-start;">
+            <div style="display:flex;flex-direction:column;align-items:center;">
+                <div id="resultadoDado"></div>
+                <canvas id="canvasDado" width="300" height="300"></canvas>
+            </div>
+            <div id="dado2Area" style="display:none;flex-direction:column;align-items:center;">
+                <div id="resultadoDado2"></div>
+                <canvas id="canvasDado2" width="300" height="300"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <input type="file" id="seleccionadorImagen" style="display:none">
+</body>
+</html>

@@ -46,8 +46,45 @@
     background-color: rgba(101, 8, 41, 0.25);
     margin: 10px;
     backdrop-filter: blur(5px);
+    /* Añadido para responsividad */
+    max-width: 600px;
+    width: 90%;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
 }
 .box h2 {
     text-align: center;
     margin: 10px;
+    /* Añadido para responsividad */
+    font-size: 1.2em;
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+        padding: 0;
+        margin: 0;
+    }
+    .background {
+        padding: 0 2vw;
+        min-height: 100vh;
+    }
+    .box {
+        width: 98%;
+        margin: 8px auto;
+        border-width: 4px;
+        border-radius: 16px;
+        padding: 8px 2vw;
+    }
+    .box h2 {
+        font-size: 1em;
+        margin: 8px 0;
+        word-break: break-word;
+    }
+    h1, h2 {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
 }

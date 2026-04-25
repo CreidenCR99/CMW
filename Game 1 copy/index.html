@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Game 1</title>
+		<link rel="icon" type="image/png" sizes="1000x1000" src="/Game 1/img/X.png"/>
+		<script src="script.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/players.css">
+        <link rel="stylesheet" href="css/wheel.css">
+        <link rel="stylesheet" href="css/color-themes.css">
+	</head>
+<body>
+    <div id="barraLateral">
+        <button id="botonInicio" class="button" onclick="volverInicio()">Inicio</button>
+        <button class="button" onclick="activarRuleta()">Ruleta</button>
+        <div id="colorModeGrid">
+            <button id="modo1" class="color-mode-btn selected" title="Modo actual"></button>
+            <button id="modo2" class="color-mode-btn" title="Modo arcoiris"></button>
+            <button id="modoClaro" class="color-mode-btn selected" title="Claro">🌞</button>
+            <button id="modoOscuro" class="color-mode-btn" title="Oscuro">🌙</button>
+        </div>
+    </div>
+
+    <div id="PantallaPersonajes">
+        <button id="botonAñadirPersonaje" onclick="añadirPersonaje()">Nuevo Personaje</button>
+        <div class="cuadrante" id="cuadrante1"></div>
+        <div class="cuadrante" id="cuadrante2"></div>
+        <div class="cuadrante" id="cuadrante3"></div>
+        <div class="cuadrante" id="cuadrante4"></div>
+        <div class="cuadrante" id="cuadrante5"></div>
+        <div class="cuadrante" id="cuadrante6"></div>
+    </div>
+
+    <div id="PantallaRuleta">
+        <!-- Selector de ruletas predefinidas SOLO visible en PantallaRuleta -->
+        <div id="ruletaSelector">
+            <button class="ruleta-circulo selected" id="ruletaGenericaBtn" title="Ruleta Genérica"></button>
+            <button class="ruleta-circulo" id="ruletaGoodBtn" title="Good Wheel"></button>
+            <button class="ruleta-circulo" id="ruletaMisteriousBtn" title="Misterious Wheel"></button>
+            <button class="ruleta-circulo" id="ruletaBadBtn" title="Bad Wheel"></button>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;width:100%;">
+            <div id="resultadoRuleta"></div>
+            <canvas id="canvasRuleta" width="500" height="500"></canvas>
+        </div>
+        <div id="listaSegmentos"></div>
+    </div>
+
+    <input type="file" id="seleccionadorImagen" style="display:none">
+</body>
+</html>

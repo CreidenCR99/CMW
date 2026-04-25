@@ -1,0 +1,164 @@
+/* --- Estilos generales y barra lateral --- */
+body {
+    display: flex;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #fafbfc;
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background 0.4s;
+}
+
+#barraLateral {
+    width: 120px;
+    height: 100vh;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 0 18px 0;
+    box-shadow: 2px 0 16px rgba(0,0,0,0.08);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: box-shadow 0.3s, background 0.3s;
+    justify-content: flex-start;
+    position: relative;
+    gap: 0;
+    min-width: 120px;
+    max-width: 120px;
+    z-index: 2001;
+}
+
+#barraLateral .button {
+    margin: 10px 0 0 0;
+    width: 92%;
+    padding: 12px 0;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
+    outline: none;
+    letter-spacing: 0.01em;
+    border-style: solid;
+    border-width: 2px;
+    box-sizing: border-box;
+    min-height: 44px;
+    /* Fija el alto para evitar saltos visuales por el cambio de border */
+}
+#barraLateral .button:first-child {
+    margin-top: 0;
+}
+#barraLateral .button:hover {
+    background: #f5f5f5;
+    color: #222;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+#barraLateral .button.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+    cursor: default;
+}
+
+/* Cuadrícula de selección de modo de color (solo botones visuales, sin funcionalidad especial) */
+#colorModeGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 8px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    width: 80px;
+    align-self: center;
+}
+.color-mode-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    outline: none;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 2px;
+    box-sizing: border-box;
+}
+.color-mode-btn.selected {
+    border: 2.5px solid #6366f1;
+    box-shadow: 0 0 0 2px #c7d2fe;
+}
+#modo2 {
+    background: linear-gradient(90deg, #ff595e 0%, #ffca3a 25%, #8ac926 50%, #1982c4 75%, #6a4c93 100%);
+    border: 2px solid #fff176;
+}
+#colorModeGrid .color-mode-btn {
+    outline: none;
+}
+#colorModeGrid .color-mode-btn.selected {
+    outline: 2px solid #6366f1;
+    outline-offset: 1px;
+}
+
+/* Transiciones suaves */
+body,
+#barraLateral,
+.color-mode-btn {
+    transition:
+        background 0.4s,
+        background-color 0.4s,
+        color 0.4s,
+        border-color 0.4s,
+        box-shadow 0.4s,
+        text-shadow 0.4s;
+}
+
+#pantallaInicio {
+    position: fixed;
+    z-index: 2000;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #fafbfc 0%, #e0e7ff 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-inicio {
+    font-size: 4.5em;
+    font-weight: bold;
+    color: #6366f1;
+    letter-spacing: 0.04em;
+    margin-bottom: 48px;
+    text-shadow: 0 4px 24px #6366f122, 0 1px 0 #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+#botonJugar {
+    font-size: 1.5em;
+    padding: 18px 54px;
+    border-radius: 16px;
+    border: none;
+    background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 4px 24px rgba(99,102,241,0.13);
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+    letter-spacing: 0.03em;
+    margin-top: 12px;
+}
+#botonJugar:hover {
+    background: linear-gradient(90deg, #60a5fa 0%, #6366f1 100%);
+    box-shadow: 0 8px 32px rgba(99,102,241,0.18);
+    transform: scale(1.04);
+}

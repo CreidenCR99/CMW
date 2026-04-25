@@ -1,0 +1,426 @@
+/* Ruleta y ventana de segmentos */
+body.bloquear-scroll {
+    overflow: hidden !important;
+    height: 100vh !important;
+    position: fixed;
+    width: 100vw;
+    overscroll-behavior: none;
+}
+
+#PantallaRuleta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 120px; /* ancho de la barra lateral */
+    width: calc(100vw - 120px);
+    height: 100vh;
+    min-height: 0;
+    min-width: 0;
+    background: transparent;
+    box-sizing: border-box;
+    margin: 0;
+    z-index: 100;
+}
+
+#canvasRuleta {
+    margin: 0 auto;
+    display: block;
+}
+
+#ruletaSelector {
+    position: fixed;
+    top: 50%;
+    left: 140px; /* Separación extra de la barra lateral */
+    transform: translateY(-50%);
+    height: auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centrado vertical */
+    gap: 36px; /* Más separación entre botones */
+    padding: 0;
+    z-index: 20;
+    background: transparent;
+}
+
+.ruleta-centro,
+#PantallaRuleta > div[style*="flex:1"] {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 0;
+    width: 100%;
+    z-index: 1;
+    margin-left: -100px; /* Mueve la ruleta más a la izquierda */
+}
+
+#listaSegmentos {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    width: 320px;
+    height: calc(100vh - 80px);
+    max-height: none;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18), -2px 0 16px rgba(0,0,0,0.10);
+    border-left: none;
+    border: 2px solid #ccc;
+    padding: 0 18px 18px 18px;
+    background: #fff;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s;
+    overflow-y: auto !important;
+}
+#tituloSegmentos {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 24px 0 14px 0;
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+#contenedorSegmentos {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+#botonAñadirSegmentoFlotante {
+    margin: 14px 0 0 0;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1em;
+    background: #f5f5f5;
+    color: #222;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: background 0.2s, color 0.2s;
+}
+#botonAñadirSegmentoFlotante:hover {
+    background: #e0e0e0;
+    color: #111;
+}
+.segmentoControl {
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    padding: 12px 8px 10px 8px;
+    transition: box-shadow 0.2s;
+}
+.segmentoControl label {
+    font-size: 0.98em;
+    font-weight: 500;
+}
+.segmentoControl input[type="text"], .segmentoControl input[type="number"] {
+    width: 95%;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px 7px;
+    background: #f7f7f7;
+}
+.segmentoControl input[type="color"] {
+    margin-bottom: 5px;
+    border: none;
+    background: transparent;
+    width: 36px;
+    height: 24px;
+    cursor: pointer;
+}
+.segmentoControl button {
+    background: #e57373;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 0.95em;
+    cursor: pointer;
+    margin-top: 0;
+    transition: background 0.2s;
+}
+.segmentoControl button:hover {
+    background: #b71c1c;
+}
+.segmentoControl .fila-color-eliminar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0;
+    justify-content: space-between;
+}
+.segmentoControl input[type="color"] {
+    margin-bottom: 0;
+    margin-right: 0;
+    border: none;
+    background: transparent;
+    width: 36px;
+    height: 24px;
+    cursor: pointer;
+    order: 1;
+}
+.segmentoControl button {
+    background: #e57373;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 0.95em;
+    cursor: pointer;
+    margin-top: 0;
+    transition: background 0.2s;
+    order: 2;
+}
+.segmentoControl button:hover {
+    background: #b71c1c;
+}
+
+/* Animación de click para la ruleta */
+@keyframes ruletaClickAnim {
+    0% { transform: scale(1);}
+    30% { transform: scale(0.93);}
+    60% { transform: scale(1.04);}
+    80% { transform: scale(0.98);}
+    100% { transform: scale(1);}
+}
+#canvasRuleta.ruleta-anim-click {
+    animation: ruletaClickAnim 0.28s cubic-bezier(.4,1.6,.4,1) 1;
+}
+
+/* Selector de ruletas predefinidas */
+#ruletaSelector {
+    position: fixed;
+    top: 50%;
+    left: 140px; /* Separación extra de la barra lateral */
+    transform: translateY(-50%);
+    height: auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centrado vertical */
+    gap: 36px; /* Más separación entre botones */
+    padding: 0;
+    z-index: 20;
+    background: transparent;
+}
+
+@media (max-width: 700px) {
+    #ruletaSelector {
+        left: 0;
+        top: unset;
+        bottom: 0;
+        flex-direction: row;
+        width: 100vw;
+        height: 60px;
+        gap: 18px;
+        padding-top: 0;
+        padding-bottom: 10px;
+        background: transparent;
+        justify-content: center;
+        left: 0;
+        top: unset;
+        bottom: 0;
+        position: fixed;
+        transform: none;
+    }
+}
+
+.ruleta-circulo {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 4px solid #bbb;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 1.2em;
+    background: #fff; /* fallback */
+}
+#ruletaGenericaBtn {
+    background: linear-gradient(135deg, #fff, #eee);
+}
+#ruletaGoodBtn {
+    background: linear-gradient(135deg, #b7ffb7 0%, #4ade80 100%);
+}
+#ruletaMisteriousBtn {
+    background: linear-gradient(135deg, #e0e7ff 0%, #6366f1 100%);
+}
+#ruletaBadBtn {
+    background: linear-gradient(135deg, #ffe3e3 0%, #f87171 100%);
+}
+#ruletaCasinoBtn {
+    background: linear-gradient(135deg, #e53935 0%, #222 60%, #43a047 100%);
+}
+#ruletaButtonBtn {
+    background: linear-gradient(135deg, #6366f1 0%, #fbbf24 50%, #60a5fa 100%);
+}
+.ruleta-circulo.selected {
+    border: 4px solid #6366f1;
+    box-shadow: 0 0 0 4px #c7d2fe;
+}
+#ruletaGenericaBtn::after { content: "🎲"; font-size: 1.2em; }
+#ruletaGoodBtn::after { content: "⭐"; font-size: 1.1em; }
+#ruletaMisteriousBtn::after { content: "❓"; font-size: 1.1em; }
+#ruletaBadBtn::after { content: "💀"; font-size: 1em; }
+#ruletaCasinoBtn::after { content: "🎰"; font-size: 1.2em; }
+#ruletaButtonBtn::after { content: "🔘"; font-size: 1.2em; }
+
+/* Resultado elegante sobre la ruleta */
+#resultadoRuleta {
+    font-family: inherit;
+    min-height: 62px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.4s;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+}
+.resultado-titulo {
+    font-size: 2.1em;
+    font-weight: bold;
+    color: #222;
+    letter-spacing: 0.02em;
+    text-shadow: 0 2px 8px #0001, 0 1px 0 #fff;
+    max-width: 340px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    max-width: 100%;
+    word-break: break-word;
+}
+.resultado-probabilidad {
+    font-size: 1em;
+    color: #666;
+    margin-top: 2px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+body.modo-colorido #resultadoRuleta .resultado-titulo {
+    color: #6a4c93;
+    text-shadow: 0 2px 8px #ffca3a33, 0 1px 0 #fffbe7;
+}
+body.modo_colorido.modo-oscuro #resultadoRuleta .resultado-titulo {
+    color: #fff176;
+    text-shadow: 0 2px 8px #6a4c9344, 0 1px 0 #23272a;
+}
+body.modo-oscuro #resultadoRuleta .resultado-titulo {
+    color: #fff;
+    text-shadow: 0 2px 8px #000a, 0 1px 0 #23272a;
+}
+body.modo-oscuro #resultadoRuleta .resultado-probabilidad {
+    color: #b3b3b3;
+}
+
+/* Estado bloqueado de la ventana de segmentos durante el giro */
+#listaSegmentos.bloqueado {
+    pointer-events: none;
+    filter: brightness(0.75) grayscale(0.18);
+    opacity: 0.80;
+    cursor: not-allowed !important;
+    transition: filter 0.3s, opacity 0.3s;
+}
+#listaSegmentos.bloqueado * {
+    cursor: not-allowed !important;
+}
+body.modo-colorido #listaSegmentos.bloqueado {
+    filter: brightness(0.85) sepia(0.25) hue-rotate(-20deg) saturate(1.2);
+    background: linear-gradient(120deg, #ffb3b3 0%, #ffe3ec 100%);
+    opacity: 0.90;
+}
+
+/* Fondo especial para pantalla de ruleta en modo colorido */
+body.modo-colorido #PantallaRuleta {
+    background: linear-gradient(135deg, #fffbe7 0%, #ffe3ec 40%, #ffca3a 100%);
+}
+body.modo-colorido.modo-oscuro #PantallaRuleta {
+    background: linear-gradient(135deg, #23272a 0%, #181a1b 40%, #6a4c93 100%);
+}
+
+/* Solo muestra el selector de ruletas cuando PantallaRuleta está visible */
+#ruletaSelector {
+    display: none;
+}
+#PantallaRuleta #ruletaSelector {
+    display: flex;
+}
+
+/* Responsive: en móvil, el selector de ruletas solo aparece en PantallaRuleta */
+@media (max-width: 700px) {
+    #PantallaRuleta,
+    #PantallaPersonajes {
+        margin-left: 0;
+        margin-bottom: 70px;
+    }
+    #PantallaRuleta #ruletaSelector {
+        flex-direction: row;
+        width: 100vw;
+        height: 60px;
+        gap: 18px;
+        padding-top: 0;
+        padding-bottom: 10px;
+        background: transparent;
+        justify-content: center;
+        left: 0;
+        top: unset;
+        bottom: 0;
+        position: fixed;
+        display: flex;
+    }
+    #ruletaSelector {
+        display: none !important;
+    }
+}
+
+@media (max-width: 900px) {
+    #PantallaRuleta {
+        flex-direction: column;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    #ruletaSelector,
+    #listaSegmentos {
+        margin: 0;
+        position: static;
+        width: 100%;
+        max-width: none;
+        right: unset;
+        top: unset;
+        height: auto;
+    }
+    #listaSegmentos {
+        box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+        border-radius: 18px;
+        border: 2px solid #ccc;
+    }
+}

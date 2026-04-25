@@ -1,0 +1,263 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	background: #fafafa;
+	font-family: Arial, sans-serif;
+	color: #222;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+/* contenedor principal con panel izquierdo + main */
+#app {
+	display: flex;
+	gap: 20px;
+	width: 100%;
+	max-width: 1100px;
+	align-items: flex-start;
+}
+
+/* panel izquierdo (ledger) */
+.ledger {
+	width: 300px;
+	background: #fff;
+	padding: 12px;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+	height: fit-content;
+}
+
+.ledger h2 {
+	margin: 0 0 12px 0;
+	font-size: 1.1rem;
+}
+
+/* lista dentro del ledger */
+.ledger-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px;
+	border-radius: 6px;
+	margin-bottom: 8px;
+	border: 1px solid transparent;
+	cursor: pointer;
+}
+
+.ledger-row .meta {
+	font-size: 0.85rem;
+	color: #666;
+}
+
+.ledger-row .amount {
+	font-weight: 600;
+}
+
+.ledger-row.selected {
+	background: #eaf7f4;
+	border-color: #cfeee9;
+}
+
+/* main area centrada a la derecha */
+.main {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+}
+
+/* cantidad grande */
+.amount {
+	font-size: 2rem;
+	margin: 0;
+}
+
+/* controles (botones) centrados en fila */
+.controls {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	justify-content: center;
+}
+
+/* panel de ingreso: input + botón a la derecha */
+.panel {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	width: 100%;
+	max-width: 480px;
+	margin-top: 8px;
+	transition: transform 0.18s ease, opacity 0.18s ease;
+	background: #fff;
+	padding: 10px;
+	border-radius: 6px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.panel input {
+	flex: 1;
+	padding: 8px 10px;
+	font-size: 1rem;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.panel button {
+	padding: 8px 12px;
+	font-size: 1rem;
+	border: none;
+	background: #2a9d8f;
+	color: white;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+/* preview list (counts por denominación) */
+.preview {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	margin-left: 8px;
+}
+.preview-list {
+	font-size: 0.9rem;
+	color: #444;
+}
+.preview-list .item {
+	display: flex;
+	justify-content: space-between;
+	padding: 2px 0;
+	border-bottom: 1px dashed #eee;
+}
+
+/* totals panel */
+.totals {
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	width: 280px;
+	background: #fff;
+	padding: 12px;
+	border-radius: 8px;
+	box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+	z-index: 999;
+}
+.totals .close {
+	position: absolute;
+	right: 8px;
+	top: 8px;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+}
+.totals .totals-sum {
+	margin-top: 8px;
+	font-weight: 700;
+}
+
+/* ocultar por clase */
+.hidden {
+	display: none !important;
+}
+
+/* rejilla de denominaciones (2 filas x 4 columnas) */
+#tablaContainer {
+	width: 100%;
+	max-width: 720px;
+	margin-top: 12px;
+}
+
+#denomGrid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 8px;
+}
+
+.denom {
+	background: #fff;
+	border: 1px solid #e0e0e0;
+	padding: 12px;
+	border-radius: 8px;
+	text-align: center;
+	cursor: pointer;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+	font-weight: 600;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+}
+
+/* imagen dentro del botón de denominación */
+.denom img.denom-img {
+	width: 48px;
+	height: auto;
+	display: block;
+	object-fit: contain;
+}
+
+/* multiplicador / etiqueta pequeña debajo de la imagen */
+.denom small {
+	display: block;
+	font-size: 0.85rem;
+	color: #666;
+	font-weight: 500;
+	margin-top: 4px;
+}
+
+/* acciones dentro del ledger (botones) */
+.action-btn {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 4px 6px;
+	margin-left: 6px;
+	color: #666;
+}
+
+/* layout for counts view (imagen + contador) */
+.counts-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 8px;
+	margin-top: 8px;
+	width: 100%;
+}
+.denom-count {
+	background: #fff;
+	border: 1px solid #e8e8e8;
+	padding: 10px;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 6px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+.denom-count .denom-img {
+	width: 48px;
+	height: auto;
+}
+.denom-count .countVal {
+	font-weight: 700;
+	color: #333;
+}
+
+/* mantener responsive para counts-grid */
+@media (max-width: 800px) {
+	#app { flex-direction: column; align-items: center; }
+	.ledger { width: 100%; }
+	.panel { max-width: 100%; }
+	#denomGrid { grid-template-columns: repeat(2, 1fr); }
+	.totals { right: 10px; left: 10px; top: auto; bottom: 10px; width: auto; }
+	.counts-grid { grid-template-columns: repeat(2, 1fr); }
+}
