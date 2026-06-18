@@ -1,0 +1,6 @@
+{
+  "name": "Xoxetinos",
+  "description": "El portal oficial del grupo de amigos Xoxetinos. Cuenta atrás para cumpleaños en tiempo real, coordinación de viajes oficiales del grupo y recopilación de frases celebres divertidas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
