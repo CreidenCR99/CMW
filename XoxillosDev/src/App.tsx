@@ -19,8 +19,8 @@ import { QuotesView } from "./components/QuotesView";
 import { GestionView } from "./components/GestionView";
 
 // Generated Visual Assets
-import bgFlames from "./assets/images/background.png";
-import iconLogo from "./assets/images/icon.jpg";
+import bgFlames from ".assets/images/background.png";
+import iconLogo from ".assets/images/icon.jpg";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>("cumples");
